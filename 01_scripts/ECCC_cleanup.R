@@ -15,14 +15,18 @@ library(sf)
 library(readxl) #excel
 library(hms) # for fixing time formats
 
-# read in ECCC master file
-ECCC <- read.csv("00_rawdata/VijayDriveSDNWA/ECCC_Hydrolab_1993-1999.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
+# read in ECCC hydrolab master file
+ECCC_hydrolab <- read.csv("00_rawdata/VijayDriveSDNWA/ECCC_Hydrolab_1993-1999.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
 
 # fix date format
-ECCC <- ECCC %>% mutate(Date = lubridate::ymd(Date))
+ECCC_hydrolab <- ECCC_hydrolab %>% mutate(Date = lubridate::ymd(Date))
 
 # fix time format 
-ECCC$Time <- as_hms(ECCC$Time)
+ECCC_hydrolab$Time <- as_hms(ECCC_hydrolab$Time)
+
+# make sure all depths are < 0 
+
+# make sure there's no outliers in any of the WQ columns
 
 
 
