@@ -16,3 +16,13 @@ library(readxl) #excel
 library(hms) # for fixing time formats
 
 # read in ECCC master file
+ECCC <- read.csv("00_rawdata/VijayDriveSDNWA/ECCC_Hydrolab_1993-1999.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
+
+# fix date format
+ECCC <- ECCC %>% mutate(Date = lubridate::ymd(Date))
+
+# fix time format 
+ECCC$Time <- as_hms(ECCC$Time)
+
+
+
