@@ -29,7 +29,6 @@ ECCC_hydro_1994 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/Hydrolab 1994.c
 ECCC_hydro_1995 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/Hydrolab 1995.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
 ECCC_hydro_1996 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/Hydrolab 1996.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
 ECCC_hydro_1997 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/Hydrolab 1997.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
-ECCC_hydro_1998 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
 ECCC_hydro_1999 <- read.csv("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1999 Hydrolab data.csv", na = c("", "NA", "#N/A", "#VALUE!", "n/a")) 
 
 #
@@ -52,14 +51,6 @@ ECCC_hydro_1993 <- print(ECCC_hydro_1993[rowSums(is.na(ECCC_hydro_1993)) != ncol
 # fix date format
 ECCC_hydro_1993$Date <- lubridate::ymd(ECCC_hydro_1993$Date)
 
-# make sure all other columns are numeric
-ECCC_hydro_1993$Julianday <- as.numeric(ECCC_hydro_1993$Julianday)
-ECCC_hydro_1993$Temp_degC <- as.numeric(ECCC_hydro_1993$Temp_degC)
-ECCC_hydro_1993$DO_mg.L <- as.numeric(ECCC_hydro_1993$DO_mg.L)
-ECCC_hydro_1993$SPC_mS.cm <- as.numeric(ECCC_hydro_1993$SPC_mS.cm)
-ECCC_hydro_1993$pH_hydro <- as.numeric(ECCC_hydro_1993$pH_hydro)
-
-
 ### Hydrolab 1994 --------------------------------------------------------------
 
 # rename columns - 1994
@@ -78,14 +69,6 @@ ECCC_hydro_1994 <- print(ECCC_hydro_1994[rowSums(is.na(ECCC_hydro_1994)) != ncol
 # fix date format
 ECCC_hydro_1994$Date <- lubridate::ymd(ECCC_hydro_1994$Date)
 
-# make sure all other columns are numeric
-ECCC_hydro_1994$Julianday <- as.numeric(ECCC_hydro_1994$Julianday)
-ECCC_hydro_1994$Temp_degC <- as.numeric(ECCC_hydro_1994$Temp_degC)
-ECCC_hydro_1994$DO_mg.L <- as.numeric(ECCC_hydro_1994$DO_mg.L)
-ECCC_hydro_1994$SPC_mS.cm <- as.numeric(ECCC_hydro_1994$SPC_mS.cm)
-ECCC_hydro_1994$pH_hydro <- as.numeric(ECCC_hydro_1994$pH_hydro)
-
-
 ### Hydrolab 1995 --------------------------------------------------------------
 
 # rename columns - 1995
@@ -98,19 +81,15 @@ names(ECCC_hydro_1995)[6] <- "SPC_mS.cm"
 names(ECCC_hydro_1995)[7] <- "pH_hydro"
 
 # remove first few rows that have no data + all-NA rows/columns
-ECCC_hydro_1995 <- ECCC_hydro_1995[-c(1:7), ]
+ECCC_hydro_1995 <- ECCC_hydro_1995[-c(1:7, 53), ]
 ECCC_hydro_1995 <- print(ECCC_hydro_1995[rowSums(is.na(ECCC_hydro_1995)) != ncol(ECCC_hydro_1995), ])
 
 # fix date format
 ECCC_hydro_1995$Date <- lubridate::ymd(ECCC_hydro_1995$Date)
 
-# make sure all other columns are numeric
-ECCC_hydro_1995$Julianday <- as.numeric(ECCC_hydro_1995$Julianday)
-ECCC_hydro_1995$Temp_degC <- as.numeric(ECCC_hydro_1995$Temp_degC)
-ECCC_hydro_1995$DO_mg.L <- as.numeric(ECCC_hydro_1995$DO_mg.L)
-ECCC_hydro_1995$SPC_mS.cm <- as.numeric(ECCC_hydro_1995$SPC_mS.cm)
-ECCC_hydro_1995$pH_hydro <- as.numeric(ECCC_hydro_1995$pH_hydro)
-
+# remove rows with no YSI data 
+ECCC_hydro_1995 <- ECCC_hydro_1995 %>% 
+  filter(!is.na(Temp_degC) | !is.na(DO_mg.L) | !is.na(SPC_mS.cm) | !is.na(pH_hydro))
 
 ### Hydrolab 1996 --------------------------------------------------------------
 
@@ -130,36 +109,31 @@ ECCC_hydro_1996 <- print(ECCC_hydro_1996[rowSums(is.na(ECCC_hydro_1996)) != ncol
 # fix date format
 ECCC_hydro_1996$Date <- lubridate::ymd(ECCC_hydro_1996$Date)
 
-# make sure all other columns are numeric
-ECCC_hydro_1996$Julianday <- as.numeric(ECCC_hydro_1996$Julianday)
-ECCC_hydro_1996$Temp_degC <- as.numeric(ECCC_hydro_1996$Temp_degC)
-ECCC_hydro_1996$DO_mg.L <- as.numeric(ECCC_hydro_1996$DO_mg.L)
-ECCC_hydro_1996$SPC_mS.cm <- as.numeric(ECCC_hydro_1996$SPC_mS.cm)
-ECCC_hydro_1996$pH_hydro <- as.numeric(ECCC_hydro_1996$pH_hydro)
-
-
-### Hydrolab merging: 1993-1996 ------------------------------------------------
+### Hydrolab merging and export: 1993-1996 -------------------------------------
 
 # merge 1993-1996 data 
 ECCC_hydro_merged <- full_join(ECCC_hydro_1993, ECCC_hydro_1994)
 ECCC_hydro_merged <- full_join(ECCC_hydro_merged, ECCC_hydro_1995)
 ECCC_hydro_merged <- full_join(ECCC_hydro_merged, ECCC_hydro_1996)
 
-# add Month column
-ECCC_hydro_merged$Month <- month(ECCC_hydro_merged$Date)
+# remove rows with no YSI data (should be 9 rows)
 ECCC_hydro_merged <- ECCC_hydro_merged %>% 
-  relocate(Month, .after = Date)
-ECCC_hydro_merged$Month <- gsub(5,"May",ECCC_hydro_merged$Month)
-ECCC_hydro_merged$Month <- gsub(6,"June",ECCC_hydro_merged$Month)
-ECCC_hydro_merged$Month <- gsub(7,"July",ECCC_hydro_merged$Month)
-ECCC_hydro_merged$Month <- gsub(8,"August",ECCC_hydro_merged$Month)
-ECCC_hydro_merged$Month <- gsub(9,"September",ECCC_hydro_merged$Month)
-ECCC_hydro_merged$Month <- gsub(10,"October",ECCC_hydro_merged$Month)
+  filter(!is.na(Temp_degC) | !is.na(DO_mg.L) | !is.na(SPC_mS.cm) | !is.na(pH_hydro))
 
-# add Year column
-ECCC_hydro_merged$Year <- year(ECCC_hydro_merged$Date)
+# remove Pond 50 that dried up
 ECCC_hydro_merged <- ECCC_hydro_merged %>% 
-  relocate(Year, .after = Month)
+  filter(!Temp_degC == "Dryed-Up")
+
+# convert to long format
+ECCC_hydro_merged_long <- pivot_longer(ECCC_hydro_merged, 
+                                       cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", "pH_hydro"), 
+                                       names_to = "CharacteristicID", 
+                                       values_to = "ResultValue")
+
+# export file to be copied to Data Stream
+write.csv(ECCC_hydro_merged_long,"05_DataStream/ECCC_hydro_long_1993-1996.csv")
+
+#
 
 ### Hydrolab 1997 --------------------------------------------------------------
 
@@ -187,7 +161,22 @@ ECCC_hydro_1997 <- ECCC_hydro_1997 %>%
 # fix time format 
 ECCC_hydro_1997$Time_hydro <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_hydro_1997$Time_hydro) # add colon between HH and MM
 
-# make sure all other columns are numeric
+# remove rows with no YSI data 
+ECCC_hydro_1997 <- ECCC_hydro_1997 %>% 
+  filter(!Temp_degC == "Dry") %>% 
+  filter(!Temp_degC == "Low") %>% 
+  filter(!pH_hydro == "Water")
+
+# convert depth to negative values for Data Stream template
+ECCC_hydro_1997$Depth_m <- as.numeric(ECCC_hydro_1997$Depth_m)
+ECCC_hydro_1997$Depth_m <- ifelse(ECCC_hydro_1997$Depth_m > 0, -1*ECCC_hydro_1997$Depth_m, ECCC_hydro_1997$Depth_m)
+
+# add Year column and put after Month column
+ECCC_hydro_1997$Year <- 1997
+ECCC_hydro_1997 <- ECCC_hydro_1997 %>% 
+  relocate(Year, .after = Month)
+
+# make all columns numeric
 ECCC_hydro_1997$Temp_degC <- as.numeric(ECCC_hydro_1997$Temp_degC)
 ECCC_hydro_1997$pH_hydro <- as.numeric(ECCC_hydro_1997$pH_hydro)
 ECCC_hydro_1997$SPC_mS.cm <- as.numeric(ECCC_hydro_1997$SPC_mS.cm)
@@ -197,61 +186,242 @@ ECCC_hydro_1997$DO_mg.L <- as.numeric(ECCC_hydro_1997$DO_mg.L)
 ECCC_hydro_1997$Redox_mV <- as.numeric(ECCC_hydro_1997$Redox_mV)
 ECCC_hydro_1997$Depth_m <- as.numeric(ECCC_hydro_1997$Depth_m)
 
-# convert depth to negative values for Data Stream template
-ECCC_hydro_1997$Depth_m <- ifelse(ECCC_hydro_1997$Depth_m > 0, -1*ECCC_hydro_1997$Depth_m, ECCC_hydro_1997$Depth_m)
-
-# add Year column and put after Month column
-ECCC_hydro_1997$Year <- 1997
-ECCC_hydro_1997 <- ECCC_hydro_1997 %>% 
-  relocate(Year, .after = Month)
-
 
 ### Hydrolab 1998 --------------------------------------------------------------
 
-# rename columns - 1998
-names(ECCC_hydro_1998)[1] <- "Pond"
-names(ECCC_hydro_1998)[2] <- "Temp_degC"
-names(ECCC_hydro_1998)[3] <- "pH_hydro"
-names(ECCC_hydro_1998)[4] <- "SPC_mS.cm"
-names(ECCC_hydro_1998)[5] <- "Sal_ppt"
-names(ECCC_hydro_1998)[6] <- "DO_sat"
-names(ECCC_hydro_1998)[7] <- "DO_mg.L"
-names(ECCC_hydro_1998)[8] <- "Redox_mV"
-names(ECCC_hydro_1998)[9] <- "Depth_m"
+### MAY ####
+
+# read in excel sheets 
+ECCC_hydro_1998_May <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet1")
+
+# rename columns - May
+names(ECCC_hydro_1998_May)[1] <- "Pond"
+names(ECCC_hydro_1998_May)[2] <- "Time_hydro"
+names(ECCC_hydro_1998_May)[3] <- "Temp_degC"
+names(ECCC_hydro_1998_May)[4] <- "pH_hydro"
+names(ECCC_hydro_1998_May)[5] <- "SPC_uS.cm"
+names(ECCC_hydro_1998_May)[6] <- "DO_mg.L"
+names(ECCC_hydro_1998_May)[7] <- "Redox_mV"
+names(ECCC_hydro_1998_May)[8] <- "Depth_m"
 
 # remove rows that have no data + all-NA rows/columns
-ECCC_hydro_1998 <- ECCC_hydro_1998[-c(1:2), -c(10:15)]
-ECCC_hydro_1998 <- print(ECCC_hydro_1998[rowSums(is.na(ECCC_hydro_1998)) != ncol(ECCC_hydro_1998), ])
-
-# make Month column
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>%
-  mutate(
-    Month = str_extract(Pond, "May|June|July|August|Septembar|October"), # extract month names from Pond column + put into Month column
-    Pond = str_remove(Pond, "May|June|July|August|Septembar|October"), # remove month names from Pond column
-    Pond = if_else(Pond == "", NA, Pond)) # replace month names with NA
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>% 
-  relocate(Month, .after = Pond)
-ECCC_hydro_1998$Month <- gsub("Septembar","September",ECCC_hydro_1998$Month)
-
-# fill in the month if it's NA with the one directly above it
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>%
-  fill(Month, .direction = "down")
+ECCC_hydro_1998_May <- ECCC_hydro_1998_May[-c(1:4, 30), ]
+ECCC_hydro_1998_May <- print(ECCC_hydro_1998_May[rowSums(is.na(ECCC_hydro_1998_May)) != ncol(ECCC_hydro_1998_May), ])
 
 # fill in the pond name if it's NA with the one directly above it
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>%
+ECCC_hydro_1998_May <- ECCC_hydro_1998_May %>%
   fill(Pond, .direction = "down")
 
-# remove rows that were column names
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>% 
-  filter(!Pond == "Pond")
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>% 
-  filter(!pH_hydro == "units")
+# remove word "Pond" in Pond column
+ECCC_hydro_1998_May$Pond <- gsub("Pond ", "", ECCC_hydro_1998_May$Pond)
 
-# remove sample that was dry all months
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>% 
-  filter(!Temp_degC == "Dry")
+# fix time format
+ECCC_hydro_1998_May$Time_hydro <- as.numeric(ECCC_hydro_1998_May$Time_hydro)
+ECCC_hydro_1998_May$Time_hydro <- as_hms(ECCC_hydro_1998_May$Time_hydro * 86400) # 86400 is the number of seconds in a day
+ECCC_hydro_1998_May$Time_hydro <- as.character(ECCC_hydro_1998_May$Time_hydro) # for merging
+  
+# add Date column
+ECCC_hydro_1998_May$Date <- "1998-05-06"
+ECCC_hydro_1998_May$Date <- as.Date(ECCC_hydro_1998_May$Date)
+ECCC_hydro_1998_May <- ECCC_hydro_1998_May %>% 
+  relocate(Date, .after = "Pond")
 
-# make sure all other columns are numeric
+# change SPC column to mS/cm units
+ECCC_hydro_1998_May$SPC_uS.cm <- as.numeric(ECCC_hydro_1998_May$SPC_uS.cm)
+ECCC_hydro_1998_May$SPC_uS.cm <- ECCC_hydro_1998_May$SPC_uS.cm/1000
+ECCC_hydro_1998_May$SPC_uS.cm <- as.character(ECCC_hydro_1998_May$SPC_uS.cm) # for merging
+
+# rename SPC column
+names(ECCC_hydro_1998_May)[6] <- "SPC_mS.cm"
+
+#
+
+### JUNE ####
+
+# read in excel sheets 
+ECCC_hydro_1998_Jun <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet2")
+
+# rename columns - June
+names(ECCC_hydro_1998_Jun)[1] <- "Pond"
+names(ECCC_hydro_1998_Jun)[2] <- "Date"
+names(ECCC_hydro_1998_Jun)[3] <- "Time_hydro"
+names(ECCC_hydro_1998_Jun)[4] <- "Temp_degC"
+names(ECCC_hydro_1998_Jun)[5] <- "pH_hydro"
+names(ECCC_hydro_1998_Jun)[6] <- "SPC_mS.cm"
+names(ECCC_hydro_1998_Jun)[7] <- "Sal_ppt"
+names(ECCC_hydro_1998_Jun)[8] <- "DO_sat"
+names(ECCC_hydro_1998_Jun)[9] <- "DO_mg.L"
+names(ECCC_hydro_1998_Jun)[10] <- "Redox_mV"
+names(ECCC_hydro_1998_Jun)[11] <- "Depth_m"
+
+# remove rows that have no data + all-NA rows/columns
+ECCC_hydro_1998_Jun <- ECCC_hydro_1998_Jun[-c(1:3, 7, 11, 19, 23), ]
+ECCC_hydro_1998_Jun <- print(ECCC_hydro_1998_Jun[rowSums(is.na(ECCC_hydro_1998_Jun)) != ncol(ECCC_hydro_1998_Jun), ])
+
+# fill in the pond name if it's NA with the one directly above it
+ECCC_hydro_1998_Jun <- ECCC_hydro_1998_Jun %>%
+  fill(Pond, .direction = "down")
+
+# fix time format
+ECCC_hydro_1998_Jun$Time_hydro <- str_pad(ECCC_hydro_1998_Jun$Time_hydro, width = 6, pad = "0") # add leading zero for time 1-9
+ECCC_hydro_1998_Jun$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1998_Jun$Time_hydro) # add colon between HH and MM and SS
+
+# fix date format
+ECCC_hydro_1998_Jun$Date <- as.Date(paste0("1998", ECCC_hydro_1998_Jun$Date), format = "%Y%B%d") # %B = the month name
+
+#
+
+### JULY ####
+
+# read in excel sheets 
+ECCC_hydro_1998_Jul <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet3")
+
+# rename columns - July
+names(ECCC_hydro_1998_Jul)[1] <- "Pond"
+names(ECCC_hydro_1998_Jul)[2] <- "Date"
+names(ECCC_hydro_1998_Jul)[3] <- "Time_hydro"
+names(ECCC_hydro_1998_Jul)[4] <- "Temp_degC"
+names(ECCC_hydro_1998_Jul)[5] <- "pH_hydro"
+names(ECCC_hydro_1998_Jul)[6] <- "SPC_mS.cm"
+names(ECCC_hydro_1998_Jul)[7] <- "Sal_ppt"
+names(ECCC_hydro_1998_Jul)[8] <- "DO_sat"
+names(ECCC_hydro_1998_Jul)[9] <- "DO_mg.L"
+names(ECCC_hydro_1998_Jul)[10] <- "Redox_mV"
+names(ECCC_hydro_1998_Jul)[11] <- "Depth_m"
+
+# remove rows that have no data + all-NA rows/columns
+ECCC_hydro_1998_Jul <- ECCC_hydro_1998_Jul[-c(1:3, 11, 14, 22, 25, 49), ]
+ECCC_hydro_1998_Jul <- print(ECCC_hydro_1998_Jul[rowSums(is.na(ECCC_hydro_1998_Jul)) != ncol(ECCC_hydro_1998_Jul), ])
+
+# fill in the pond name if it's NA with the one directly above it
+ECCC_hydro_1998_Jul <- ECCC_hydro_1998_Jul %>%
+  fill(Pond, .direction = "down")
+
+# fix time format
+ECCC_hydro_1998_Jul$Time_hydro <- str_pad(ECCC_hydro_1998_Jul$Time_hydro, width = 6, pad = "0") # add leading zero for time 1-9
+ECCC_hydro_1998_Jul$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1998_Jul$Time_hydro) # add colon between HH and MM and SS
+
+# fix date format
+ECCC_hydro_1998_Jul$Date <- as.Date(paste0("1998", ECCC_hydro_1998_Jul$Date), format = "%Y%B%d") # %B = the month name
+
+#
+
+### AUGUST ####
+
+# read in excel sheets 
+ECCC_hydro_1998_Aug <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet4")
+
+# rename columns - August
+names(ECCC_hydro_1998_Aug)[1] <- "Pond"
+names(ECCC_hydro_1998_Aug)[2] <- "Date"
+names(ECCC_hydro_1998_Aug)[3] <- "Time_hydro"
+names(ECCC_hydro_1998_Aug)[4] <- "Temp_degC"
+names(ECCC_hydro_1998_Aug)[5] <- "pH_hydro"
+names(ECCC_hydro_1998_Aug)[6] <- "SPC_mS.cm"
+names(ECCC_hydro_1998_Aug)[7] <- "Sal_ppt"
+names(ECCC_hydro_1998_Aug)[8] <- "DO_sat"
+names(ECCC_hydro_1998_Aug)[9] <- "DO_mg.L"
+names(ECCC_hydro_1998_Aug)[10] <- "Redox_mV"
+names(ECCC_hydro_1998_Aug)[11] <- "Depth_m"
+
+# remove rows that have no data + all-NA rows/columns
+ECCC_hydro_1998_Aug <- ECCC_hydro_1998_Aug[-c(1:3, 10, 14, 22, 26), ]
+ECCC_hydro_1998_Aug <- print(ECCC_hydro_1998_Aug[rowSums(is.na(ECCC_hydro_1998_Aug)) != ncol(ECCC_hydro_1998_Aug), ])
+
+# fill in the pond name if it's NA with the one directly above it
+ECCC_hydro_1998_Aug <- ECCC_hydro_1998_Aug %>%
+  fill(Pond, .direction = "down")
+
+# fix time format
+ECCC_hydro_1998_Aug$Time_hydro <- str_pad(ECCC_hydro_1998_Aug$Time_hydro, width = 6, pad = "0") # add leading zero for time 1-9
+ECCC_hydro_1998_Aug$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1998_Aug$Time_hydro) # add colon between HH and MM and SS
+
+# fix date format
+ECCC_hydro_1998_Aug$Date <- str_pad(ECCC_hydro_1998_Aug$Date, width = 6, pad = "0") # add leading zero for months 1-9
+ECCC_hydro_1998_Aug$Date <- as.Date(strptime(ECCC_hydro_1998_Aug$Date, format = "%m%d%y"))
+
+#
+
+### SEPTEMBER ####
+
+# read in excel sheets 
+ECCC_hydro_1998_Sep <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet5")
+
+# rename columns - September
+names(ECCC_hydro_1998_Sep)[1] <- "Pond"
+names(ECCC_hydro_1998_Sep)[2] <- "Date"
+names(ECCC_hydro_1998_Sep)[3] <- "Time_hydro"
+names(ECCC_hydro_1998_Sep)[4] <- "Temp_degC"
+names(ECCC_hydro_1998_Sep)[5] <- "pH_hydro"
+names(ECCC_hydro_1998_Sep)[6] <- "SPC_mS.cm"
+names(ECCC_hydro_1998_Sep)[7] <- "Sal_ppt"
+names(ECCC_hydro_1998_Sep)[8] <- "DO_sat"
+names(ECCC_hydro_1998_Sep)[9] <- "DO_mg.L"
+names(ECCC_hydro_1998_Sep)[10] <- "Redox_mV"
+names(ECCC_hydro_1998_Sep)[11] <- "Depth_m"
+
+# remove rows that have no data + all-NA rows/columns
+ECCC_hydro_1998_Sep <- ECCC_hydro_1998_Sep[-c(1:3, 6, 10, 22, 24), ]
+ECCC_hydro_1998_Sep <- print(ECCC_hydro_1998_Sep[rowSums(is.na(ECCC_hydro_1998_Sep)) != ncol(ECCC_hydro_1998_Sep), ])
+
+# fill in the pond name if it's NA with the one directly above it
+ECCC_hydro_1998_Sep <- ECCC_hydro_1998_Sep %>%
+  fill(Pond, .direction = "down")
+
+# fix time format
+ECCC_hydro_1998_Sep$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1998_Sep$Time_hydro) # add colon between HH and MM and SS
+
+# fix date format
+ECCC_hydro_1998_Sep$Date <- str_pad(ECCC_hydro_1998_Sep$Date, width = 6, pad = "0") # add leading zero for months 1-9
+ECCC_hydro_1998_Sep$Date <- as.Date(strptime(ECCC_hydro_1998_Sep$Date, format = "%m%d%y"))
+
+#
+
+### OCTOBER ####
+
+# read in excel sheets 
+ECCC_hydro_1998_Oct <- read_excel("00_rawdata/VijayDriveSDNWA/Hydrolab/WEVS1998 Hydrolab data.xls", sheet = "Sheet6")
+
+# rename columns - October
+names(ECCC_hydro_1998_Oct)[1] <- "Pond"
+names(ECCC_hydro_1998_Oct)[2] <- "Date"
+names(ECCC_hydro_1998_Oct)[3] <- "Time_hydro"
+names(ECCC_hydro_1998_Oct)[4] <- "Temp_degC"
+names(ECCC_hydro_1998_Oct)[5] <- "pH_hydro"
+names(ECCC_hydro_1998_Oct)[6] <- "SPC_mS.cm"
+names(ECCC_hydro_1998_Oct)[7] <- "Sal_ppt"
+names(ECCC_hydro_1998_Oct)[8] <- "DO_sat"
+names(ECCC_hydro_1998_Oct)[9] <- "DO_mg.L"
+names(ECCC_hydro_1998_Oct)[10] <- "Redox_mV"
+names(ECCC_hydro_1998_Oct)[11] <- "Depth_m"
+
+# remove rows that have no data + all-NA rows/columns
+ECCC_hydro_1998_Oct <- ECCC_hydro_1998_Oct[-c(1:2, 7, 9, 11, 13, 15, 16), ]
+ECCC_hydro_1998_Oct <- print(ECCC_hydro_1998_Oct[rowSums(is.na(ECCC_hydro_1998_Oct)) != ncol(ECCC_hydro_1998_Oct), ])
+
+# fill in the pond name if it's NA with the one directly above it
+ECCC_hydro_1998_Oct <- ECCC_hydro_1998_Oct %>%
+  fill(Pond, .direction = "down")
+
+# fix time format
+ECCC_hydro_1998_Oct$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1998_Oct$Time_hydro) # add colon between HH and MM and SS
+
+# fix date format
+ECCC_hydro_1998_Oct$Date <- "1998-10-02"
+ECCC_hydro_1998_Oct$Date <- as.Date(ECCC_hydro_1998_Oct$Date)
+
+#
+
+
+### Merging 1998 Data ----------------------------------------------------------
+
+ECCC_hydro_1998 <- full_join(ECCC_hydro_1998_Jun, ECCC_hydro_1998_Jul)
+ECCC_hydro_1998 <- full_join(ECCC_hydro_1998, ECCC_hydro_1998_Aug)
+ECCC_hydro_1998 <- full_join(ECCC_hydro_1998, ECCC_hydro_1998_Sep)
+ECCC_hydro_1998 <- full_join(ECCC_hydro_1998, ECCC_hydro_1998_Oct)
+ECCC_hydro_1998 <- full_join(ECCC_hydro_1998, ECCC_hydro_1998_May)
+
+# make all columns numeric
 ECCC_hydro_1998$Temp_degC <- as.numeric(ECCC_hydro_1998$Temp_degC)
 ECCC_hydro_1998$pH_hydro <- as.numeric(ECCC_hydro_1998$pH_hydro)
 ECCC_hydro_1998$SPC_mS.cm <- as.numeric(ECCC_hydro_1998$SPC_mS.cm)
@@ -261,14 +431,10 @@ ECCC_hydro_1998$DO_mg.L <- as.numeric(ECCC_hydro_1998$DO_mg.L)
 ECCC_hydro_1998$Redox_mV <- as.numeric(ECCC_hydro_1998$Redox_mV)
 ECCC_hydro_1998$Depth_m <- as.numeric(ECCC_hydro_1998$Depth_m)
 
-# convert depth to negative values for Data Stream template
+# convert depth column to negative values for Data Stream template
 ECCC_hydro_1998$Depth_m <- ifelse(ECCC_hydro_1998$Depth_m > 0, -1*ECCC_hydro_1998$Depth_m, ECCC_hydro_1998$Depth_m)
 
-# add Year column and put after Month column
-ECCC_hydro_1998$Year <- 1998
-ECCC_hydro_1998 <- ECCC_hydro_1998 %>% 
-  relocate(Year, .after = Month)
-
+#
 
 ### Hydrolab 1999 --------------------------------------------------------------
 
@@ -300,23 +466,6 @@ ECCC_hydro_1999 <- ECCC_hydro_1999 %>%
 ECCC_hydro_1999$Date <- str_pad(ECCC_hydro_1999$Date, width = 6, pad = "0") # add leading zero for months 1-9
 ECCC_hydro_1999$Date <- as.Date(strptime(ECCC_hydro_1999$Date, format = "%m%d%y"))
 
-# add Month column
-ECCC_hydro_1999$Month <- month(ECCC_hydro_1999$Date)
-ECCC_hydro_1999 <- ECCC_hydro_1999 %>% 
-  relocate(Month, .after = Date)
-ECCC_hydro_1999$Month <- gsub(4,"April",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(5,"May",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(6,"June",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(7,"July",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(8,"August",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(9,"September",ECCC_hydro_1999$Month)
-ECCC_hydro_1999$Month <- gsub(10,"October",ECCC_hydro_1999$Month)
-
-# add Year column and put after Month column
-ECCC_hydro_1999$Year <- 1999
-ECCC_hydro_1999 <- ECCC_hydro_1999 %>% 
-  relocate(Year, .after = Month)
-
 # fix time format
 ECCC_hydro_1999$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1999$Time_hydro) # add colon between HH and MM and SS
 
@@ -332,20 +481,26 @@ ECCC_hydro_1999$Depth_m <- as.numeric(ECCC_hydro_1999$Depth_m)
 # convert depth to negative values for Data Stream template
 ECCC_hydro_1999$Depth_m <- ifelse(ECCC_hydro_1999$Depth_m > 0, -1*ECCC_hydro_1999$Depth_m, ECCC_hydro_1999$Depth_m)
 
+#
 
-### Hydrolab merging: 1997-1999 ------------------------------------------------
+### Hydrolab merging and export: 1997-1999 -------------------------------------
 
 # merge 1997-1999 data 
-ECCC_hydro_merged2 <- full_join(ECCC_hydro_1997, ECCC_hydro_1998)
-ECCC_hydro_merged2 <- full_join(ECCC_hydro_merged2, ECCC_hydro_1999)
+ECCC_hydro_merged2 <- full_join(ECCC_hydro_1998, ECCC_hydro_1999)
+ECCC_hydro_merged2 <- full_join(ECCC_hydro_merged2, ECCC_hydro_1997)
 
-### Hydrolab merging: all years ------------------------------------------------
+# convert to long format to input into Data Stream
+ECCC_hydro_merged2_long <- pivot_longer(ECCC_hydro_merged2, cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", 
+                                                        "pH_hydro", "Sal_ppt", "DO_sat", "Redox_mV"), 
+                                names_to = "CharacteristicID", values_to = "ResultValue")
 
-# merge 1993-1999 data
-ECCC_hydrolab <- full_join(ECCC_hydro_merged, ECCC_hydro_merged2)
+# write as new csv
+write.csv(ECCC_hydro_merged2_long,"05_DataStream/ECCC_hydro_long_1997-1999.csv")
 
-ECCC_hydrolab$Pond <- gsub("Gursky","Gursky's", ECCC_hydrolab$Pond)
-ECCC_hydrolab$Pond <- gsub("'s's","'s", ECCC_hydrolab$Pond)
+
+#
+
+
 
 ### Checking for outliers-------------------------------------------------------
 
@@ -377,11 +532,7 @@ data.frame(SPC_outlier)
 # remove 2 SPC outliers above 150 mS/cm
 ECCC_hydrolab$SPC_mS.cm <- ifelse(ECCC_hydrolab$SPC_mS.cm > 150, NA, ECCC_hydrolab$SPC_mS.cm)
 
-### Export Hydrolab data -------------------------------------------------------
 
-write.csv(ECCC_hydrolab,"02_tidydata/ECCC_hydrolab_clean.csv")
-
-#
 
 ###-----------------------------------------------------------------------------
 #
@@ -453,80 +604,68 @@ ECCC_nut_1993$Date <- lubridate::dmy(ECCC_nut_1993$Date)
 # fix time format 
 ECCC_nut_1993$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1993$Time) # add colon between HH and MM
 
-# fix NO3NO2 column
-ECCC_nut_1993$NO3NO2_mg.L <- gsub("L0.010","0.001",ECCC_nut_1993$NO3NO2_mg.L) # make it near 0 bc it's below detection
-ECCC_nut_1993$NO3NO2_mg.L <- gsub("L0.01","0.001",ECCC_nut_1993$NO3NO2_mg.L) # make it near 0 bc it's below detection
-
-# fix F diss column
-ECCC_nut_1993$F_diss_mg.L <- gsub("L.01","0.001",ECCC_nut_1993$F_diss_mg.L) # make it near 0 bc it's below detection
-ECCC_nut_1993$F_diss_mg.L <- gsub("SusInt",NA,ECCC_nut_1993$F_diss_mg.L) 
-
-# fix Na diss column
-ECCC_nut_1993$Na_diss_mg.L <- gsub("L.4","0.4",ECCC_nut_1993$Na_diss_mg.L) 
-
-# fix P diss ortho column
-ECCC_nut_1993$P_diss_ortho_mg.L <- gsub("L0.002","0.001",ECCC_nut_1993$P_diss_ortho_mg.L) # make it near 0 bc it's below detection
-
 # fix Cl diss column
 ECCC_nut_1993$Cl_diss_mg.L <- gsub("????g33",NA,ECCC_nut_1993$Cl_diss_mg.L) 
+ 
+# # make sure all other columns are numeric
+# ECCC_nut_1993$Julianday <- as.numeric(ECCC_nut_1993$Julianday)
+# ECCC_nut_1993$TDS_mg.L <- as.numeric(ECCC_nut_1993$TDS_mg.L)
+# ECCC_nut_1993$Cond_uS.cm <- as.numeric(ECCC_nut_1993$Cond_uS.cm)
+# ECCC_nut_1993$TOC_mg.L <- as.numeric(ECCC_nut_1993$TOC_mg.L)
+# ECCC_nut_1993$DOC_mg.L <- as.numeric(ECCC_nut_1993$DOC_mg.L)
+# ECCC_nut_1993$HCO3_mg.L <- as.numeric(ECCC_nut_1993$HCO3_mg.L)
+# ECCC_nut_1993$CO3_mg.L <- as.numeric(ECCC_nut_1993$CO3_mg.L)
+# ECCC_nut_1993$FreeCO2_mg.L <- as.numeric(ECCC_nut_1993$FreeCO2_mg.L)
+# ECCC_nut_1993$POC_mg.L <- as.numeric(ECCC_nut_1993$POC_mg.L)
+# ECCC_nut_1993$NO3NO2_mg.L <- as.numeric(ECCC_nut_1993$NO3NO2_mg.L)
+# ECCC_nut_1993$NH3_tot_mg.L <- as.numeric(ECCC_nut_1993$NH3_tot_mg.L)
+# ECCC_nut_1993$NH3_union_mg.L <- as.numeric(ECCC_nut_1993$NH3_union_mg.L)
+# ECCC_nut_1993$TN_mg.L <- as.numeric(ECCC_nut_1993$TN_mg.L)
+# ECCC_nut_1993$DN_mg.L <- as.numeric(ECCC_nut_1993$DN_mg.L)
+# ECCC_nut_1993$PN_mg.L <- as.numeric(ECCC_nut_1993$PN_mg.L)
+# ECCC_nut_1993$OH_mg.L <- as.numeric(ECCC_nut_1993$OH_mg.L)
+# ECCC_nut_1993$F_diss_mg.L <- as.numeric(ECCC_nut_1993$F_diss_mg.L)
+# ECCC_nut_1993$Alk_tot_mg.L <- as.numeric(ECCC_nut_1993$Alk_tot_mg.L)
+# ECCC_nut_1993$Alk_p_mg.L <- as.numeric(ECCC_nut_1993$Alk_p_mg.L)
+# ECCC_nut_1993$pH <- as.numeric(ECCC_nut_1993$pH)
+# ECCC_nut_1993$Hard_tot_mg.L <- as.numeric(ECCC_nut_1993$Hard_tot_mg.L)
+# ECCC_nut_1993$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1993$Hard_nonCO3_mg.L)
+# ECCC_nut_1993$Na_diss_mg.L <- as.numeric(ECCC_nut_1993$Na_diss_mg.L)
+# ECCC_nut_1993$Na_perc <- as.numeric(ECCC_nut_1993$Na_perc)
+# ECCC_nut_1993$Mg_diss_mg.L <- as.numeric(ECCC_nut_1993$Mg_diss_mg.L)
+# ECCC_nut_1993$SiO2_mg.L <- as.numeric(ECCC_nut_1993$SiO2_mg.L)
+# ECCC_nut_1993$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1993$P_diss_ortho_mg.L)
+# ECCC_nut_1993$P_tot_mg.L <- as.numeric(ECCC_nut_1993$P_tot_mg.L)
+# ECCC_nut_1993$P_diss_mg.L <- as.numeric(ECCC_nut_1993$P_diss_mg.L)
+# ECCC_nut_1993$P_part_mg.L <- as.numeric(ECCC_nut_1993$P_part_mg.L)
+# ECCC_nut_1993$SO4_diss_mg.L <- as.numeric(ECCC_nut_1993$SO4_diss_mg.L)
+# ECCC_nut_1993$Cl_diss_mg.L <- as.numeric(ECCC_nut_1993$Cl_diss_mg.L)
+# ECCC_nut_1993$K_diss_mg.L <- as.numeric(ECCC_nut_1993$K_diss_mg.L)
+# ECCC_nut_1993$Ca_diss_mg.L <- as.numeric(ECCC_nut_1993$Ca_diss_mg.L)
+# ECCC_nut_1993$PCPN <- as.numeric(ECCC_nut_1993$PCPN)
+# ECCC_nut_1993$PCPP <- as.numeric(ECCC_nut_1993$PCPP)
+# ECCC_nut_1993$PNPP <- as.numeric(ECCC_nut_1993$PNPP)
+# ECCC_nut_1993$Chla_mg.L <- as.numeric(ECCC_nut_1993$Chla_mg.L)
 
-# make sure all other columns are numeric
-ECCC_nut_1993$Julianday <- as.numeric(ECCC_nut_1993$Julianday)
-ECCC_nut_1993$TDS_mg.L <- as.numeric(ECCC_nut_1993$TDS_mg.L)
-ECCC_nut_1993$Cond_uS.cm <- as.numeric(ECCC_nut_1993$Cond_uS.cm)
-ECCC_nut_1993$TOC_mg.L <- as.numeric(ECCC_nut_1993$TOC_mg.L)
-ECCC_nut_1993$DOC_mg.L <- as.numeric(ECCC_nut_1993$DOC_mg.L)
-ECCC_nut_1993$HCO3_mg.L <- as.numeric(ECCC_nut_1993$HCO3_mg.L)
-ECCC_nut_1993$CO3_mg.L <- as.numeric(ECCC_nut_1993$CO3_mg.L)
-ECCC_nut_1993$FreeCO2_mg.L <- as.numeric(ECCC_nut_1993$FreeCO2_mg.L)
-ECCC_nut_1993$POC_mg.L <- as.numeric(ECCC_nut_1993$POC_mg.L)
-ECCC_nut_1993$NO3NO2_mg.L <- as.numeric(ECCC_nut_1993$NO3NO2_mg.L)
-ECCC_nut_1993$NH3_tot_mg.L <- as.numeric(ECCC_nut_1993$NH3_tot_mg.L)
-ECCC_nut_1993$NH3_union_mg.L <- as.numeric(ECCC_nut_1993$NH3_union_mg.L)
-ECCC_nut_1993$TN_mg.L <- as.numeric(ECCC_nut_1993$TN_mg.L)
-ECCC_nut_1993$DN_mg.L <- as.numeric(ECCC_nut_1993$DN_mg.L)
-ECCC_nut_1993$PN_mg.L <- as.numeric(ECCC_nut_1993$PN_mg.L)
-ECCC_nut_1993$OH_mg.L <- as.numeric(ECCC_nut_1993$OH_mg.L)
-ECCC_nut_1993$F_diss_mg.L <- as.numeric(ECCC_nut_1993$F_diss_mg.L)
-ECCC_nut_1993$Alk_tot_mg.L <- as.numeric(ECCC_nut_1993$Alk_tot_mg.L)
-ECCC_nut_1993$Alk_p_mg.L <- as.numeric(ECCC_nut_1993$Alk_p_mg.L)
-ECCC_nut_1993$pH <- as.numeric(ECCC_nut_1993$pH)
-ECCC_nut_1993$Hard_tot_mg.L <- as.numeric(ECCC_nut_1993$Hard_tot_mg.L)
-ECCC_nut_1993$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1993$Hard_nonCO3_mg.L)
-ECCC_nut_1993$Na_diss_mg.L <- as.numeric(ECCC_nut_1993$Na_diss_mg.L)
-ECCC_nut_1993$Na_perc <- as.numeric(ECCC_nut_1993$Na_perc)
-ECCC_nut_1993$Mg_diss_mg.L <- as.numeric(ECCC_nut_1993$Mg_diss_mg.L)
-ECCC_nut_1993$SiO2_mg.L <- as.numeric(ECCC_nut_1993$SiO2_mg.L)
-ECCC_nut_1993$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1993$P_diss_ortho_mg.L)
-ECCC_nut_1993$P_tot_mg.L <- as.numeric(ECCC_nut_1993$P_tot_mg.L)
-ECCC_nut_1993$P_diss_mg.L <- as.numeric(ECCC_nut_1993$P_diss_mg.L)
-ECCC_nut_1993$P_part_mg.L <- as.numeric(ECCC_nut_1993$P_part_mg.L)
-ECCC_nut_1993$SO4_diss_mg.L <- as.numeric(ECCC_nut_1993$SO4_diss_mg.L)
-ECCC_nut_1993$Cl_diss_mg.L <- as.numeric(ECCC_nut_1993$Cl_diss_mg.L)
-ECCC_nut_1993$K_diss_mg.L <- as.numeric(ECCC_nut_1993$K_diss_mg.L)
-ECCC_nut_1993$Ca_diss_mg.L <- as.numeric(ECCC_nut_1993$Ca_diss_mg.L)
-ECCC_nut_1993$PCPN <- as.numeric(ECCC_nut_1993$PCPN)
-ECCC_nut_1993$PCPP <- as.numeric(ECCC_nut_1993$PCPP)
-ECCC_nut_1993$PNPP <- as.numeric(ECCC_nut_1993$PNPP)
-ECCC_nut_1993$Chla_mg.L <- as.numeric(ECCC_nut_1993$Chla_mg.L)
+# convert to long format to input into Data Stream
+ECCC_nut_1993_long <- pivot_longer(ECCC_nut_1993, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
+                                                           "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
+                                                           "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
+                                                           "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
+                                                           "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
+                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                        names_to = "CharacteristicID", values_to = "ResultValue")
 
-# add Month column
-ECCC_nut_1993$Month <- month(ECCC_nut_1993$Date)
-ECCC_nut_1993 <- ECCC_nut_1993 %>% 
-  relocate(Month, .after = Date)
-ECCC_nut_1993$Month <- gsub(4,"April",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(5,"May",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(6,"June",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(7,"July",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(8,"August",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(9,"September",ECCC_nut_1993$Month)
-ECCC_nut_1993$Month <- gsub(10,"October",ECCC_nut_1993$Month)
+# write as new csv
+write.csv(ECCC_nut_1993_long,"05_DataStream/ECCC_nut_long_1993.csv")
 
-# add Year column and put after Month column
-ECCC_nut_1993$Year <- 1993
-ECCC_nut_1993 <- ECCC_nut_1993 %>% 
-  relocate(Year, .after = Month)
 
+
+#
 
 ### Nutrient 1994 --------------------------------------------------------------
 
@@ -578,6 +717,10 @@ names(ECCC_nut_1994)[42] <- "Chla_mg.L"
 ECCC_nut_1994 <- ECCC_nut_1994[-c(1:4, 166), -c(43:252)]
 ECCC_nut_1994 <- print(ECCC_nut_1994[rowSums(is.na(ECCC_nut_1994)) != ncol(ECCC_nut_1994), ])
 
+# remove QC blanks
+ECCC_nut_1994 <- ECCC_nut_1994 %>% 
+  filter(!Pond == "QC Blank")
+
 # fix date format
 ECCC_nut_1994$Date <- lubridate::dmy(ECCC_nut_1994$Date)
 
@@ -587,62 +730,63 @@ ECCC_nut_1994$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1994$Time) # a
 # fix pH column (should not have pH of 0)
 ECCC_nut_1994$pH <- gsub("0",NA,ECCC_nut_1994$pH)
 
-# make sure all other columns are numeric
-ECCC_nut_1994$Julianday <- as.numeric(ECCC_nut_1994$Julianday)
-ECCC_nut_1994$TDS_mg.L <- as.numeric(ECCC_nut_1994$TDS_mg.L)
-ECCC_nut_1994$Cond_uS.cm <- as.numeric(ECCC_nut_1994$Cond_uS.cm)
-ECCC_nut_1994$TOC_mg.L <- as.numeric(ECCC_nut_1994$TOC_mg.L)
-ECCC_nut_1994$DOC_mg.L <- as.numeric(ECCC_nut_1994$DOC_mg.L)
-ECCC_nut_1994$HCO3_mg.L <- as.numeric(ECCC_nut_1994$HCO3_mg.L)
-ECCC_nut_1994$CO3_mg.L <- as.numeric(ECCC_nut_1994$CO3_mg.L)
-ECCC_nut_1994$FreeCO2_mg.L <- as.numeric(ECCC_nut_1994$FreeCO2_mg.L)
-ECCC_nut_1994$POC_mg.L <- as.numeric(ECCC_nut_1994$POC_mg.L)
-ECCC_nut_1994$NO3NO2_mg.L <- as.numeric(ECCC_nut_1994$NO3NO2_mg.L)
-ECCC_nut_1994$NH3_tot_mg.L <- as.numeric(ECCC_nut_1994$NH3_tot_mg.L)
-ECCC_nut_1994$NH3_union_mg.L <- as.numeric(ECCC_nut_1994$NH3_union_mg.L)
-ECCC_nut_1994$TN_mg.L <- as.numeric(ECCC_nut_1994$TN_mg.L)
-ECCC_nut_1994$DN_mg.L <- as.numeric(ECCC_nut_1994$DN_mg.L)
-ECCC_nut_1994$PN_mg.L <- as.numeric(ECCC_nut_1994$PN_mg.L)
-ECCC_nut_1994$OH_mg.L <- as.numeric(ECCC_nut_1994$OH_mg.L)
-ECCC_nut_1994$F_diss_mg.L <- as.numeric(ECCC_nut_1994$F_diss_mg.L)
-ECCC_nut_1994$Alk_tot_mg.L <- as.numeric(ECCC_nut_1994$Alk_tot_mg.L)
-ECCC_nut_1994$Alk_p_mg.L <- as.numeric(ECCC_nut_1994$Alk_p_mg.L)
-ECCC_nut_1994$pH <- as.numeric(ECCC_nut_1994$pH)
-ECCC_nut_1994$Hard_tot_mg.L <- as.numeric(ECCC_nut_1994$Hard_tot_mg.L)
-ECCC_nut_1994$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1994$Hard_nonCO3_mg.L)
-ECCC_nut_1994$Na_diss_mg.L <- as.numeric(ECCC_nut_1994$Na_diss_mg.L)
-ECCC_nut_1994$Na_perc <- as.numeric(ECCC_nut_1994$Na_perc)
-ECCC_nut_1994$Mg_diss_mg.L <- as.numeric(ECCC_nut_1994$Mg_diss_mg.L)
-ECCC_nut_1994$SiO2_mg.L <- as.numeric(ECCC_nut_1994$SiO2_mg.L)
-ECCC_nut_1994$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1994$P_diss_ortho_mg.L)
-ECCC_nut_1994$P_tot_mg.L <- as.numeric(ECCC_nut_1994$P_tot_mg.L)
-ECCC_nut_1994$P_diss_mg.L <- as.numeric(ECCC_nut_1994$P_diss_mg.L)
-ECCC_nut_1994$P_part_mg.L <- as.numeric(ECCC_nut_1994$P_part_mg.L)
-ECCC_nut_1994$SO4_diss_mg.L <- as.numeric(ECCC_nut_1994$SO4_diss_mg.L)
-ECCC_nut_1994$Cl_diss_mg.L <- as.numeric(ECCC_nut_1994$Cl_diss_mg.L)
-ECCC_nut_1994$K_diss_mg.L <- as.numeric(ECCC_nut_1994$K_diss_mg.L)
-ECCC_nut_1994$Ca_diss_mg.L <- as.numeric(ECCC_nut_1994$Ca_diss_mg.L)
-ECCC_nut_1994$PCPN <- as.numeric(ECCC_nut_1994$PCPN)
-ECCC_nut_1994$PCPP <- as.numeric(ECCC_nut_1994$PCPP)
-ECCC_nut_1994$PNPP <- as.numeric(ECCC_nut_1994$PNPP)
-ECCC_nut_1994$Chla_mg.L <- as.numeric(ECCC_nut_1994$Chla_mg.L)
+# # make sure all other columns are numeric
+# ECCC_nut_1994$Julianday <- as.numeric(ECCC_nut_1994$Julianday)
+# ECCC_nut_1994$TDS_mg.L <- as.numeric(ECCC_nut_1994$TDS_mg.L)
+# ECCC_nut_1994$Cond_uS.cm <- as.numeric(ECCC_nut_1994$Cond_uS.cm)
+# ECCC_nut_1994$TOC_mg.L <- as.numeric(ECCC_nut_1994$TOC_mg.L)
+# ECCC_nut_1994$DOC_mg.L <- as.numeric(ECCC_nut_1994$DOC_mg.L)
+# ECCC_nut_1994$HCO3_mg.L <- as.numeric(ECCC_nut_1994$HCO3_mg.L)
+# ECCC_nut_1994$CO3_mg.L <- as.numeric(ECCC_nut_1994$CO3_mg.L)
+# ECCC_nut_1994$FreeCO2_mg.L <- as.numeric(ECCC_nut_1994$FreeCO2_mg.L)
+# ECCC_nut_1994$POC_mg.L <- as.numeric(ECCC_nut_1994$POC_mg.L)
+# ECCC_nut_1994$NO3NO2_mg.L <- as.numeric(ECCC_nut_1994$NO3NO2_mg.L)
+# ECCC_nut_1994$NH3_tot_mg.L <- as.numeric(ECCC_nut_1994$NH3_tot_mg.L)
+# ECCC_nut_1994$NH3_union_mg.L <- as.numeric(ECCC_nut_1994$NH3_union_mg.L)
+# ECCC_nut_1994$TN_mg.L <- as.numeric(ECCC_nut_1994$TN_mg.L)
+# ECCC_nut_1994$DN_mg.L <- as.numeric(ECCC_nut_1994$DN_mg.L)
+# ECCC_nut_1994$PN_mg.L <- as.numeric(ECCC_nut_1994$PN_mg.L)
+# ECCC_nut_1994$OH_mg.L <- as.numeric(ECCC_nut_1994$OH_mg.L)
+# ECCC_nut_1994$F_diss_mg.L <- as.numeric(ECCC_nut_1994$F_diss_mg.L)
+# ECCC_nut_1994$Alk_tot_mg.L <- as.numeric(ECCC_nut_1994$Alk_tot_mg.L)
+# ECCC_nut_1994$Alk_p_mg.L <- as.numeric(ECCC_nut_1994$Alk_p_mg.L)
+# ECCC_nut_1994$pH <- as.numeric(ECCC_nut_1994$pH)
+# ECCC_nut_1994$Hard_tot_mg.L <- as.numeric(ECCC_nut_1994$Hard_tot_mg.L)
+# ECCC_nut_1994$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1994$Hard_nonCO3_mg.L)
+# ECCC_nut_1994$Na_diss_mg.L <- as.numeric(ECCC_nut_1994$Na_diss_mg.L)
+# ECCC_nut_1994$Na_perc <- as.numeric(ECCC_nut_1994$Na_perc)
+# ECCC_nut_1994$Mg_diss_mg.L <- as.numeric(ECCC_nut_1994$Mg_diss_mg.L)
+# ECCC_nut_1994$SiO2_mg.L <- as.numeric(ECCC_nut_1994$SiO2_mg.L)
+# ECCC_nut_1994$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1994$P_diss_ortho_mg.L)
+# ECCC_nut_1994$P_tot_mg.L <- as.numeric(ECCC_nut_1994$P_tot_mg.L)
+# ECCC_nut_1994$P_diss_mg.L <- as.numeric(ECCC_nut_1994$P_diss_mg.L)
+# ECCC_nut_1994$P_part_mg.L <- as.numeric(ECCC_nut_1994$P_part_mg.L)
+# ECCC_nut_1994$SO4_diss_mg.L <- as.numeric(ECCC_nut_1994$SO4_diss_mg.L)
+# ECCC_nut_1994$Cl_diss_mg.L <- as.numeric(ECCC_nut_1994$Cl_diss_mg.L)
+# ECCC_nut_1994$K_diss_mg.L <- as.numeric(ECCC_nut_1994$K_diss_mg.L)
+# ECCC_nut_1994$Ca_diss_mg.L <- as.numeric(ECCC_nut_1994$Ca_diss_mg.L)
+# ECCC_nut_1994$PCPN <- as.numeric(ECCC_nut_1994$PCPN)
+# ECCC_nut_1994$PCPP <- as.numeric(ECCC_nut_1994$PCPP)
+# ECCC_nut_1994$PNPP <- as.numeric(ECCC_nut_1994$PNPP)
+# ECCC_nut_1994$Chla_mg.L <- as.numeric(ECCC_nut_1994$Chla_mg.L)
 
-# add Month column
-ECCC_nut_1994$Month <- month(ECCC_nut_1994$Date)
-ECCC_nut_1994 <- ECCC_nut_1994 %>% 
-  relocate(Month, .after = Date)
-ECCC_nut_1994$Month <- gsub(4,"April",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(5,"May",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(6,"June",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(7,"July",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(8,"August",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(9,"September",ECCC_nut_1994$Month)
-ECCC_nut_1994$Month <- gsub(10,"October",ECCC_nut_1994$Month)
+# convert to long format to input into Data Stream
+ECCC_nut_1994_long <- pivot_longer(ECCC_nut_1994, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
+                                                           "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
+                                                           "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
+                                                           "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
+                                                           "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
+                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                   names_to = "CharacteristicID", values_to = "ResultValue")
 
-# add Year column and put after Month column
-ECCC_nut_1994$Year <- 1994
-ECCC_nut_1994 <- ECCC_nut_1994 %>% 
-  relocate(Year, .after = Month)
+# write as new csv
+write.csv(ECCC_nut_1994_long,"05_DataStream/ECCC_nut_long_1994.csv")
+
+#
 
 
 ### Nutrient 1995 --------------------------------------------------------------
@@ -701,77 +845,67 @@ ECCC_nut_1995$Date <- lubridate::dmy(ECCC_nut_1995$Date)
 # fix time format 
 ECCC_nut_1995$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1995$Time) # add colon between HH and MM
 
-# fix NO3NO2 column
-ECCC_nut_1995$NO3NO2_mg.L <- gsub("L0.01!","0.001",ECCC_nut_1995$NO3NO2_mg.L) # make it near 0 bc it's below detection
-
-# fix F diss column
-ECCC_nut_1995$F_diss_mg.L <- gsub("L.01","0.001",ECCC_nut_1995$F_diss_mg.L) # make it near 0 bc it's below detection
-ECCC_nut_1995$F_diss_mg.L <- gsub("IN",NA,ECCC_nut_1995$F_diss_mg.L) 
-
-# fix P diss ortho column
-ECCC_nut_1995$P_diss_ortho_mg.L <- gsub("L0.002!","0.001",ECCC_nut_1995$P_diss_ortho_mg.L) # make it near 0 bc it's below detection
-
 # fix K diss column
 ECCC_nut_1995$K_diss_mg.L <- gsub("I56",NA,ECCC_nut_1995$K_diss_mg.L) 
 ECCC_nut_1995$K_diss_mg.L <- gsub("G55",NA,ECCC_nut_1995$K_diss_mg.L)
 
-# make sure all other columns are numeric
-ECCC_nut_1995$Julianday <- as.numeric(ECCC_nut_1995$Julianday)
-ECCC_nut_1995$TDS_mg.L <- as.numeric(ECCC_nut_1995$TDS_mg.L)
-ECCC_nut_1995$Cond_uS.cm <- as.numeric(ECCC_nut_1995$Cond_uS.cm)
-ECCC_nut_1995$TOC_mg.L <- as.numeric(ECCC_nut_1995$TOC_mg.L)
-ECCC_nut_1995$DOC_mg.L <- as.numeric(ECCC_nut_1995$DOC_mg.L)
-ECCC_nut_1995$HCO3_mg.L <- as.numeric(ECCC_nut_1995$HCO3_mg.L)
-ECCC_nut_1995$CO3_mg.L <- as.numeric(ECCC_nut_1995$CO3_mg.L)
-ECCC_nut_1995$FreeCO2_mg.L <- as.numeric(ECCC_nut_1995$FreeCO2_mg.L)
-ECCC_nut_1995$POC_mg.L <- as.numeric(ECCC_nut_1995$POC_mg.L)
-ECCC_nut_1995$NO3NO2_mg.L <- as.numeric(ECCC_nut_1995$NO3NO2_mg.L)
-ECCC_nut_1995$NH3_tot_mg.L <- as.numeric(ECCC_nut_1995$NH3_tot_mg.L)
-ECCC_nut_1995$NH3_union_mg.L <- as.numeric(ECCC_nut_1995$NH3_union_mg.L)
-ECCC_nut_1995$TN_mg.L <- as.numeric(ECCC_nut_1995$TN_mg.L)
-ECCC_nut_1995$DN_mg.L <- as.numeric(ECCC_nut_1995$DN_mg.L)
-ECCC_nut_1995$PN_mg.L <- as.numeric(ECCC_nut_1995$PN_mg.L)
-ECCC_nut_1995$OH_mg.L <- as.numeric(ECCC_nut_1995$OH_mg.L)
-ECCC_nut_1995$F_diss_mg.L <- as.numeric(ECCC_nut_1995$F_diss_mg.L)
-ECCC_nut_1995$Alk_tot_mg.L <- as.numeric(ECCC_nut_1995$Alk_tot_mg.L)
-ECCC_nut_1995$Alk_p_mg.L <- as.numeric(ECCC_nut_1995$Alk_p_mg.L)
-ECCC_nut_1995$pH <- as.numeric(ECCC_nut_1995$pH)
-ECCC_nut_1995$Hard_tot_mg.L <- as.numeric(ECCC_nut_1995$Hard_tot_mg.L)
-ECCC_nut_1995$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1995$Hard_nonCO3_mg.L)
-ECCC_nut_1995$Na_diss_mg.L <- as.numeric(ECCC_nut_1995$Na_diss_mg.L)
-ECCC_nut_1995$Na_perc <- as.numeric(ECCC_nut_1995$Na_perc)
-ECCC_nut_1995$Mg_diss_mg.L <- as.numeric(ECCC_nut_1995$Mg_diss_mg.L)
-ECCC_nut_1995$SiO2_mg.L <- as.numeric(ECCC_nut_1995$SiO2_mg.L)
-ECCC_nut_1995$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1995$P_diss_ortho_mg.L)
-ECCC_nut_1995$P_tot_mg.L <- as.numeric(ECCC_nut_1995$P_tot_mg.L)
-ECCC_nut_1995$P_diss_mg.L <- as.numeric(ECCC_nut_1995$P_diss_mg.L)
-ECCC_nut_1995$P_part_mg.L <- as.numeric(ECCC_nut_1995$P_part_mg.L)
-ECCC_nut_1995$SO4_diss_mg.L <- as.numeric(ECCC_nut_1995$SO4_diss_mg.L)
-ECCC_nut_1995$Cl_diss_mg.L <- as.numeric(ECCC_nut_1995$Cl_diss_mg.L)
-ECCC_nut_1995$K_diss_mg.L <- as.numeric(ECCC_nut_1995$K_diss_mg.L)
-ECCC_nut_1995$Ca_diss_mg.L <- as.numeric(ECCC_nut_1995$Ca_diss_mg.L)
-ECCC_nut_1995$PCPN <- as.numeric(ECCC_nut_1995$PCPN)
-ECCC_nut_1995$PCPP <- as.numeric(ECCC_nut_1995$PCPP)
-ECCC_nut_1995$PNPP <- as.numeric(ECCC_nut_1995$PNPP)
-ECCC_nut_1995$Chla_mg.L <- as.numeric(ECCC_nut_1995$Chla_mg.L)
+# # make sure all other columns are numeric
+# ECCC_nut_1995$Julianday <- as.numeric(ECCC_nut_1995$Julianday)
+# ECCC_nut_1995$TDS_mg.L <- as.numeric(ECCC_nut_1995$TDS_mg.L)
+# ECCC_nut_1995$Cond_uS.cm <- as.numeric(ECCC_nut_1995$Cond_uS.cm)
+# ECCC_nut_1995$TOC_mg.L <- as.numeric(ECCC_nut_1995$TOC_mg.L)
+# ECCC_nut_1995$DOC_mg.L <- as.numeric(ECCC_nut_1995$DOC_mg.L)
+# ECCC_nut_1995$HCO3_mg.L <- as.numeric(ECCC_nut_1995$HCO3_mg.L)
+# ECCC_nut_1995$CO3_mg.L <- as.numeric(ECCC_nut_1995$CO3_mg.L)
+# ECCC_nut_1995$FreeCO2_mg.L <- as.numeric(ECCC_nut_1995$FreeCO2_mg.L)
+# ECCC_nut_1995$POC_mg.L <- as.numeric(ECCC_nut_1995$POC_mg.L)
+# ECCC_nut_1995$NO3NO2_mg.L <- as.numeric(ECCC_nut_1995$NO3NO2_mg.L)
+# ECCC_nut_1995$NH3_tot_mg.L <- as.numeric(ECCC_nut_1995$NH3_tot_mg.L)
+# ECCC_nut_1995$NH3_union_mg.L <- as.numeric(ECCC_nut_1995$NH3_union_mg.L)
+# ECCC_nut_1995$TN_mg.L <- as.numeric(ECCC_nut_1995$TN_mg.L)
+# ECCC_nut_1995$DN_mg.L <- as.numeric(ECCC_nut_1995$DN_mg.L)
+# ECCC_nut_1995$PN_mg.L <- as.numeric(ECCC_nut_1995$PN_mg.L)
+# ECCC_nut_1995$OH_mg.L <- as.numeric(ECCC_nut_1995$OH_mg.L)
+# ECCC_nut_1995$F_diss_mg.L <- as.numeric(ECCC_nut_1995$F_diss_mg.L)
+# ECCC_nut_1995$Alk_tot_mg.L <- as.numeric(ECCC_nut_1995$Alk_tot_mg.L)
+# ECCC_nut_1995$Alk_p_mg.L <- as.numeric(ECCC_nut_1995$Alk_p_mg.L)
+# ECCC_nut_1995$pH <- as.numeric(ECCC_nut_1995$pH)
+# ECCC_nut_1995$Hard_tot_mg.L <- as.numeric(ECCC_nut_1995$Hard_tot_mg.L)
+# ECCC_nut_1995$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1995$Hard_nonCO3_mg.L)
+# ECCC_nut_1995$Na_diss_mg.L <- as.numeric(ECCC_nut_1995$Na_diss_mg.L)
+# ECCC_nut_1995$Na_perc <- as.numeric(ECCC_nut_1995$Na_perc)
+# ECCC_nut_1995$Mg_diss_mg.L <- as.numeric(ECCC_nut_1995$Mg_diss_mg.L)
+# ECCC_nut_1995$SiO2_mg.L <- as.numeric(ECCC_nut_1995$SiO2_mg.L)
+# ECCC_nut_1995$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1995$P_diss_ortho_mg.L)
+# ECCC_nut_1995$P_tot_mg.L <- as.numeric(ECCC_nut_1995$P_tot_mg.L)
+# ECCC_nut_1995$P_diss_mg.L <- as.numeric(ECCC_nut_1995$P_diss_mg.L)
+# ECCC_nut_1995$P_part_mg.L <- as.numeric(ECCC_nut_1995$P_part_mg.L)
+# ECCC_nut_1995$SO4_diss_mg.L <- as.numeric(ECCC_nut_1995$SO4_diss_mg.L)
+# ECCC_nut_1995$Cl_diss_mg.L <- as.numeric(ECCC_nut_1995$Cl_diss_mg.L)
+# ECCC_nut_1995$K_diss_mg.L <- as.numeric(ECCC_nut_1995$K_diss_mg.L)
+# ECCC_nut_1995$Ca_diss_mg.L <- as.numeric(ECCC_nut_1995$Ca_diss_mg.L)
+# ECCC_nut_1995$PCPN <- as.numeric(ECCC_nut_1995$PCPN)
+# ECCC_nut_1995$PCPP <- as.numeric(ECCC_nut_1995$PCPP)
+# ECCC_nut_1995$PNPP <- as.numeric(ECCC_nut_1995$PNPP)
+# ECCC_nut_1995$Chla_mg.L <- as.numeric(ECCC_nut_1995$Chla_mg.L)
 
-# add Month column
-ECCC_nut_1995$Month <- month(ECCC_nut_1995$Date)
-ECCC_nut_1995 <- ECCC_nut_1995 %>% 
-  relocate(Month, .after = Date)
-ECCC_nut_1995$Month <- gsub(4,"April",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(5,"May",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(6,"June",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(7,"July",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(8,"August",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(9,"September",ECCC_nut_1995$Month)
-ECCC_nut_1995$Month <- gsub(10,"October",ECCC_nut_1995$Month)
+# convert to long format to input into Data Stream
+ECCC_nut_1995_long <- pivot_longer(ECCC_nut_1995, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
+                                                           "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
+                                                           "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
+                                                           "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
+                                                           "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
+                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                   names_to = "CharacteristicID", values_to = "ResultValue")
 
-# add Year column and put after Month column
-ECCC_nut_1995$Year <- 1995
-ECCC_nut_1995 <- ECCC_nut_1995 %>% 
-  relocate(Year, .after = Month)
+# write as new csv
+write.csv(ECCC_nut_1995_long,"05_DataStream/ECCC_nut_long_1995.csv")
 
+#
 
 ### Nutrient 1996 --------------------------------------------------------------
 
@@ -832,76 +966,63 @@ ECCC_nut_1996$Date <- lubridate::dmy(ECCC_nut_1996$Date)
 # fix time format 
 ECCC_nut_1996$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1996$Time) # add colon between HH and MM
 
-# fix NO3NO2 column
-ECCC_nut_1996$NO3NO2_mg.L <- gsub("L0.010","0.001",ECCC_nut_1996$NO3NO2_mg.L) # make it near 0 bc it's below detection
+# # make sure all other columns are numeric
+# ECCC_nut_1996$Julianday <- as.numeric(ECCC_nut_1996$Julianday)
+# ECCC_nut_1996$TDS_mg.L <- as.numeric(ECCC_nut_1996$TDS_mg.L)
+# ECCC_nut_1996$Cond_uS.cm <- as.numeric(ECCC_nut_1996$Cond_uS.cm)
+# ECCC_nut_1996$TOC_mg.L <- as.numeric(ECCC_nut_1996$TOC_mg.L)
+# ECCC_nut_1996$DOC_mg.L <- as.numeric(ECCC_nut_1996$DOC_mg.L)
+# ECCC_nut_1996$HCO3_mg.L <- as.numeric(ECCC_nut_1996$HCO3_mg.L)
+# ECCC_nut_1996$CO3_mg.L <- as.numeric(ECCC_nut_1996$CO3_mg.L)
+# ECCC_nut_1996$FreeCO2_mg.L <- as.numeric(ECCC_nut_1996$FreeCO2_mg.L)
+# ECCC_nut_1996$POC_mg.L <- as.numeric(ECCC_nut_1996$POC_mg.L)
+# ECCC_nut_1996$NO3NO2_mg.L <- as.numeric(ECCC_nut_1996$NO3NO2_mg.L)
+# ECCC_nut_1996$NH3_tot_mg.L <- as.numeric(ECCC_nut_1996$NH3_tot_mg.L)
+# ECCC_nut_1996$NH3_union_mg.L <- as.numeric(ECCC_nut_1996$NH3_union_mg.L)
+# ECCC_nut_1996$TN_mg.L <- as.numeric(ECCC_nut_1996$TN_mg.L)
+# ECCC_nut_1996$DN_mg.L <- as.numeric(ECCC_nut_1996$DN_mg.L)
+# ECCC_nut_1996$PN_mg.L <- as.numeric(ECCC_nut_1996$PN_mg.L)
+# ECCC_nut_1996$OH_mg.L <- as.numeric(ECCC_nut_1996$OH_mg.L)
+# ECCC_nut_1996$F_diss_mg.L <- as.numeric(ECCC_nut_1996$F_diss_mg.L)
+# ECCC_nut_1996$Alk_tot_mg.L <- as.numeric(ECCC_nut_1996$Alk_tot_mg.L)
+# ECCC_nut_1996$Alk_p_mg.L <- as.numeric(ECCC_nut_1996$Alk_p_mg.L)
+# ECCC_nut_1996$pH <- as.numeric(ECCC_nut_1996$pH)
+# ECCC_nut_1996$Hard_tot_mg.L <- as.numeric(ECCC_nut_1996$Hard_tot_mg.L)
+# ECCC_nut_1996$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1996$Hard_nonCO3_mg.L)
+# ECCC_nut_1996$Na_diss_mg.L <- as.numeric(ECCC_nut_1996$Na_diss_mg.L)
+# ECCC_nut_1996$Na_perc <- as.numeric(ECCC_nut_1996$Na_perc)
+# ECCC_nut_1996$Mg_diss_mg.L <- as.numeric(ECCC_nut_1996$Mg_diss_mg.L)
+# ECCC_nut_1996$SiO2_mg.L <- as.numeric(ECCC_nut_1996$SiO2_mg.L)
+# ECCC_nut_1996$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1996$P_diss_ortho_mg.L)
+# ECCC_nut_1996$P_tot_mg.L <- as.numeric(ECCC_nut_1996$P_tot_mg.L)
+# ECCC_nut_1996$P_diss_mg.L <- as.numeric(ECCC_nut_1996$P_diss_mg.L)
+# ECCC_nut_1996$P_part_mg.L <- as.numeric(ECCC_nut_1996$P_part_mg.L)
+# ECCC_nut_1996$SO4_diss_mg.L <- as.numeric(ECCC_nut_1996$SO4_diss_mg.L)
+# ECCC_nut_1996$Cl_diss_mg.L <- as.numeric(ECCC_nut_1996$Cl_diss_mg.L)
+# ECCC_nut_1996$K_diss_mg.L <- as.numeric(ECCC_nut_1996$K_diss_mg.L)
+# ECCC_nut_1996$Ca_diss_mg.L <- as.numeric(ECCC_nut_1996$Ca_diss_mg.L)
+# ECCC_nut_1996$PCPN <- as.numeric(ECCC_nut_1996$PCPN)
+# ECCC_nut_1996$PCPP <- as.numeric(ECCC_nut_1996$PCPP)
+# ECCC_nut_1996$PNPP <- as.numeric(ECCC_nut_1996$PNPP)
+# ECCC_nut_1996$Chla_mg.L <- as.numeric(ECCC_nut_1996$Chla_mg.L)
 
-# fix F diss column
-ECCC_nut_1996$F_diss_mg.L <- gsub("SusInt",NA,ECCC_nut_1996$F_diss_mg.L) 
-ECCC_nut_1996$F_diss_mg.L <- gsub("L.01","0.001",ECCC_nut_1996$F_diss_mg.L) # make it near 0 bc it's below detection
+# convert to long format to input into Data Stream
+ECCC_nut_1996_long <- pivot_longer(ECCC_nut_1996, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
+                                                           "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
+                                                           "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
+                                                           "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
+                                                           "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
+                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                   names_to = "CharacteristicID", values_to = "ResultValue")
 
-# fix PCPP column
-ECCC_nut_1996$PCPP <- gsub("NC",NA,ECCC_nut_1996$PCPP) 
+# write as new csv
+write.csv(ECCC_nut_1996_long,"05_DataStream/ECCC_nut_long_1996.csv")
 
-# fix PNPP column
-ECCC_nut_1996$PNPP <- gsub("NC",NA,ECCC_nut_1996$PNPP) 
-
-# make sure all other columns are numeric
-ECCC_nut_1996$Julianday <- as.numeric(ECCC_nut_1996$Julianday)
-ECCC_nut_1996$TDS_mg.L <- as.numeric(ECCC_nut_1996$TDS_mg.L)
-ECCC_nut_1996$Cond_uS.cm <- as.numeric(ECCC_nut_1996$Cond_uS.cm)
-ECCC_nut_1996$TOC_mg.L <- as.numeric(ECCC_nut_1996$TOC_mg.L)
-ECCC_nut_1996$DOC_mg.L <- as.numeric(ECCC_nut_1996$DOC_mg.L)
-ECCC_nut_1996$HCO3_mg.L <- as.numeric(ECCC_nut_1996$HCO3_mg.L)
-ECCC_nut_1996$CO3_mg.L <- as.numeric(ECCC_nut_1996$CO3_mg.L)
-ECCC_nut_1996$FreeCO2_mg.L <- as.numeric(ECCC_nut_1996$FreeCO2_mg.L)
-ECCC_nut_1996$POC_mg.L <- as.numeric(ECCC_nut_1996$POC_mg.L)
-ECCC_nut_1996$NO3NO2_mg.L <- as.numeric(ECCC_nut_1996$NO3NO2_mg.L)
-ECCC_nut_1996$NH3_tot_mg.L <- as.numeric(ECCC_nut_1996$NH3_tot_mg.L)
-ECCC_nut_1996$NH3_union_mg.L <- as.numeric(ECCC_nut_1996$NH3_union_mg.L)
-ECCC_nut_1996$TN_mg.L <- as.numeric(ECCC_nut_1996$TN_mg.L)
-ECCC_nut_1996$DN_mg.L <- as.numeric(ECCC_nut_1996$DN_mg.L)
-ECCC_nut_1996$PN_mg.L <- as.numeric(ECCC_nut_1996$PN_mg.L)
-ECCC_nut_1996$OH_mg.L <- as.numeric(ECCC_nut_1996$OH_mg.L)
-ECCC_nut_1996$F_diss_mg.L <- as.numeric(ECCC_nut_1996$F_diss_mg.L)
-ECCC_nut_1996$Alk_tot_mg.L <- as.numeric(ECCC_nut_1996$Alk_tot_mg.L)
-ECCC_nut_1996$Alk_p_mg.L <- as.numeric(ECCC_nut_1996$Alk_p_mg.L)
-ECCC_nut_1996$pH <- as.numeric(ECCC_nut_1996$pH)
-ECCC_nut_1996$Hard_tot_mg.L <- as.numeric(ECCC_nut_1996$Hard_tot_mg.L)
-ECCC_nut_1996$Hard_nonCO3_mg.L <- as.numeric(ECCC_nut_1996$Hard_nonCO3_mg.L)
-ECCC_nut_1996$Na_diss_mg.L <- as.numeric(ECCC_nut_1996$Na_diss_mg.L)
-ECCC_nut_1996$Na_perc <- as.numeric(ECCC_nut_1996$Na_perc)
-ECCC_nut_1996$Mg_diss_mg.L <- as.numeric(ECCC_nut_1996$Mg_diss_mg.L)
-ECCC_nut_1996$SiO2_mg.L <- as.numeric(ECCC_nut_1996$SiO2_mg.L)
-ECCC_nut_1996$P_diss_ortho_mg.L <- as.numeric(ECCC_nut_1996$P_diss_ortho_mg.L)
-ECCC_nut_1996$P_tot_mg.L <- as.numeric(ECCC_nut_1996$P_tot_mg.L)
-ECCC_nut_1996$P_diss_mg.L <- as.numeric(ECCC_nut_1996$P_diss_mg.L)
-ECCC_nut_1996$P_part_mg.L <- as.numeric(ECCC_nut_1996$P_part_mg.L)
-ECCC_nut_1996$SO4_diss_mg.L <- as.numeric(ECCC_nut_1996$SO4_diss_mg.L)
-ECCC_nut_1996$Cl_diss_mg.L <- as.numeric(ECCC_nut_1996$Cl_diss_mg.L)
-ECCC_nut_1996$K_diss_mg.L <- as.numeric(ECCC_nut_1996$K_diss_mg.L)
-ECCC_nut_1996$Ca_diss_mg.L <- as.numeric(ECCC_nut_1996$Ca_diss_mg.L)
-ECCC_nut_1996$PCPN <- as.numeric(ECCC_nut_1996$PCPN)
-ECCC_nut_1996$PCPP <- as.numeric(ECCC_nut_1996$PCPP)
-ECCC_nut_1996$PNPP <- as.numeric(ECCC_nut_1996$PNPP)
-ECCC_nut_1996$Chla_mg.L <- as.numeric(ECCC_nut_1996$Chla_mg.L)
-
-# add Month column
-ECCC_nut_1996$Month <- month(ECCC_nut_1996$Date)
-ECCC_nut_1996 <- ECCC_nut_1996 %>% 
-  relocate(Month, .after = Date)
-ECCC_nut_1996$Month <- gsub(4,"April",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(5,"May",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(6,"June",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(7,"July",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(8,"August",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(9,"September",ECCC_nut_1996$Month)
-ECCC_nut_1996$Month <- gsub(10,"October",ECCC_nut_1996$Month)
-
-# add Year column and put after Month column
-ECCC_nut_1996$Year <- 1996
-ECCC_nut_1996 <- ECCC_nut_1996 %>% 
-  relocate(Year, .after = Month)
-
+#
 
 ### Nutrient merging: all years ------------------------------------------------
 
@@ -988,27 +1109,12 @@ ECCC_waterlevel$Date <- paste(ECCC_waterlevel$Date, ECCC_waterlevel$Year, sep="-
 # fix Date format
 ECCC_waterlevel <- ECCC_waterlevel %>% mutate(Date = lubridate::dmy(Date))
 
-# add Month column
-ECCC_waterlevel$Month <- month(ECCC_waterlevel$Date)
+# remove Year column
 ECCC_waterlevel <- ECCC_waterlevel %>% 
-  relocate(Month, .after = Date)
-ECCC_waterlevel$Month <- gsub(5,"May",ECCC_waterlevel$Month)
-ECCC_waterlevel$Month <- gsub(6,"June",ECCC_waterlevel$Month)
-ECCC_waterlevel$Month <- gsub(7,"July",ECCC_waterlevel$Month)
-ECCC_waterlevel$Month <- gsub(8,"August",ECCC_waterlevel$Month)
-ECCC_waterlevel$Month <- gsub(9,"September",ECCC_waterlevel$Month)
-ECCC_waterlevel$Month <- gsub(10,"October",ECCC_waterlevel$Month)
-
-# put Year column after Month column
-ECCC_waterlevel <- ECCC_waterlevel %>% 
-  relocate(Year, .after = Month)
+  select(!Year)
 
 # make water level column numeric 
 ECCC_waterlevel$Water_level_m <- as.numeric(ECCC_waterlevel$Water_level_m)
-
-# remove missing water level data
-ECCC_waterlevel <- ECCC_waterlevel %>% 
-  filter(!is.na(Water_level_m))
 
 # look for any outliers 
 boxplot(ECCC_waterlevel$Water_level_m, ylab = "Water level (m)") # looks good
@@ -1019,6 +1125,13 @@ write.csv(ECCC_waterlevel,"02_tidydata/ECCC_waterlevel_clean.csv")
 
 #
 
+# convert to long format for DataStream template
+ECCC_waterlevel_long <- pivot_longer(ECCC_waterlevel, cols = Water_level_m, 
+                                     names_to = "CharacteristicID", 
+                                     values_to = "ResultValue")
+
+# export as csv
+write.csv(ECCC_waterlevel_long,"05_DataStream/ECCC_waterlevel_long_1993-1996.csv")
 
 
 ###-----------------------------------------------------------------------------
