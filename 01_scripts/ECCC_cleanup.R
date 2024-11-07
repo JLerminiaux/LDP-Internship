@@ -489,6 +489,9 @@ ECCC_hydro_1999$Depth_m <- ifelse(ECCC_hydro_1999$Depth_m > 0, -1*ECCC_hydro_199
 ECCC_hydro_merged2 <- full_join(ECCC_hydro_1998, ECCC_hydro_1999)
 ECCC_hydro_merged2 <- full_join(ECCC_hydro_merged2, ECCC_hydro_1997)
 
+# fix Gursky pond ID
+ECCC_hydro_merged2$Pond <- gsub("Gursky", "Gursky's", ECCC_hydro_merged2$Pond)
+
 # convert to long format to input into Data Stream
 ECCC_hydro_merged2_long <- pivot_longer(ECCC_hydro_merged2, cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", 
                                                         "pH_hydro", "Sal_ppt", "DO_sat", "Redox_mV"), 
