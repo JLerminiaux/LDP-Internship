@@ -124,6 +124,10 @@ ECCC_hydro_merged <- ECCC_hydro_merged %>%
 ECCC_hydro_merged <- ECCC_hydro_merged %>% 
   filter(!Temp_degC == "Dryed-Up")
 
+# remove Gursky pond bc we don't have coordinates
+ECCC_hydro_merged <- ECCC_hydro_merged %>% 
+  filter(!Pond == "Gursky's")
+
 # convert to long format
 ECCC_hydro_merged_long <- pivot_longer(ECCC_hydro_merged, 
                                        cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", "pH_hydro"), 
@@ -186,6 +190,8 @@ ECCC_hydro_1997$DO_mg.L <- as.numeric(ECCC_hydro_1997$DO_mg.L)
 ECCC_hydro_1997$Redox_mV <- as.numeric(ECCC_hydro_1997$Redox_mV)
 ECCC_hydro_1997$Depth_m <- as.numeric(ECCC_hydro_1997$Depth_m)
 
+# DataStream cannot take averages, need one Date for each reading
+# Leave 1997 out of DataStream for now
 
 ### Hydrolab 1998 --------------------------------------------------------------
 
@@ -434,6 +440,9 @@ ECCC_hydro_1998$Depth_m <- as.numeric(ECCC_hydro_1998$Depth_m)
 # convert depth column to negative values for Data Stream template
 ECCC_hydro_1998$Depth_m <- ifelse(ECCC_hydro_1998$Depth_m > 0, -1*ECCC_hydro_1998$Depth_m, ECCC_hydro_1998$Depth_m)
 
+# remove the extra zeros at the end of some times
+ECCC_hydro_1998$Time_hydro <- sub("\\.000000$", "", ECCC_hydro_1998$Time_hydro)
+
 #
 
 ### Hydrolab 1999 --------------------------------------------------------------
@@ -467,6 +476,9 @@ ECCC_hydro_1999$Date <- str_pad(ECCC_hydro_1999$Date, width = 6, pad = "0") # ad
 ECCC_hydro_1999$Date <- as.Date(strptime(ECCC_hydro_1999$Date, format = "%m%d%y"))
 
 # fix time format
+ECCC_hydro_1999$Time_hydro <- gsub("922708","92271",ECCC_hydro_1999$Time_hydro)
+ECCC_hydro_1999$Time_hydro <- gsub("14453","144530",ECCC_hydro_1999$Time_hydro)
+ECCC_hydro_1999$Time_hydro <- str_pad(ECCC_hydro_1999$Time_hydro, width = 6, pad = "0") # add leading zero for time 1-9
 ECCC_hydro_1999$Time_hydro <- sub("(\\d{2})(\\d{2})(\\d{2})", "\\1:\\2:\\3", ECCC_hydro_1999$Time_hydro) # add colon between HH and MM and SS
 
 # make sure all other columns are numeric
@@ -487,10 +499,14 @@ ECCC_hydro_1999$Depth_m <- ifelse(ECCC_hydro_1999$Depth_m > 0, -1*ECCC_hydro_199
 
 # merge 1997-1999 data 
 ECCC_hydro_merged2 <- full_join(ECCC_hydro_1998, ECCC_hydro_1999)
-ECCC_hydro_merged2 <- full_join(ECCC_hydro_merged2, ECCC_hydro_1997)
+#ECCC_hydro_merged2 <- full_join(ECCC_hydro_merged2, ECCC_hydro_1997)
 
 # fix Gursky pond ID
 ECCC_hydro_merged2$Pond <- gsub("Gursky", "Gursky's", ECCC_hydro_merged2$Pond)
+
+# remove Gursky pond because we don't have coordinates for it
+ECCC_hydro_merged2 <- ECCC_hydro_merged2 %>% 
+  filter(!Pond == "Gursky's")
 
 # convert to long format to input into Data Stream
 ECCC_hydro_merged2_long <- pivot_longer(ECCC_hydro_merged2, cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", 
@@ -498,44 +514,9 @@ ECCC_hydro_merged2_long <- pivot_longer(ECCC_hydro_merged2, cols = c("Temp_degC"
                                 names_to = "CharacteristicID", values_to = "ResultValue")
 
 # write as new csv
-write.csv(ECCC_hydro_merged2_long,"05_DataStream/ECCC_hydro_long_1997-1999.csv")
-
+write.csv(ECCC_hydro_merged2_long,"05_DataStream/ECCC_hydro_long_1998-1999.csv")
 
 #
-
-
-
-### Checking for outliers-------------------------------------------------------
-
-# visualize each variable to check for outliers
-boxplot(ECCC_hydrolab$Temp_degC, ylab = "Temp (˚C)") # clearly one outlier here
-boxplot(ECCC_hydrolab$DO_mg.L, ylab = "DO (mg/L)")
-boxplot(ECCC_hydrolab$Depth_m, ylab = "Depth (m)")
-boxplot(ECCC_hydrolab$SPC_mS.cm, ylab = "SPC (mS/cm)") # two outliers
-boxplot(ECCC_hydrolab$pH, ylab = "pH") 
-boxplot(ECCC_hydrolab$Redox_mV, ylab = "Redox (mV)")
-boxplot(ECCC_hydrolab$DO_sat, ylab = "DO (%)")
-boxplot(ECCC_hydrolab$Sal_ppt, ylab = "Salinity (ppt)")
-
-# double check outliers in Temp_degC column 
-temp_outlier <- ECCC_hydrolab %>% 
-  identify_outliers(Temp_degC)
-data.frame(temp_outlier)
-
-# replace extreme temp outlier (6046.0 ˚C) with NA
-ECCC_hydrolab <- ECCC_hydrolab %>%
-  mutate(Temp_degC = ifelse(Temp_degC %in% temp_outlier$Temp_degC[temp_outlier$is.extreme == TRUE], NA, Temp_degC))
-
-# double check for outliers in SPC_uS.cm column 
-SPC_outlier <- ECCC_hydrolab %>% 
-  identify_outliers(SPC_mS.cm)
-data.frame(SPC_outlier) 
-# two outliers with very high values - doesn't make sense given low salinity for same sample
-
-# remove 2 SPC outliers above 150 mS/cm
-ECCC_hydrolab$SPC_mS.cm <- ifelse(ECCC_hydrolab$SPC_mS.cm > 150, NA, ECCC_hydrolab$SPC_mS.cm)
-
-
 
 ###-----------------------------------------------------------------------------
 #
@@ -609,7 +590,11 @@ ECCC_nut_1993$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1993$Time) # a
 
 # fix Cl diss column
 ECCC_nut_1993$Cl_diss_mg.L <- gsub("????g33",NA,ECCC_nut_1993$Cl_diss_mg.L) 
- 
+
+# remove Gursky pond because we don't have coordinates for it
+ECCC_nut_1993 <- ECCC_nut_1993 %>% 
+  filter(!Pond == "Gursky's")
+
 # # make sure all other columns are numeric
 # ECCC_nut_1993$Julianday <- as.numeric(ECCC_nut_1993$Julianday)
 # ECCC_nut_1993$TDS_mg.L <- as.numeric(ECCC_nut_1993$TDS_mg.L)
@@ -654,13 +639,13 @@ ECCC_nut_1993$Cl_diss_mg.L <- gsub("????g33",NA,ECCC_nut_1993$Cl_diss_mg.L)
 ECCC_nut_1993_long <- pivot_longer(ECCC_nut_1993, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
                                                            "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
                                                            "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
-                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "F_diss_mg.L", 
                                                            "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
-                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", 
                                                            "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
                                                            "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
                                                            "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
-                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                                           "Ca_diss_mg.L", "Chla_mg.L"), 
                                         names_to = "CharacteristicID", values_to = "ResultValue")
 
 # write as new csv
@@ -733,6 +718,10 @@ ECCC_nut_1994$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1994$Time) # a
 # fix pH column (should not have pH of 0)
 ECCC_nut_1994$pH <- gsub("0",NA,ECCC_nut_1994$pH)
 
+# remove Gursky pond because we don't have coordinates for it
+ECCC_nut_1994 <- ECCC_nut_1994 %>% 
+  filter(!Pond == "Gursky's")
+
 # # make sure all other columns are numeric
 # ECCC_nut_1994$Julianday <- as.numeric(ECCC_nut_1994$Julianday)
 # ECCC_nut_1994$TDS_mg.L <- as.numeric(ECCC_nut_1994$TDS_mg.L)
@@ -777,13 +766,13 @@ ECCC_nut_1994$pH <- gsub("0",NA,ECCC_nut_1994$pH)
 ECCC_nut_1994_long <- pivot_longer(ECCC_nut_1994, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
                                                            "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
                                                            "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
-                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "F_diss_mg.L", 
                                                            "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
-                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", 
                                                            "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
                                                            "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
                                                            "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
-                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                                           "Ca_diss_mg.L", "Chla_mg.L"), 
                                    names_to = "CharacteristicID", values_to = "ResultValue")
 
 # write as new csv
@@ -852,6 +841,10 @@ ECCC_nut_1995$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1995$Time) # a
 ECCC_nut_1995$K_diss_mg.L <- gsub("I56",NA,ECCC_nut_1995$K_diss_mg.L) 
 ECCC_nut_1995$K_diss_mg.L <- gsub("G55",NA,ECCC_nut_1995$K_diss_mg.L)
 
+# remove Gursky pond because we don't have coordinates for it
+ECCC_nut_1995 <- ECCC_nut_1995 %>% 
+  filter(!Pond == "Gursky's")
+
 # # make sure all other columns are numeric
 # ECCC_nut_1995$Julianday <- as.numeric(ECCC_nut_1995$Julianday)
 # ECCC_nut_1995$TDS_mg.L <- as.numeric(ECCC_nut_1995$TDS_mg.L)
@@ -896,13 +889,13 @@ ECCC_nut_1995$K_diss_mg.L <- gsub("G55",NA,ECCC_nut_1995$K_diss_mg.L)
 ECCC_nut_1995_long <- pivot_longer(ECCC_nut_1995, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
                                                            "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
                                                            "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
-                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "F_diss_mg.L", 
                                                            "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
-                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", 
                                                            "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
                                                            "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
                                                            "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
-                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                                           "Ca_diss_mg.L", "Chla_mg.L"), 
                                    names_to = "CharacteristicID", values_to = "ResultValue")
 
 # write as new csv
@@ -969,6 +962,10 @@ ECCC_nut_1996$Date <- lubridate::dmy(ECCC_nut_1996$Date)
 # fix time format 
 ECCC_nut_1996$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1996$Time) # add colon between HH and MM
 
+# remove Gursky pond because we don't have coordinates for it
+ECCC_nut_1996 <- ECCC_nut_1996 %>% 
+  filter(!Pond == "Gursky's")
+
 # # make sure all other columns are numeric
 # ECCC_nut_1996$Julianday <- as.numeric(ECCC_nut_1996$Julianday)
 # ECCC_nut_1996$TDS_mg.L <- as.numeric(ECCC_nut_1996$TDS_mg.L)
@@ -1013,13 +1010,13 @@ ECCC_nut_1996$Time <- sub("(\\d{2})(\\d{2})", "\\1:\\2", ECCC_nut_1996$Time) # a
 ECCC_nut_1996_long <- pivot_longer(ECCC_nut_1996, cols = c("TDS_mg.L", "Cond_uS.cm", "TOC_mg.L", "DOC_mg.L", 
                                                            "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
                                                            "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", 
-                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "OH_mg.L", "F_diss_mg.L", 
+                                                           "TN_mg.L", "DN_mg.L", "PN_mg.L", "F_diss_mg.L", 
                                                            "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
-                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", 
+                                                           "Hard_nonCO3_mg.L", "Na_diss_mg.L", 
                                                            "Mg_diss_mg.L", "SiO2_mg.L", "P_diss_ortho_mg.L", 
                                                            "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", 
                                                            "SO4_diss_mg.L", "Cl_diss_mg.L", "K_diss_mg.L", 
-                                                           "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", "Chla_mg.L"), 
+                                                           "Ca_diss_mg.L", "Chla_mg.L"), 
                                    names_to = "CharacteristicID", values_to = "ResultValue")
 
 # write as new csv
