@@ -1,0 +1,2809 @@
+﻿sample_id,matrix_type,parameter_type,pond_id,comment,note,sample_date,pond_alias,Data Source
+201107068,Sediment ,LOI,100,04-Feb,,06-Jul-11,Pond 100,U of R
+201107071,Sediment ,Particle Size ,100,04-Feb,,06-Jul-11,Pond 100,U of R
+201107204,Sediment ,Kmeth,100,04-Feb,,06-Jul-11,Pond 100,U of R
+201107207,Sediment ,Kmeth,100,04-Feb,,06-Jul-11,Pond 100,U of R
+201107210,Sediment ,Kmeth,100,04-Feb,,06-Jul-11,Pond 100,U of R
+201107074,Sediment ,LOI,104,04-Feb,,06-Jul-11,Pond 104,U of R
+201107077,Sediment ,Particle Size ,104,04-Feb,,06-Jul-11,Pond 104,U of R
+201107213,Sediment ,Kmeth,104,04-Feb,,06-Jul-11,Pond 104,U of R
+201107216,Sediment ,Kmeth,104,04-Feb,,06-Jul-11,Pond 104,U of R
+201107219,Sediment ,Kmeth,104,04-Feb,,06-Jul-11,Pond 104,U of R
+201107080,Sediment ,LOI,110,04-Feb,,06-Jul-11,Pond 110,U of R
+201107083,Sediment ,Particle Size ,110,04-Feb,,06-Jul-11,Pond 110,U of R
+201107222,Sediment ,Kmeth,110,04-Feb,,06-Jul-11,Pond 110,U of R
+201107225,Sediment ,Kmeth,110,04-Feb,,06-Jul-11,Pond 110,U of R
+201107228,Sediment ,Kmeth,110,04-Feb,,06-Jul-11,Pond 110,U of R
+201107086,Sediment ,LOI,113,04-Feb,,06-Jul-11,Pond 113,U of R
+201107089,Sediment ,Particle Size ,113,04-Feb,,06-Jul-11,Pond 113,U of R
+201107231,Sediment ,Kmeth,113,04-Feb,,06-Jul-11,Pond 113,U of R
+201107234,Sediment ,Kmeth,113,04-Feb,,06-Jul-11,Pond 113,U of R
+201107237,Sediment ,Kmeth,113,04-Feb,,06-Jul-11,Pond 113,U of R
+201107092,Sediment ,LOI,118,04-Feb,,06-Jul-11,Pond 118,U of R
+201107095,Sediment ,Particle Size ,118,04-Feb,,06-Jul-11,Pond 118,U of R
+201107240,Sediment ,Kmeth,118,04-Feb,,06-Jul-11,Pond 118,U of R
+201107243,Sediment ,Kmeth,118,04-Feb,,06-Jul-11,Pond 118,U of R
+201107246,Sediment ,Kmeth,118,04-Feb,,06-Jul-11,Pond 118,U of R
+201107098,Sediment ,LOI,130,04-Feb,,07-Jul-11,Pond 130,U of R
+201107101,Sediment ,Particle Size ,130,04-Feb,,07-Jul-11,Pond 130,U of R
+201107267,Sediment ,Kmeth,130,04-Feb,,07-Jul-11,Pond 130,U of R
+201107270,Sediment ,Kmeth,130,04-Feb,,07-Jul-11,Pond 130,U of R
+201107273,Sediment ,Kmeth,130,04-Feb,,07-Jul-11,Pond 130,U of R
+201107276,Sediment ,Kmeth,139,04-Feb,,07-Jul-11,Pond 139 ,U of R
+201107279,Sediment ,Kmeth,139,04-Feb,,07-Jul-11,Pond 139 ,U of R
+201107282,Sediment ,Kmeth,139,04-Feb,,07-Jul-11,Pond 139 ,U of R
+201107062,Sediment ,Particle Size ,2,04-Feb,,07-Jul-11,Pond 2,U of R
+201107249,Sediment ,Kmeth,2,04-Feb,,07-Jul-11,Pond 2,U of R
+201107252,Sediment ,Kmeth,2,04-Feb,,07-Jul-11,Pond 2,U of R
+201107255,Sediment ,Kmeth,2,04-Feb,,07-Jul-11,Pond 2,U of R
+201107065,Sediment ,Particle Size ,3,04-Feb,,07-Jul-11,Pond 3,U of R
+201107258,Sediment ,Kmeth,3,04-Feb,,07-Jul-11,Pond 3,U of R
+201107261,Sediment ,Kmeth,3,04-Feb,,07-Jul-11,Pond 3,U of R
+201107264,Sediment ,Kmeth,3,04-Feb,,07-Jul-11,Pond 3,U of R
+201108171,Sediment ,KMeth,100,04-Feb,,24-Aug-11,SD100,U of R
+201108174,Sediment ,KMeth,100,04-Feb,,24-Aug-11,SD100,U of R
+201108177,Sediment ,KMeth,100,04-Feb,,24-Aug-11,SD100,U of R
+201108252,Sediment ,LOI,100,04-Feb,,24-Aug-11,SD100,U of R
+201108255,Sediment ,Particle Size ,100,04-Feb,,24-Aug-11,SD100,U of R
+201108153,Sediment ,KMeth,104,04-Feb,,24-Aug-11,SD104,U of R
+201108156,Sediment ,KMeth,104,04-Feb,,24-Aug-11,SD104,U of R
+201108159,Sediment ,KMeth,104,04-Feb,,24-Aug-11,SD104,U of R
+201108240,Sediment ,LOI,104,04-Feb,,24-Aug-11,SD104,U of R
+201108243,Sediment ,Particle Size ,104,04-Feb,,24-Aug-11,SD104,U of R
+201108135,Sediment ,KMeth,110,04-Feb,,24-Aug-11,SD110,U of R
+201108138,Sediment ,KMeth,110,04-Feb,,24-Aug-11,SD110,U of R
+201108141,Sediment ,KMeth,110,04-Feb,,24-Aug-11,SD110,U of R
+201108228,Sediment ,LOI,110,04-Feb,,24-Aug-11,SD110,U of R
+201108231,Sediment ,Particle Size ,110,04-Feb,,24-Aug-11,SD110,U of R
+201108144,Sediment ,KMeth,113,04-Feb,,24-Aug-11,SD113,U of R
+201108147,Sediment ,KMeth,113,04-Feb,,24-Aug-11,SD113,U of R
+201108150,Sediment ,KMeth,113,04-Feb,,24-Aug-11,SD113,U of R
+201108234,Sediment ,LOI,113,04-Feb,,24-Aug-11,SD113,U of R
+201108237,Sediment ,Particle Size ,113,04-Feb,,24-Aug-11,SD113,U of R
+201108162,Sediment ,KMeth,118,04-Feb,,24-Aug-11,SD118,U of R
+201108165,Sediment ,KMeth,118,04-Feb,,24-Aug-11,SD118,U of R
+201108168,Sediment ,KMeth,118,04-Feb,,24-Aug-11,SD118,U of R
+201108246,Sediment ,LOI,118,04-Feb,,24-Aug-11,SD118,U of R
+201108249,Sediment ,Particle Size ,118,04-Feb,,24-Aug-11,SD118,U of R
+201108207,Sediment ,KMeth,130,04-Feb,,25-Aug-11,SD130,U of R
+201108210,Sediment ,KMeth,130,04-Feb,,25-Aug-11,SD130,U of R
+201108213,Sediment ,KMeth,130,04-Feb,,25-Aug-11,SD130,U of R
+201108276,Sediment ,LOI,130,04-Feb,,25-Aug-11,SD130,U of R
+201108279,Sediment ,Particle Size ,130,04-Feb,,25-Aug-11,SD130,U of R
+201108198,Sediment ,KMeth,139,04-Feb,,25-Aug-11,SD139,U of R
+201108201,Sediment ,KMeth,139,04-Feb,,25-Aug-11,SD139,U of R
+201108204,Sediment ,KMeth,139,04-Feb,,25-Aug-11,SD139,U of R
+201108270,Sediment ,LOI,139,04-Feb,,25-Aug-11,SD139,U of R
+201108273,Sediment ,Particle Size ,139,04-Feb,,25-Aug-11,SD139,U of R
+201108189,Sediment ,KMeth,2,04-Feb,,25-Aug-11,SD2,U of R
+201108192,Sediment ,KMeth,2,04-Feb,,25-Aug-11,SD2,U of R
+201108195,Sediment ,KMeth,2,04-Feb,,25-Aug-11,SD2,U of R
+201108264,Sediment ,LOI,2,04-Feb,,25-Aug-11,SD2,U of R
+201108267,Sediment ,Particle Size ,2,04-Feb,,25-Aug-11,SD2,U of R
+201108180,Sediment ,KMeth,3,04-Feb,,25-Aug-11,SD3,U of R
+201108183,Sediment ,KMeth,3,04-Feb,,25-Aug-11,SD3,U of R
+201108186,Sediment ,KMeth,3,04-Feb,,25-Aug-11,SD3,U of R
+201108258,Sediment ,LOI,3,04-Feb,,25-Aug-11,SD3,U of R
+201108261,Sediment ,Particle Size ,3,04-Feb,,25-Aug-11,SD3,U of R
+201107069,Sediment ,LOI,100,08-Apr,,06-Jul-11,Pond 100,U of R
+201107072,Sediment ,Particle Size ,100,08-Apr,,06-Jul-11,Pond 100,U of R
+201107205,Sediment ,Kmeth,100,08-Apr,,06-Jul-11,Pond 100,U of R
+201107208,Sediment ,Kmeth,100,08-Apr,,06-Jul-11,Pond 100,U of R
+201107211,Sediment ,Kmeth,100,08-Apr,,06-Jul-11,Pond 100,U of R
+201107075,Sediment ,LOI,104,08-Apr,,06-Jul-11,Pond 104,U of R
+201107078,Sediment ,Particle Size ,104,08-Apr,,06-Jul-11,Pond 104,U of R
+201107214,Sediment ,Kmeth,104,08-Apr,,06-Jul-11,Pond 104,U of R
+201107217,Sediment ,Kmeth,104,08-Apr,,06-Jul-11,Pond 104,U of R
+201107220,Sediment ,Kmeth,104,08-Apr,,06-Jul-11,Pond 104,U of R
+201107081,Sediment ,LOI,110,08-Apr,,06-Jul-11,Pond 110,U of R
+201107084,Sediment ,Particle Size ,110,08-Apr,,06-Jul-11,Pond 110,U of R
+201107223,Sediment ,Kmeth,110,08-Apr,,06-Jul-11,Pond 110,U of R
+201107226,Sediment ,Kmeth,110,08-Apr,,06-Jul-11,Pond 110,U of R
+201107229,Sediment ,Kmeth,110,08-Apr,,06-Jul-11,Pond 110,U of R
+201107087,Sediment ,LOI,113,08-Apr,,06-Jul-11,Pond 113,U of R
+201107090,Sediment ,Particle Size ,113,08-Apr,,06-Jul-11,Pond 113,U of R
+201107232,Sediment ,Kmeth,113,08-Apr,,06-Jul-11,Pond 113,U of R
+201107235,Sediment ,Kmeth,113,08-Apr,,06-Jul-11,Pond 113,U of R
+201107238,Sediment ,Kmeth,113,08-Apr,,06-Jul-11,Pond 113,U of R
+201107093,Sediment ,LOI,118,08-Apr,,06-Jul-11,Pond 118,U of R
+201107096,Sediment ,Particle Size ,118,08-Apr,,06-Jul-11,Pond 118,U of R
+201107241,Sediment ,Kmeth,118,08-Apr,,06-Jul-11,Pond 118,U of R
+201107244,Sediment ,Kmeth,118,08-Apr,,06-Jul-11,Pond 118,U of R
+201107247,Sediment ,Kmeth,118,08-Apr,,06-Jul-11,Pond 118,U of R
+201107099,Sediment ,LOI,130,08-Apr,,07-Jul-11,Pond 130,U of R
+201107102,Sediment ,Particle Size ,130,08-Apr,,07-Jul-11,Pond 130,U of R
+201107268,Sediment ,Kmeth,130,08-Apr,,07-Jul-11,Pond 130,U of R
+201107271,Sediment ,Kmeth,130,08-Apr,,07-Jul-11,Pond 130,U of R
+201107274,Sediment ,Kmeth,130,08-Apr,,07-Jul-11,Pond 130,U of R
+201107277,Sediment ,Kmeth,139,08-Apr,,07-Jul-11,Pond 139 ,U of R
+201107280,Sediment ,Kmeth,139,08-Apr,,07-Jul-11,Pond 139 ,U of R
+201107283,Sediment ,Kmeth,139,08-Apr,,07-Jul-11,Pond 139 ,U of R
+201107063,Sediment ,Particle Size ,2,08-Apr,,07-Jul-11,Pond 2,U of R
+201107250,Sediment ,Kmeth,2,08-Apr,,07-Jul-11,Pond 2,U of R
+201107253,Sediment ,Kmeth,2,08-Apr,,07-Jul-11,Pond 2,U of R
+201107256,Sediment ,Kmeth,2,08-Apr,,07-Jul-11,Pond 2,U of R
+201107066,Sediment ,Particle Size ,3,08-Apr,,07-Jul-11,Pond 3,U of R
+201107259,Sediment ,Kmeth,3,08-Apr,,07-Jul-11,Pond 3,U of R
+201107262,Sediment ,Kmeth,3,08-Apr,,07-Jul-11,Pond 3,U of R
+201107265,Sediment ,Kmeth,3,08-Apr,,07-Jul-11,Pond 3,U of R
+201108172,Sediment ,KMeth,100,08-Apr,,24-Aug-11,SD100,U of R
+201108175,Sediment ,KMeth,100,08-Apr,,24-Aug-11,SD100,U of R
+201108178,Sediment ,KMeth,100,08-Apr,,24-Aug-11,SD100,U of R
+201108253,Sediment ,LOI,100,08-Apr,,24-Aug-11,SD100,U of R
+201108256,Sediment ,Particle Size ,100,08-Apr,,24-Aug-11,SD100,U of R
+201108154,Sediment ,KMeth,104,08-Apr,,24-Aug-11,SD104,U of R
+201108157,Sediment ,KMeth,104,08-Apr,,24-Aug-11,SD104,U of R
+201108160,Sediment ,KMeth,104,08-Apr,,24-Aug-11,SD104,U of R
+201108241,Sediment ,LOI,104,08-Apr,,24-Aug-11,SD104,U of R
+201108244,Sediment ,Particle Size ,104,08-Apr,,24-Aug-11,SD104,U of R
+201108136,Sediment ,KMeth,110,08-Apr,,24-Aug-11,SD110,U of R
+201108139,Sediment ,KMeth,110,08-Apr,,24-Aug-11,SD110,U of R
+201108142,Sediment ,KMeth,110,08-Apr,,24-Aug-11,SD110,U of R
+201108229,Sediment ,LOI,110,08-Apr,,24-Aug-11,SD110,U of R
+201108232,Sediment ,Particle Size ,110,08-Apr,,24-Aug-11,SD110,U of R
+201108145,Sediment ,KMeth,113,08-Apr,,24-Aug-11,SD113,U of R
+201108148,Sediment ,KMeth,113,08-Apr,,24-Aug-11,SD113,U of R
+201108151,Sediment ,KMeth,113,08-Apr,,24-Aug-11,SD113,U of R
+201108235,Sediment ,LOI,113,08-Apr,,24-Aug-11,SD113,U of R
+201108238,Sediment ,Particle Size ,113,08-Apr,,24-Aug-11,SD113,U of R
+201108163,Sediment ,KMeth,118,08-Apr,,24-Aug-11,SD118,U of R
+201108166,Sediment ,KMeth,118,08-Apr,,24-Aug-11,SD118,U of R
+201108169,Sediment ,KMeth,118,08-Apr,,24-Aug-11,SD118,U of R
+201108247,Sediment ,LOI,118,08-Apr,,24-Aug-11,SD118,U of R
+201108250,Sediment ,Particle Size ,118,08-Apr,,24-Aug-11,SD118,U of R
+201108208,Sediment ,KMeth,130,08-Apr,,25-Aug-11,SD130,U of R
+201108211,Sediment ,KMeth,130,08-Apr,,25-Aug-11,SD130,U of R
+201108214,Sediment ,KMeth,130,08-Apr,,25-Aug-11,SD130,U of R
+201108277,Sediment ,LOI,130,08-Apr,,25-Aug-11,SD130,U of R
+201108280,Sediment ,Particle Size ,130,08-Apr,,25-Aug-11,SD130,U of R
+201108199,Sediment ,KMeth,139,08-Apr,,25-Aug-11,SD139,U of R
+201108202,Sediment ,KMeth,139,08-Apr,,25-Aug-11,SD139,U of R
+201108205,Sediment ,KMeth,139,08-Apr,,25-Aug-11,SD139,U of R
+201108271,Sediment ,LOI,139,08-Apr,,25-Aug-11,SD139,U of R
+201108274,Sediment ,Particle Size ,139,08-Apr,,25-Aug-11,SD139,U of R
+201108190,Sediment ,KMeth,2,08-Apr,,25-Aug-11,SD2,U of R
+201108193,Sediment ,KMeth,2,08-Apr,,25-Aug-11,SD2,U of R
+201108196,Sediment ,KMeth,2,08-Apr,,25-Aug-11,SD2,U of R
+201108265,Sediment ,LOI,2,08-Apr,,25-Aug-11,SD2,U of R
+201108268,Sediment ,Particle Size ,2,08-Apr,,25-Aug-11,SD2,U of R
+201108181,Sediment ,KMeth,3,08-Apr,,25-Aug-11,SD3,U of R
+201108184,Sediment ,KMeth,3,08-Apr,,25-Aug-11,SD3,U of R
+201108187,Sediment ,KMeth,3,08-Apr,,25-Aug-11,SD3,U of R
+201108259,Sediment ,LOI,3,08-Apr,,25-Aug-11,SD3,U of R
+201108262,Sediment ,Particle Size ,3,08-Apr,,25-Aug-11,SD3,U of R
+201107016,Pore water,THg,100, ,,06-Jul-11,Pond 100,U of R
+201107017,Pore water,MeHg,100, ,,06-Jul-11,Pond 100,U of R
+201107018,Pore water,SO4,100, ,,06-Jul-11,Pond 100,U of R
+201107019,Pore water,DOC,100, ,,06-Jul-11,Pond 100,U of R
+201107020,Pore water,SUVA,100, ,,06-Jul-11,Pond 100,U of R
+201107006,Pore water,THg,104, ,,05-Jul-11,Pond 104,U of R
+201107007,Pore water,MeHg,104, ,,05-Jul-11,Pond 104,U of R
+201107008,Pore water,SO4,104, ,,05-Jul-11,Pond 104,U of R
+201107009,Pore water,DOC,104, ,,05-Jul-11,Pond 104,U of R
+201107010,Pore water,SUVA,104, ,,05-Jul-11,Pond 104,U of R
+201107001,Pore water,THg,110, ,,05-Jul-11,Pond 110,U of R
+201107002,Pore water,MeHg,110, ,,05-Jul-11,Pond 110,U of R
+201107003,Pore water,SO4,110, ,,05-Jul-11,Pond 110,U of R
+201107004,Pore water,DOC,110, ,,05-Jul-11,Pond 110,U of R
+201107005,Pore water,SUVA,110, ,,05-Jul-11,Pond 110,U of R
+201107021,Pore water,THg,113, ,,06-Jul-11,Pond 113,U of R
+201107022,Pore water,MeHg,113, ,,06-Jul-11,Pond 113,U of R
+201107023,Pore water,SO4,113, ,,06-Jul-11,Pond 113,U of R
+201107024,Pore water,DOC,113, ,,06-Jul-11,Pond 113,U of R
+201107025,Pore water,SUVA,113, ,,06-Jul-11,Pond 113,U of R
+201107011,Pore water,THg,118, ,,05-Jul-11,Pond 118,U of R
+201107012,Pore water,MeHg,118, ,,05-Jul-11,Pond 118,U of R
+201107013,Pore water,SO4,118, ,,05-Jul-11,Pond 118,U of R
+201107014,Pore water,DOC,118, ,,05-Jul-11,Pond 118,U of R
+201107015,Pore water,SUVA,118, ,,05-Jul-11,Pond 118,U of R
+201107026,Pore water,THg,130, ,,06-Jul-11,Pond 130,U of R
+201107027,Pore water,MeHg,130, ,,06-Jul-11,Pond 130,U of R
+201107028,Pore water,SO4,130, ,,06-Jul-11,Pond 130,U of R
+201107029,Pore water,DOC,130, ,,06-Jul-11,Pond 130,U of R
+201107030,Pore water,SUVA,130, ,,06-Jul-11,Pond 130,U of R
+201107031,Pore water,THg,139, ,,06-Jul-11,Pond 139 ,U of R
+201107032,Pore water,MeHg,139, ,,06-Jul-11,Pond 139 ,U of R
+201107033,Pore water,SO4,139, ,,06-Jul-11,Pond 139 ,U of R
+201107034,Pore water,DOC,139, ,,06-Jul-11,Pond 139 ,U of R
+201107035,Pore water,SUVA,139, ,,06-Jul-11,Pond 139 ,U of R
+201107036,Pore water,THg,2, ,,07-Jul-11,Pond 2,U of R
+201107037,Pore water,MeHg,2, ,,07-Jul-11,Pond 2,U of R
+201107038,Pore water,SO4,2, ,,07-Jul-11,Pond 2,U of R
+201107039,Pore water,DOC,2, ,,07-Jul-11,Pond 2,U of R
+201107040,Pore water,SUVA,2, ,,07-Jul-11,Pond 2,U of R
+201107041,Pore water,THg,3, ,,07-Jul-11,Pond 3,U of R
+201107042,Pore water,MeHg,3, ,,07-Jul-11,Pond 3,U of R
+201107043,Pore water,SO4,3, ,,07-Jul-11,Pond 3,U of R
+201107044,Pore water,DOC,3, ,,07-Jul-11,Pond 3,U of R
+201107045,Pore water,SUVA,3, ,,07-Jul-11,Pond 3,U of R
+2013THg1,Snow,THg,1, ,, ,1,U of R
+2013MeHg1,Snow,MeHg,1, ,, ,1,U of R
+2013THg2,Snow,THg,2, ,, ,2,U of R
+2013MeHg2,Snow,MeHg,2, ,, ,2,U of R
+2013THg3,Snow,THg,3, ,, ,3,U of R
+2013MeHg3,Snow,MeHg,3, ,, ,3,U of R
+2013THg4,Snow,THg,4, ,, ,4,U of R
+2013MeHg4,Snow,MeHg,4, ,, ,4,U of R
+2013THg5,Snow,THg,5, ,, ,5,U of R
+2013MeHg5,Snow,MeHg,5, ,, ,5,U of R
+2013THg6,Snow,THg,6, ,, ,6,U of R
+2013MeHg6,Snow,MeHg,6, ,, ,6,U of R
+2013THg7,Snow,THg,7, ,, ,7,U of R
+2013MeHg7,Snow,MeHg,7, ,, ,7,U of R
+2013THg8,Snow,THg,8, ,, ,8,U of R
+2013MeHg8,Snow,MeHg,8, ,, ,8,U of R
+2013THg9,Snow,THg,9, ,, ,9,U of R
+2013MeHg9,Snow,MeHg,9, ,, ,9,U of R
+2013THg11,Snow,THg,11, ,, ,11,U of R
+2013MeHg11,Snow,MeHg,11, ,, ,11,U of R
+2013THg13,Snow,THg,13, ,, ,13,U of R
+2013MeHg13,Snow,MeHg,13, ,, ,13,U of R
+2013THg14,Snow,THg,14, ,, ,14,U of R
+2013MeHg14,Snow,MeHg,14, ,, ,14,U of R
+2013THg15,Snow,THg,15, ,, ,15,U of R
+2013MeHg15,Snow,MeHg,15, ,, ,15,U of R
+2013THg16,Snow,THg,16, ,, ,16,U of R
+2013MeHg16,Snow,MeHg,16, ,, ,16,U of R
+2013THg18,Snow,THg,18, ,, ,18,U of R
+2013MeHg18,Snow,MeHg,18, ,, ,18,U of R
+2013THg19,Snow,THg,19, ,, ,19,U of R
+2013MeHg19,Snow,MeHg,19, ,, ,19,U of R
+2013THg20,Snow,THg,20, ,, ,20,U of R
+2013MeHg20,Snow,MeHg,20, ,, ,20,U of R
+2013THg21,Snow,THg,21, ,, ,21,U of R
+2013MeHg21,Snow,MeHg,21, ,, ,21,U of R
+2013THg22,Snow,THg,22, ,, ,22,U of R
+2013MeHg22,Snow,MeHg,22, ,, ,22,U of R
+2013THg23,Snow,THg,23, ,, ,23,U of R
+2013MeHg23,Snow,MeHg,23, ,, ,23,U of R
+2013THg24,Snow,THg,24, ,, ,24,U of R
+2013MeHg24,Snow,MeHg,24, ,, ,24,U of R
+2013THg25,Snow,THg,25, ,, ,25,U of R
+2013MeHg25,Snow,MeHg,25, ,, ,25,U of R
+2013THg26,Snow,THg,26, ,, ,26,U of R
+2013MeHg26,Snow,MeHg,26, ,, ,26,U of R
+2013THg27,Snow,THg,27, ,, ,27,U of R
+2013MeHg27,Snow,MeHg,27, ,, ,27,U of R
+2013THg29,Snow,THg,29, ,, ,29,U of R
+2013MeHg29,Snow,MeHg,29, ,, ,29,U of R
+2013THg30,Snow,THg,30, ,, ,30,U of R
+2013MeHg30,Snow,MeHg,30, ,, ,30,U of R
+2013THg31,Snow,THg,31, ,, ,31,U of R
+2013MeHg31,Snow,MeHg,31, ,, ,31,U of R
+2013THg32,Snow,THg,32, ,, ,32,U of R
+2013MeHg32,Snow,MeHg,32, ,, ,32,U of R
+2013THg33,Snow,THg,33, ,, ,33,U of R
+2013MeHg33,Snow,MeHg,33, ,, ,33,U of R
+2013THg34,Snow,THg,34, ,, ,34,U of R
+2013MeHg34,Snow,MeHg,34, ,, ,34,U of R
+2013THg35,Snow,THg,35, ,, ,35,U of R
+2013MeHg35,Snow,MeHg,35, ,, ,35,U of R
+2013THg37,Snow,THg,37, ,, ,37,U of R
+2013MeHg37,Snow,MeHg,37, ,, ,37,U of R
+2013THg38,Snow,THg,38, ,, ,38,U of R
+2013MeHg38,Snow,MeHg,38, ,, ,38,U of R
+2013THg39,Snow,THg,39, ,, ,39,U of R
+2013MeHg39,Snow,MeHg,39, ,, ,39,U of R
+2013THg41,Snow,THg,41, ,, ,41,U of R
+2013MeHg41,Snow,MeHg,41, ,, ,41,U of R
+2013THg43,Snow,THg,43, ,, ,43,U of R
+2013MeHg43,Snow,MeHg,43, ,, ,43,U of R
+2013THg44,Snow,THg,44, ,, ,44,U of R
+2013MeHg44,Snow,MeHg,44, ,, ,44,U of R
+2013THg46,Snow,THg,46, ,, ,46,U of R
+2013MeHg46,Snow,MeHg,46, ,, ,46,U of R
+2013THg47,Snow,THg,47, ,, ,47,U of R
+2013MeHg47,Snow,MeHg,47, ,, ,47,U of R
+2013THg48,Snow,THg,48, ,, ,48,U of R
+2013MeHg48,Snow,MeHg,48, ,, ,48,U of R
+2013THg49,Snow,THg,49, ,, ,49,U of R
+2013MeHg49,Snow,MeHg,49, ,, ,49,U of R
+2013THg50,Snow,THg,50, ,, ,50,U of R
+2013MeHg50,Snow,MeHg,50, ,, ,50,U of R
+2013THg51,Snow,THg,51, ,, ,51,U of R
+2013MeHg51,Snow,MeHg,51, ,, ,51,U of R
+2013THg52,Snow,THg,52, ,, ,52,U of R
+2013MeHg52,Snow,MeHg,52, ,, ,52,U of R
+2013THg53,Snow,THg,53, ,, ,53,U of R
+2013MeHg53,Snow,MeHg,53, ,, ,53,U of R
+2013THg55,Snow,THg,55, ,, ,55,U of R
+2013MeHg55,Snow,MeHg,55, ,, ,55,U of R
+2013THg56,Snow,THg,56, ,, ,56,U of R
+2013MeHg56,Snow,MeHg,56, ,, ,56,U of R
+2013THg58,Snow,THg,58, ,, ,58,U of R
+2013MeHg58,Snow,MeHg,58, ,, ,58,U of R
+2013THg62,Snow,THg,62, ,, ,62,U of R
+2013MeHg62,Snow,MeHg,62, ,, ,62,U of R
+2013THg63,Snow,THg,63, ,, ,63,U of R
+2013MeHg63,Snow,MeHg,63, ,, ,63,U of R
+2013MeHg64,Snow,MeHg,64, ,, ,64,U of R
+2013THg65,Snow,THg,65, ,, ,65,U of R
+2013MeHg65,Snow,MeHg,65, ,, ,65,U of R
+2013THg66,Snow,THg,66, ,, ,66,U of R
+2013MeHg66,Snow,MeHg,66, ,, ,66,U of R
+2013THg14B,Snow,THg,14B, ,, ,14B,U of R
+2013MeHg14B,Snow,MeHg,14B, ,, ,14B,U of R
+2013THg15G,Snow,THg,15G, ,, ,15G,U of R
+2013MeHg15G,Snow,MeHg,15G, ,, ,15G,U of R
+2013THg2G,Snow,THg,2G, ,, ,2G,U of R
+2013MeHg2G,Snow,MeHg,2G, ,, ,2G,U of R
+201205041,Surface water,DOC,1, ,,31-May-12,SD1,U of R
+201205042,Surface water,SO4,1, ,,31-May-12,SD1,U of R
+201205043,Surface water,SUVA,1, ,,31-May-12,SD1,U of R
+201205044,Surface water,THg,1, ,,31-May-12,SD1,U of R
+201205045,Surface water,MeHg,1, ,,31-May-12,SD1,U of R
+201206021,Surface water,DOC,1, ,,28-Jun-12,SD1,U of R
+201206022,Surface water,SO4,1, ,,28-Jun-12,SD1,U of R
+201206023,Surface water,SUVA,1, ,,28-Jun-12,SD1,U of R
+201206024,Surface water,THg,1, ,,28-Jun-12,SD1,U of R
+201206025,Surface water,MeHg,1, ,,28-Jun-12,SD1,U of R
+201207001,Surface water,DOC,1, ,,26-Jul-12,SD1,U of R
+201207002,Surface water,SO4,1, ,,26-Jul-12,SD1,U of R
+201207003,Surface water,SUVA,1, ,,26-Jul-12,SD1,U of R
+201207004,Surface water,THg,1, ,,26-Jul-12,SD1,U of R
+201207005,Surface water,MeHg,1, ,,26-Jul-12,SD1,U of R
+201208001,Surface water,DOC,1, ,,30-Aug-12,SD1,U of R
+201208002,Surface water,SO4,1, ,,30-Aug-12,SD1,U of R
+201208003,Surface water,SUVA,1, ,,30-Aug-12,SD1,U of R
+201208004,Surface water,THg,1, ,,30-Aug-12,SD1,U of R
+201208005,Surface water,MeHg,1, ,,30-Aug-12,SD1,U of R
+201205021,Surface water,DOC,100, ,,31-May-12,SD100,U of R
+201205022,Surface water,SO4,100, ,,31-May-12,SD100,U of R
+201205023,Surface water,SUVA,100, ,,31-May-12,SD100,U of R
+201205024,Surface water,THg,100, ,,31-May-12,SD100,U of R
+201205025,Surface water,MeHg,100, ,,31-May-12,SD100,U of R
+201206026,Surface water,DOC,100, ,,28-Jun-12,SD100,U of R
+201206027,Surface water,SO4,100, ,,28-Jun-12,SD100,U of R
+201206028,Surface water,SUVA,100, ,,28-Jun-12,SD100,U of R
+201206029,Surface water,THg,100, ,,28-Jun-12,SD100,U of R
+201206030,Surface water,MeHg,100, ,,28-Jun-12,SD100,U of R
+201207016,Surface water,DOC,100, ,,26-Jul-12,SD100,U of R
+201207017,Surface water,SO4,100, ,,26-Jul-12,SD100,U of R
+201207018,Surface water,SUVA,100, ,,26-Jul-12,SD100,U of R
+201207019,Surface water,THg,100, ,,26-Jul-12,SD100,U of R
+201207020,Surface water,MeHg,100, ,,26-Jul-12,SD100,U of R
+201208016,Surface water,DOC,100, ,,30-Aug-12,SD100,U of R
+201208017,Surface water,SO4,100, ,,30-Aug-12,SD100,U of R
+201208018,Surface water,SUVA,100, ,,30-Aug-12,SD100,U of R
+201208019,Surface water,THg,100, ,,30-Aug-12,SD100,U of R
+201208020,Surface water,MeHg,100, ,,30-Aug-12,SD100,U of R
+201205006,Surface water,DOC,104, ,,31-May-12,SD104,U of R
+201205007,Surface water,SO4,104, ,,31-May-12,SD104,U of R
+201205008,Surface water,SUVA,104, ,,31-May-12,SD104,U of R
+201205009,Surface water,THg,104, ,,31-May-12,SD104,U of R
+201205010,Surface water,MeHg,104, ,,31-May-12,SD104,U of R
+201206031,Surface water,DOC,104, ,,28-Jun-12,SD104,U of R
+201206032,Surface water,SO4,104, ,,28-Jun-12,SD104,U of R
+201206033,Surface water,SUVA,104, ,,28-Jun-12,SD104,U of R
+201206034,Surface water,THg,104, ,,28-Jun-12,SD104,U of R
+201206035,Surface water,MeHg,104, ,,28-Jun-12,SD104,U of R
+201207021,Surface water,DOC,104, ,,26-Jul-12,SD104,U of R
+201207022,Surface water,SO4,104, ,,26-Jul-12,SD104,U of R
+201207023,Surface water,SUVA,104, ,,26-Jul-12,SD104,U of R
+201207024,Surface water,THg,104, ,,26-Jul-12,SD104,U of R
+201207025,Surface water,MeHg,104, ,,26-Jul-12,SD104,U of R
+201208021,Surface water,DOC,104, ,,30-Aug-12,SD104,U of R
+201208022,Surface water,SO4,104, ,,30-Aug-12,SD104,U of R
+201208023,Surface water,SUVA,104, ,,30-Aug-12,SD104,U of R
+201208024,Surface water,THg,104, ,,30-Aug-12,SD104,U of R
+201208025,Surface water,MeHg,104, ,,30-Aug-12,SD104,U of R
+201205001,Surface water,DOC,110, ,,31-May-12,SD110,U of R
+201205002,Surface water,SO4,110, ,,31-May-12,SD110,U of R
+201205003,Surface water,SUVA,110, ,,31-May-12,SD110,U of R
+201205004,Surface water,THg,110, ,,31-May-12,SD110,U of R
+201205005,Surface water,MeHg,110, ,,31-May-12,SD110,U of R
+201206046,Surface water,DOC,110, ,,28-Jun-12,SD110,U of R
+201206047,Surface water,SO4,110, ,,28-Jun-12,SD110,U of R
+201206048,Surface water,SUVA,110, ,,28-Jun-12,SD110,U of R
+201206049,Surface water,THg,110, ,,28-Jun-12,SD110,U of R
+201206050,Surface water,MeHg,110, ,,28-Jun-12,SD110,U of R
+201207026,Surface water,DOC,110, ,,26-Jul-12,SD110,U of R
+201207027,Surface water,SO4,110, ,,26-Jul-12,SD110,U of R
+201207028,Surface water,SUVA,110, ,,26-Jul-12,SD110,U of R
+201207029,Surface water,THg,110, ,,26-Jul-12,SD110,U of R
+201207030,Surface water,MeHg,110, ,,26-Jul-12,SD110,U of R
+201208026,Surface water,DOC,110, ,,30-Aug-12,SD110,U of R
+201208027,Surface water,SO4,110, ,,30-Aug-12,SD110,U of R
+201208028,Surface water,SUVA,110, ,,30-Aug-12,SD110,U of R
+201208029,Surface water,THg,110, ,,30-Aug-12,SD110,U of R
+201208030,Surface water,MeHg,110, ,,30-Aug-12,SD110,U of R
+201205016,Surface water,DOC,113, ,,31-May-12,SD113,U of R
+201205017,Surface water,SO4,113, ,,31-May-12,SD113,U of R
+201205018,Surface water,SUVA,113, ,,31-May-12,SD113,U of R
+201205019,Surface water,THg,113, ,,31-May-12,SD113,U of R
+201205020,Surface water,MeHg,113, ,,31-May-12,SD113,U of R
+201206041,Surface water,DOC,113, ,,28-Jun-12,SD113,U of R
+201206042,Surface water,SO4,113, ,,28-Jun-12,SD113,U of R
+201206043,Surface water,SUVA,113, ,,28-Jun-12,SD113,U of R
+201206044,Surface water,THg,113, ,,28-Jun-12,SD113,U of R
+201206045,Surface water,MeHg,113, ,,28-Jun-12,SD113,U of R
+201207031,Surface water,DOC,113, ,,26-Jul-12,SD113,U of R
+201207032,Surface water,SO4,113, ,,26-Jul-12,SD113,U of R
+201207033,Surface water,SUVA,113, ,,26-Jul-12,SD113,U of R
+201207034,Surface water,THg,113, ,,26-Jul-12,SD113,U of R
+201207035,Surface water,MeHg,113, ,,26-Jul-12,SD113,U of R
+201208031,Surface water,DOC,113, ,,30-Aug-12,SD113,U of R
+201208032,Surface water,SO4,113, ,,30-Aug-12,SD113,U of R
+201208033,Surface water,SUVA,113, ,,30-Aug-12,SD113,U of R
+201208034,Surface water,THg,113, ,,30-Aug-12,SD113,U of R
+201208035,Surface water,MeHg,113, ,,30-Aug-12,SD113,U of R
+201205011,Surface water,DOC,118, ,,31-May-12,SD118,U of R
+201205012,Surface water,SO4,118, ,,31-May-12,SD118,U of R
+201205013,Surface water,SUVA,118, ,,31-May-12,SD118,U of R
+201205014,Surface water,THg,118, ,,31-May-12,SD118,U of R
+201205015,Surface water,MeHg,118, ,,31-May-12,SD118,U of R
+201206036,Surface water,DOC,118, ,,28-Jun-12,SD118,U of R
+201206037,Surface water,SO4,118, ,,28-Jun-12,SD118,U of R
+201206038,Surface water,SUVA,118, ,,28-Jun-12,SD118,U of R
+201206039,Surface water,THg,118, ,,28-Jun-12,SD118,U of R
+201206040,Surface water,MeHg,118, ,,28-Jun-12,SD118,U of R
+201207036,Surface water,DOC,118, ,,26-Jul-12,SD118,U of R
+201207037,Surface water,SO4,118, ,,26-Jul-12,SD118,U of R
+201207038,Surface water,SUVA,118, ,,26-Jul-12,SD118,U of R
+201207039,Surface water,THg,118, ,,26-Jul-12,SD118,U of R
+201207040,Surface water,MeHg,118, ,,26-Jul-12,SD118,U of R
+201208036,Surface water,DOC,118, ,,30-Aug-12,SD118,U of R
+201208037,Surface water,SO4,118, ,,30-Aug-12,SD118,U of R
+201208038,Surface water,SUVA,118, ,,30-Aug-12,SD118,U of R
+201208039,Surface water,THg,118, ,,30-Aug-12,SD118,U of R
+201208040,Surface water,MeHg,118, ,,30-Aug-12,SD118,U of R
+201205026,Surface water,DOC,130, ,,31-May-12,SD130,U of R
+201205027,Surface water,SO4,130, ,,31-May-12,SD130,U of R
+201205028,Surface water,SUVA,130, ,,31-May-12,SD130,U of R
+201205029,Surface water,THg,130, ,,31-May-12,SD130,U of R
+201205030,Surface water,MeHg,130, ,,31-May-12,SD130,U of R
+201206006,Surface water,DOC,130, ,,28-Jun-12,SD130,U of R
+201206007,Surface water,SO4,130, ,,28-Jun-12,SD130,U of R
+201206008,Surface water,SUVA,130, ,,28-Jun-12,SD130,U of R
+201206009,Surface water,THg,130, ,,28-Jun-12,SD130,U of R
+201206010,Surface water,MeHg,130, ,,28-Jun-12,SD130,U of R
+201207041,Surface water,DOC,130, ,,26-Jul-12,SD130,U of R
+201207042,Surface water,SO4,130, ,,26-Jul-12,SD130,U of R
+201207043,Surface water,SUVA,130, ,,26-Jul-12,SD130,U of R
+201207044,Surface water,THg,130, ,,26-Jul-12,SD130,U of R
+201207045,Surface water,MeHg,130, ,,26-Jul-12,SD130,U of R
+201208041,Surface water,DOC,130, ,,30-Aug-12,SD130,U of R
+201208042,Surface water,SO4,130, ,,30-Aug-12,SD130,U of R
+201208043,Surface water,SUVA,130, ,,30-Aug-12,SD130,U of R
+201208044,Surface water,THg,130, ,,30-Aug-12,SD130,U of R
+201208045,Surface water,MeHg,130, ,,30-Aug-12,SD130,U of R
+201205031,Surface water,DOC,139, ,,31-May-12,SD139,U of R
+201205032,Surface water,SO4,139, ,,31-May-12,SD139,U of R
+201205033,Surface water,SUVA,139, ,,31-May-12,SD139,U of R
+201205034,Surface water,THg,139, ,,31-May-12,SD139,U of R
+201205035,Surface water,MeHg,139, ,,31-May-12,SD139,U of R
+201206011,Surface water,DOC,139, ,,28-Jun-12,SD139,U of R
+201206012,Surface water,SO4,139, ,,28-Jun-12,SD139,U of R
+201206013,Surface water,SUVA,139, ,,28-Jun-12,SD139,U of R
+201206014,Surface water,THg,139, ,,28-Jun-12,SD139,U of R
+201206015,Surface water,MeHg,139, ,,28-Jun-12,SD139,U of R
+201207046,Surface water,DOC,139, ,,26-Jul-12,SD139,U of R
+201207047,Surface water,SO4,139, ,,26-Jul-12,SD139,U of R
+201207048,Surface water,SUVA,139, ,,26-Jul-12,SD139,U of R
+201207049,Surface water,THg,139, ,,26-Jul-12,SD139,U of R
+201207050,Surface water,MeHg,139, ,,26-Jul-12,SD139,U of R
+201208046,Surface water,DOC,139, ,,30-Aug-12,SD139,U of R
+201208047,Surface water,SO4,139, ,,30-Aug-12,SD139,U of R
+201208048,Surface water,SUVA,139, ,,30-Aug-12,SD139,U of R
+201208049,Surface water,THg,139, ,,30-Aug-12,SD139,U of R
+201208050,Surface water,MeHg,139, ,,30-Aug-12,SD139,U of R
+201205036,Surface water,DOC,2, ,,31-May-12,SD2,U of R
+201205037,Surface water,SO4,2, ,,31-May-12,SD2,U of R
+201205038,Surface water,SUVA,2, ,,31-May-12,SD2,U of R
+201205039,Surface water,THg,2, ,,31-May-12,SD2,U of R
+201205040,Surface water,MeHg,2, ,,31-May-12,SD2,U of R
+201206001,Surface water,DOC,2, ,,28-Jun-12,SD2,U of R
+201206002,Surface water,SO4,2, ,,28-Jun-12,SD2,U of R
+201206003,Surface water,SUVA,2, ,,28-Jun-12,SD2,U of R
+201206004,Surface water,THg,2, ,,28-Jun-12,SD2,U of R
+201206005,Surface water,MeHg,2, ,,28-Jun-12,SD2,U of R
+201207006,Surface water,DOC,2, ,,26-Jul-12,SD2,U of R
+201207007,Surface water,SO4,2, ,,26-Jul-12,SD2,U of R
+201207008,Surface water,SUVA,2, ,,26-Jul-12,SD2,U of R
+201207009,Surface water,THg,2, ,,26-Jul-12,SD2,U of R
+201207010,Surface water,MeHg,2, ,,26-Jul-12,SD2,U of R
+201208006,Surface water,DOC,2, ,,30-Aug-12,SD2,U of R
+201208007,Surface water,SO4,2, ,,30-Aug-12,SD2,U of R
+201208008,Surface water,SUVA,2, ,,30-Aug-12,SD2,U of R
+201208009,Surface water,THg,2, ,,30-Aug-12,SD2,U of R
+201208010,Surface water,MeHg,2, ,,30-Aug-12,SD2,U of R
+201205046,Surface water,DOC,3, ,,31-May-12,SD3,U of R
+201205047,Surface water,SO4,3, ,,31-May-12,SD3,U of R
+201205048,Surface water,SUVA,3, ,,31-May-12,SD3,U of R
+201205049,Surface water,THg,3, ,,31-May-12,SD3,U of R
+201205050,Surface water,MeHg,3, ,,31-May-12,SD3,U of R
+201206016,Surface water,DOC,3, ,,28-Jun-12,SD3,U of R
+201206017,Surface water,SO4,3, ,,28-Jun-12,SD3,U of R
+201206018,Surface water,SUVA,3, ,,28-Jun-12,SD3,U of R
+201206019,Surface water,THg,3, ,,28-Jun-12,SD3,U of R
+201206020,Surface water,MeHg,3, ,,28-Jun-12,SD3,U of R
+201207011,Surface water,DOC,3, ,,26-Jul-12,SD3,U of R
+201207012,Surface water,SO4,3, ,,26-Jul-12,SD3,U of R
+201207013,Surface water,SUVA,3, ,,26-Jul-12,SD3,U of R
+201207014,Surface water,THg,3, ,,26-Jul-12,SD3,U of R
+201207015,Surface water,MeHg,3, ,,26-Jul-12,SD3,U of R
+201208011,Surface water,DOC,3, ,,30-Aug-12,SD3,U of R
+201208012,Surface water,SO4,3, ,,30-Aug-12,SD3,U of R
+201208013,Surface water,SUVA,3, ,,30-Aug-12,SD3,U of R
+201208014,Surface water,THg,3, ,,30-Aug-12,SD3,U of R
+201208015,Surface water,MeHg,3, ,,30-Aug-12,SD3,U of R
+201905008,Water,DOC,1, ,,29-May-19,1,U of R
+201905009,Water,SUVA,1, ,,29-May-19,1,U of R
+201905010,Water,SO4,1, ,,29-May-19,1,U of R
+201907003,Water,SUVA,1, ,,02-Jul-19,1,U of R
+201907004,Water,DOC,1, ,,02-Jul-19,1,U of R
+201907005,Water,SO4,1, ,,02-Jul-19,1,U of R
+201907005A,Water,SUVA,1, ,,07-Jul-19,1,U of R
+201907006A,Water,DOC,1, ,,07-Jul-19,1,U of R
+201907007A,Water,SO4,1, ,,07-Jul-19,1,U of R
+201908003,Water,SUVA,1, ,,21-Aug-19,1,U of R
+201908004,Water,DOC,1, ,,21-Aug-19,1,U of R
+201908005,Water,SO4,1, ,,21-Aug-19,1,U of R
+202006001,Water,DOC,1, ,,11-Jun-20,1,U of R
+202006002,Water,SO4,1, ,,11-Jun-20,1,U of R
+202006003,Water,SUVA,1, ,,11-Jun-20,1,U of R
+202006049,Water,DOC,1, ,,29-Jun-20,1,U of R
+202006050,Water,SUVA,1, ,,29-Jun-20,1,U of R
+202006051,Water,SO4,1, ,,29-Jun-20,1,U of R
+202007019,Water,DOC,1, ,,15-Jul-20,1,U of R
+202007020,Water,SO4,1, ,,15-Jul-20,1,U of R
+202007021,Water,SUVA,1, ,,15-Jul-20,1,U of R
+202007034,Water,DOC,1, ,,29-Jul-20,1,U of R
+202007035,Water,SO4,1, ,,29-Jul-20,1,U of R
+202007036,Water,SUVA,1, ,,29-Jul-20,1,U of R
+202008016,Water,DOC,1, ,,12-Aug-20,1,U of R
+202008017,Water,SO4,1, ,,12-Aug-20,1,U of R
+202008018,Water,SUVA,1, ,,12-Aug-20,1,U of R
+202008037,Water,DOC,1, ,,23-Aug-20,1,U of R
+202008038,Water,SUVA,1, ,,23-Aug-20,1,U of R
+202008039,Water,SO4,1, ,,23-Aug-20,1,U of R
+202009007,Water,DOC,1, ,,05-Sep-20,1,U of R
+202009008,Water,SO4,1, ,,05-Sep-20,1,U of R
+202009009,Water,SUVA,1, ,,05-Sep-20,1,U of R
+202009028,Water,DOC,1, ,,23-Sep-20,1,U of R
+202009029,Water,SUVA,1, ,,23-Sep-20,1,U of R
+202009030,Water,SO4,1, ,,23-Sep-20,1,U of R
+202010010,Water,DOC,1, ,,04-Oct-20,1,U of R
+202010011,Water,SUVA,1, ,,04-Oct-20,1,U of R
+202010012,Water,SO4,1, ,,04-Oct-20,1,U of R
+202107056,Water,SO4,1, ,,22-Jul-21,1,U of R
+202108004,Water,DOC,1, ,,04-Aug-21,1,U of R
+202108005,Water,SO4,1, ,,04-Aug-21,1,U of R
+202108024,Water,DOC ,1, ,,18-Aug-21,1,U of R
+202108025,Water,SO4,1, ,,18-Aug-21,1,U of R
+202109008,Water,DOC,1, ,,01-Sep-21,1,U of R
+202109009,Water,SO4,1, ,,01-Sep-21,1,U of R
+202109027,Water,DOC,1, ,,19-Sep-21,1,U of R
+202109028,Water,SO4,1, ,,19-Sep-21,1,U of R
+202205012,Water,DOC,1, ,,10-May-22,1,U of R
+202205013,Water,SO4,1, ,,10-May-22,1,U of R
+202205067,Water,DOC,1, ,,24-May-22,1,U of R
+202205068,Water,SO4,1, ,,24-May-22,1,U of R
+202206002,Water,DOC,1, ,,08-Jun-22,1,U of R
+202206003,Water,SO4,1, ,,08-Jun-22,1,U of R
+202206063,Water,DOC,1, ,,21-Jun-22,1,U of R
+202206064,Water,SO4,1, ,,21-Jun-22,1,U of R
+202207007,Water,DOC,1, ,,06-Jul-22,1,U of R
+202207008,Water,SO4,1, ,,06-Jul-22,1,U of R
+202207063,Water,DOC,1, ,,19-Jul-22,1,U of R
+202207064,Water,SO4,1, ,,19-Jul-22,1,U of R
+201905001,Water,SO4,2, ,,29-May-19,2,U of R
+201905002,Water,SUVA,2, ,,29-May-19,2,U of R
+201905003,Water,DOC,2, ,,29-May-19,2,U of R
+201907008,Water,SUVA,2, ,,02-Jul-19,2,U of R
+201907009,Water,DOC,2, ,,02-Jul-19,2,U of R
+201907010,Water,SO4,2, ,,02-Jul-19,2,U of R
+202006004,Water,DOC,2, ,,11-Jun-20,2,U of R
+202006005,Water,SO4,2, ,,11-Jun-20,2,U of R
+202006006,Water,SUVA,2, ,,11-Jun-20,2,U of R
+202006052,Water,DOC,2, ,,29-Jun-20,2,U of R
+202006053,Water,SUVA,2, ,,29-Jun-20,2,U of R
+202006054,Water,SO4,2, ,,29-Jun-20,2,U of R
+202007016,Water,DOC,2, ,,15-Jul-20,2,U of R
+202007017,Water,SUVA,2, ,,15-Jul-20,2,U of R
+202007018,Water,SO4,2, ,,15-Jul-20,2,U of R
+202007037,Water,DOC,2, ,,29-Jul-20,2,U of R
+202007038,Water,SUVA,2, ,,29-Jul-20,2,U of R
+202007039,Water,SO4,2, ,,29-Jul-20,2,U of R
+202008022,Water,DOC,2, ,,12-Aug-20,2,U of R
+202008023,Water,SUVA,2, ,,12-Aug-20,2,U of R
+202008024,Water,SO4,2, ,,12-Aug-20,2,U of R
+202008040,Water,DOC,2, ,,23-Aug-20,2,U of R
+202008041,Water,SUVA,2, ,,23-Aug-20,2,U of R
+202008042,Water,SO4,2, ,,23-Aug-20,2,U of R
+202205007,Water,DOC,2, ,,10-May-22,2,U of R
+202205008,Water,SO4,2, ,,10-May-22,2,U of R
+202205062,Water,DOC,2, ,,24-May-22,2,U of R
+202205063,Water,SO4,2, ,,24-May-22,2,U of R
+202206005,Water,DOC,2, ,,08-Jun-22,2,U of R
+202206006,Water,SO4,2, ,,08-Jun-22,2,U of R
+202206066,Water,DOC,2, ,,21-Jun-22,2,U of R
+202206067,Water,SO4,2, ,,21-Jun-22,2,U of R
+202207010,Water,DOC,2, ,,06-Jul-22,2,U of R
+202207011,Water,SO4,2, ,,06-Jul-22,2,U of R
+202205030,Water,DOC,6, ,,10-May-22,6,U of R
+202205031,Water,SO4,6, ,,10-May-22,6,U of R
+202205085,Water,DOC,6, ,,24-May-22,6,U of R
+202205086,Water,SO4,6, ,,24-May-22,6,U of R
+202206040,Water,DOC,6, ,,09-Jun-22,6,U of R
+202206041,Water,SO4,6, ,,09-Jun-22,6,U of R
+202206096,Water,DOC,6, ,,21-Jun-22,6,U of R
+202206097,Water,SO4,6, ,,21-Jun-22,6,U of R
+202207030,Water,DOC,6, ,,06-Jul-22,6,U of R
+202207031,Water,SO4,6, ,,06-Jul-22,6,U of R
+202107044,Water,SO4,15, ,,22-Jul-21,15,U of R
+202108010,Water,DOC,15, ,,04-Aug-21,15,U of R
+202108011,Water,SO4,15, ,,04-Aug-21,15,U of R
+202108033,Water,DOC ,15, ,,18-Aug-21,15,U of R
+202108034,Water,SO4,15, ,,18-Aug-21,15,U of R
+202109004,Water,DOC,15, ,,01-Sep-21,15,U of R
+202109005,Water,SO4,15, ,,01-Sep-21,15,U of R
+202109033,Water,DOC,15, ,,19-Sep-21,15,U of R
+202109034,Water,SO4,15, ,,19-Sep-21,15,U of R
+202205002,Water,DOC,15, ,,10-May-22,15,U of R
+202205003,Water,SO4,15, ,,10-May-22,15,U of R
+202205057,Water,DOC,15, ,,24-May-22,15,U of R
+202205058,Water,SO4,15, ,,24-May-22,15,U of R
+202206010,Water,DOC,15, ,,08-Jun-22,15,U of R
+202206011,Water,SO4,15, ,,08-Jun-22,15,U of R
+202206058,Water,DOC,15, ,,21-Jun-22,15,U of R
+202206059,Water,SO4,15, ,,21-Jun-22,15,U of R
+202207002,Water,DOC,15, ,,06-Jul-22,15,U of R
+202207003,Water,SO4,15, ,,06-Jul-22,15,U of R
+202207058,Water,DOC,15, ,,19-Jul-22,15,U of R
+202207059,Water,SO4,15, ,,19-Jul-22,15,U of R
+202007029,Water,DOC,25, ,,15-Jul-20,25,U of R
+202007030,Water,SO4,25, ,,15-Jul-20,25,U of R
+202007061,Water,DOC,25, ,,15-Jul-20,25,U of R
+202007062,Water,SO4,25, ,,15-Jul-20,25,U of R
+202007063,Water,SUVA,25, ,,15-Jul-20,25,U of R
+202007043,Water,DOC,25, ,,29-Jul-20,25,U of R
+202007044,Water,SUVA,25, ,,29-Jul-20,25,U of R
+202007045,Water,SO4,25, ,,29-Jul-20,25,U of R
+202008013,Water,DOC,25, ,,12-Aug-20,25,U of R
+202008014,Water,SO4,25, ,,12-Aug-20,25,U of R
+202008015,Water,SUVA,25, ,,12-Aug-20,25,U of R
+202008043,Water,DOC,25, ,,23-Aug-20,25,U of R
+202008044,Water,SUVA,25, ,,23-Aug-20,25,U of R
+202008045,Water,SUVA,25, ,,23-Aug-20,25,U of R
+202009004,Water,DOC,25, ,,05-Sep-20,25,U of R
+202009005,Water,SO4,25, ,,05-Sep-20,25,U of R
+202009006,Water,SUVA,25, ,,05-Sep-20,25,U of R
+202009025,Water,DOC,25, ,,23-Sep-20,25,U of R
+202009026,Water,SUVA,25, ,,23-Sep-20,25,U of R
+202009027,Water,SO4,25, ,,23-Sep-20,25,U of R
+202010007,Water,DOC,25, ,,04-Oct-20,25,U of R
+202010008,Water,SUVA,25, ,,04-Oct-20,25,U of R
+202010009,Water,SO4,25, ,,04-Oct-20,25,U of R
+202107041,Water,SO4,25, ,,22-Jul-21,25,U of R
+202108001,Water,DOC,25, ,,04-Aug-21,25,U of R
+202108002,Water,SO4,25, ,,04-Aug-21,25,U of R
+202108036,Water,DOC ,25, ,,18-Aug-21,25,U of R
+202108037,Water,SO4,25, ,,18-Aug-21,25,U of R
+202109002,Water,DOC,25, ,,01-Sep-21,25,U of R
+202109003,Water,SO4,25, ,,01-Sep-21,25,U of R
+202109024,Water,DOC,25, ,,19-Sep-21,25,U of R
+202109025,Water,SO4,25, ,,19-Sep-21,25,U of R
+202205045,Water,DOC,35, ,,10-May-22,35,U of R
+202205046,Water,SO4,35, ,,10-May-22,35,U of R
+202205100,Water,DOC,35, ,,24-May-22,35,U of R
+202205101,Water,SO4,35, ,,24-May-22,35,U of R
+202206030,Water,DOC,35, ,,08-Jun-22,35,U of R
+202206031,Water,SO4,35, ,,08-Jun-22,35,U of R
+202206101,Water,DOC,35, ,,21-Jun-22,35,U of R
+202206102,Water,SO4,35, ,,21-Jun-22,35,U of R
+202207040,Water,DOC,35, ,,06-Jul-22,35,U of R
+202207041,Water,SO4,35, ,,06-Jul-22,35,U of R
+202207086,Water,DOC,35, ,,19-Jul-22,35,U of R
+202207087,Water,SO4,35, ,,19-Jul-22,35,U of R
+202205050,Water,DOC,37, ,,10-May-22,37,U of R
+202205051,Water,SO4,37, ,,10-May-22,37,U of R
+202205105,Water,DOC,37, ,,24-May-22,37,U of R
+202205106,Water,SO4,37, ,,24-May-22,37,U of R
+202206035,Water,DOC,37, ,,08-Jun-22,37,U of R
+202206036,Water,SO4,37, ,,08-Jun-22,37,U of R
+202206106,Water,DOC,37, ,,21-Jun-22,37,U of R
+202206107,Water,SO4,37, ,,21-Jun-22,37,U of R
+202207045,Water,DOC,37, ,,06-Jul-22,37,U of R
+202207046,Water,SO4,37, ,,06-Jul-22,37,U of R
+202207081,Water,DOC,37, ,,19-Jul-22,37,U of R
+202207082,Water,SO4,37, ,,19-Jul-22,37,U of R
+202007064,Water,DOC,80, ,,15-Jul-20,80,U of R
+202007052,Water,DOC,80, ,,29-Jul-20,80,U of R
+202007053,Water,SUVA,80, ,,29-Jul-20,80,U of R
+202007054,Water,SO4,80, ,,29-Jul-20,80,U of R
+202008007,Water,DOC,80, ,,12-Aug-20,80,U of R
+202008008,Water,SO4,80, ,,12-Aug-20,80,U of R
+202008009,Water,SUVA,80, ,,12-Aug-20,80,U of R
+202008046,Water,DOC,80, ,,23-Aug-20,80,U of R
+202008047,Water,SO4,80, ,,23-Aug-20,80,U of R
+202008048,Water,SUVA,80, ,,23-Aug-20,80,U of R
+202007010,Water,DOC,97, ,,15-Jul-20,97,U of R
+202007011,Water,SO4,97, ,,15-Jul-20,97,U of R
+202007012,Water,SUVA,97, ,,15-Jul-20,97,U of R
+202007040,Water,DOC,97, ,,29-Jul-20,97,U of R
+202007041,Water,SUVA,97, ,,29-Jul-20,97,U of R
+202007042,Water,SO4,97, ,,29-Jul-20,97,U of R
+202008010,Water,DOC,97, ,,12-Aug-20,97,U of R
+202008011,Water,SO4,97, ,,12-Aug-20,97,U of R
+202008012,Water,SUVA,97, ,,12-Aug-20,97,U of R
+202008028,Water,DOC,97, ,,23-Aug-20,97,U of R
+202008029,Water,SUVA,97, ,,23-Aug-20,97,U of R
+202008030,Water,SO4,97, ,,23-Aug-20,97,U of R
+202009016,Water,DOC,97, ,,05-Sep-20,97,U of R
+202009017,Water,SO4,97, ,,05-Sep-20,97,U of R
+202009018,Water,SUVA,97, ,,05-Sep-20,97,U of R
+202009037,Water,DOC,97, ,,23-Sep-20,97,U of R
+202009038,Water,SUVA,97, ,,23-Sep-20,97,U of R
+202009039,Water,SO4,97, ,,23-Sep-20,97,U of R
+202010019,Water,DOC,97, ,,04-Oct-20,97,U of R
+202010020,Water,SUVA,97, ,,04-Oct-20,97,U of R
+202010021,Water,SO4,97, ,,04-Oct-20,97,U of R
+202107047,Water,SO4,97, ,,22-Jul-21,97,U of R
+202108007,Water,DOC,97, ,,04-Aug-21,97,U of R
+202108008,Water,SO4,97, ,,04-Aug-21,97,U of R
+202108027,Water,DOC ,97, ,,18-Aug-21,97,U of R
+202108028,Water,SO4,97, ,,18-Aug-21,97,U of R
+202109014,Water,DOC,97, ,,01-Sep-21,97,U of R
+202109015,Water,SO4,97, ,,01-Sep-21,97,U of R
+202205025,Water,DOC,97, ,,10-May-22,97,U of R
+202205026,Water,SO4,97, ,,10-May-22,97,U of R
+202205080,Water,DOC,97, ,,24-May-22,97,U of R
+202205081,Water,SO4,97, ,,24-May-22,97,U of R
+202206025,Water,DOC,97, ,,08-Jun-22,97,U of R
+202206026,Water,SO4,97, ,,08-Jun-22,97,U of R
+202206081,Water,DOC,97, ,,21-Jun-22,97,U of R
+202206082,Water,SO4,97, ,,21-Jun-22,97,U of R
+202207025,Water,DOC,97, ,,06-Jul-22,97,U of R
+202207026,Water,SO4,97, ,,06-Jul-22,97,U of R
+202207071,Water,DOC,97, ,,19-Jul-22,97,U of R
+202207072,Water,SO4,97, ,,19-Jul-22,97,U of R
+202006016,Water,DOC,100, ,,11-Jun-20,100,U of R
+202006017,Water,SUVA,100, ,,11-Jun-20,100,U of R
+202006018,Water,SO4,100, ,,11-Jun-20,100,U of R
+202006025,Water,DOC,103, ,,11-Jun-20,103,U of R
+202006026,Water,SUVA,103, ,,11-Jun-20,103,U of R
+202006027,Water,SO4,103, ,,11-Jun-20,103,U of R
+202006037,Water,DOC,103, ,,29-Jun-20,103,U of R
+202006038,Water,SUVA,103, ,,29-Jun-20,103,U of R
+202006039,Water,SO4,103, ,,29-Jun-20,103,U of R
+202007007,Water,DOC,103, ,,15-Jul-20,103,U of R
+202007008,Water,SUVA,103, ,,15-Jul-20,103,U of R
+202007009,Water,SO4,103, ,,15-Jul-20,103,U of R
+202007031,Water,DOC,103, ,,29-Jul-20,103,U of R
+202007032,Water,SO4,103, ,,29-Jul-20,103,U of R
+202007033,Water,SUVA,103, ,,29-Jul-20,103,U of R
+202008001,Water,DOC,103, ,,12-Aug-20,103,U of R
+202008002,Water,SUVA,103, ,,12-Aug-20,103,U of R
+202008003,Water,SO4,103, ,,12-Aug-20,103,U of R
+202008052,Water,DOC,103, ,,23-Aug-20,103,U of R
+202008053,Water,SO4,103, ,,23-Aug-20,103,U of R
+202008054,Water,SUVA,103, ,,23-Aug-20,103,U of R
+202009001,Water,DOC,103, ,,05-Sep-20,103,U of R
+202009002,Water,SO4,103, ,,05-Sep-20,103,U of R
+202009003,Water,SUVA,103, ,,05-Sep-20,103,U of R
+202009022,Water,DOC,103, ,,23-Sep-20,103,U of R
+202009023,Water,SUVA,103, ,,23-Sep-20,103,U of R
+202009024,Water,SO4,103, ,,23-Sep-20,103,U of R
+202010001,Water,DOC,103, ,,04-Oct-20,103,U of R
+202010002,Water,SUVA,103, ,,04-Oct-20,103,U of R
+202010003,Water,SO4,103, ,,04-Oct-20,103,U of R
+202107053,Water,SO4,109, ,,22-Jul-21,109,U of R
+202205035,Water,DOC,109, ,,10-May-22,109,U of R
+202205036,Water,SO4,109, ,,10-May-22,109,U of R
+202205090,Water,DOC,109, ,,24-May-22,109,U of R
+202205091,Water,SO4,109, ,,24-May-22,109,U of R
+202206046,Water,DOC,109, ,,09-Jun-22,109,U of R
+202206047,Water,SO4,109, ,,09-Jun-22,109,U of R
+202206086,Water,DOC,109, ,,21-Jun-22,109,U of R
+202206087,Water,SO4,109, ,,21-Jun-22,109,U of R
+202207035,Water,DOC,109, ,,06-Jul-22,109,U of R
+202207036,Water,SO4,109, ,,06-Jul-22,109,U of R
+202207076,Water,DOC,109, ,,19-Jul-22,109,U of R
+202207077,Water,SO4,109, ,,19-Jul-22,109,U of R
+202007027,Water,DOC,111, ,,15-Jul-20,111,U of R
+202007028,Water,SO4,111, ,,15-Jul-20,111,U of R
+202007058,Water,DOC,111, ,,15-Jul-20,111,U of R
+202007059,Water,SUVA,111, ,,15-Jul-20,111,U of R
+202007060,Water,SO4,111, ,,15-Jul-20,111,U of R
+202007049,Water,DOC,111, ,,29-Jul-20,111,U of R
+202007050,Water,SO4,111, ,,29-Jul-20,111,U of R
+202007051,Water,SUVA,111, ,,29-Jul-20,111,U of R
+202008004,Water,DOC,111, ,,12-Aug-20,111,U of R
+202008005,Water,SUVA,111, ,,12-Aug-20,111,U of R
+202008006,Water,SO4,111, ,,12-Aug-20,111,U of R
+202008049,Water,DOC,111, ,,23-Aug-20,111,U of R
+202008050,Water,SO4,111, ,,23-Aug-20,111,U of R
+202008051,Water,SUVA,111, ,,23-Aug-20,111,U of R
+202009010,Water,DOC,111, ,,05-Sep-20,111,U of R
+202009011,Water,SO4,111, ,,05-Sep-20,111,U of R
+202009012,Water,SUVA,111, ,,05-Sep-20,111,U of R
+202009040,Water,DOC,111, ,,23-Sep-20,111,U of R
+202009041,Water,SUVA,111, ,,23-Sep-20,111,U of R
+202009042,Water,SO4,111, ,,23-Sep-20,111,U of R
+202010004,Water,DOC,111, ,,04-Oct-20,111,U of R
+202010005,Water,SUVA,111, ,,04-Oct-20,111,U of R
+202010006,Water,SO4,111, ,,04-Oct-20,111,U of R
+201905023,Water,SUVA,118, ,,30-May-19,118,U of R
+201905024,Water,DOC,118, ,,30-May-19,118,U of R
+201905025,Water,SO4,118, ,,30-May-19,118,U of R
+201907023,Water,SUVA,118, ,,02-Jul-19,118,U of R
+201907024,Water,DOC,118, ,,02-Jul-19,118,U of R
+201907025,Water,SO4,118, ,,02-Jul-19,118,U of R
+202006022,Water,DOC,118, ,,11-Jun-20,118,U of R
+202006023,Water,SUVA,118, ,,11-Jun-20,118,U of R
+202006024,Water,SO4,118, ,,11-Jun-20,118,U of R
+202006046,Water,DOC,118, ,,29-Jun-20,118,U of R
+202006047,Water,SUVA,118, ,,29-Jun-20,118,U of R
+202006048,Water,SO4,118, ,,29-Jun-20,118,U of R
+202007013,Water,DOC,118, ,,15-Jul-20,118,U of R
+202007014,Water,SUVA,118, ,,15-Jul-20,118,U of R
+202007015,Water,SO4,118, ,,15-Jul-20,118,U of R
+202007065,Water,DOC,118, ,,29-Jul-20,118,U of R
+202007066,Water,SUVA,118, ,,29-Jul-20,118,U of R
+202007067,Water,SO4,118, ,,29-Jul-20,118,U of R
+202205040,Water,DOC,118, ,,10-May-22,118,U of R
+202205041,Water,SO4,118, ,,10-May-22,118,U of R
+202205095,Water,DOC,118, ,,24-May-22,118,U of R
+202205096,Water,SO4,118, ,,24-May-22,118,U of R
+202206051,Water,DOC,118, ,,09-Jun-22,118,U of R
+202206052,Water,SO4,118, ,,09-Jun-22,118,U of R
+202206091,Water,DOC,118, ,,21-Jun-22,118,U of R
+202206092,Water,SO4,118, ,,21-Jun-22,118,U of R
+201905013,Water,DOC,120, ,,30-May-19,120,U of R
+201905014,Water,SO4,120, ,,30-May-19,120,U of R
+201905015,Water,SUVA,120, ,,30-May-19,120,U of R
+201907018,Water,SUVA,120, ,,02-Jul-19,120,U of R
+201907019,Water,DOC,120, ,,02-Jul-19,120,U of R
+201907020,Water,SO4,120, ,,02-Jul-19,120,U of R
+202006028,Water,DOC,120, ,,11-Jun-20,120,U of R
+202006029,Water,SUVA,120, ,,11-Jun-20,120,U of R
+202006030,Water,SO4,120, ,,29-Jun-20,120,U of R
+202006055,Water,DOC,120, ,,29-Jun-20,120,U of R
+202006056,Water,SUVA,120, ,,29-Jun-20,120,U of R
+202006057,Water,SO4,120, ,,29-Jun-20,120,U of R
+202007001,Water,DOC,120, ,,15-Jul-20,120,U of R
+202007002,Water,SO4,120, ,,15-Jul-20,120,U of R
+202007003,Water,SUVA,120, ,,15-Jul-20,120,U of R
+202205020,Water,DOC,124, ,,10-May-22,124,U of R
+202205021,Water,SO4,124, ,,10-May-22,124,U of R
+202205075,Water,DOC,124, ,,24-May-22,124,U of R
+202205076,Water,SO4,124, ,,24-May-22,124,U of R
+202206020,Water,DOC,124, ,,08-Jun-22,124,U of R
+202206021,Water,SO4,124, ,,08-Jun-22,124,U of R
+202206071,Water,DOC,124, ,,21-Jun-22,124,U of R
+202206072,Water,SO4,124, ,,21-Jun-22,124,U of R
+202207020,Water,DOC,124, ,,06-Jul-22,124,U of R
+202207021,Water,SO4,124, ,,06-Jul-22,124,U of R
+202007024,Water,DOC,125, ,,15-Jul-20,125,U of R
+202007025,Water,SO4,125, ,,15-Jul-20,125,U of R
+202007026,Water,SUVA,125, ,,15-Jul-20,125,U of R
+202007046,Water,DOC,125, ,,29-Jul-20,125,U of R
+202007047,Water,SUVA,125, ,,29-Jul-20,125,U of R
+202007048,Water,SO4,125, ,,29-Jul-20,125,U of R
+202008019,Water,DOC,125, ,,12-Aug-20,125,U of R
+202008020,Water,SO4,125, ,,12-Aug-20,125,U of R
+202008021,Water,SUVA,125, ,,12-Aug-20,125,U of R
+202008034,Water,DOC,125, ,,23-Aug-20,125,U of R
+202008035,Water,SUVA,125, ,,23-Aug-20,125,U of R
+202008036,Water,SO4,125, ,,23-Aug-20,125,U of R
+202009013,Water,DOC,125, ,,05-Sep-20,125,U of R
+202009014,Water,SO4,125, ,,05-Sep-20,125,U of R
+202009015,Water,SUVA,125, ,,05-Sep-20,125,U of R
+202009031,Water,DOC,125, ,,23-Sep-20,125,U of R
+202009032,Water,SUVA,125, ,,23-Sep-20,125,U of R
+202009033,Water,SO4,125, ,,23-Sep-20,125,U of R
+202010013,Water,DOC,125, ,,04-Oct-20,125,U of R
+202010014,Water,SO4,125, ,,04-Oct-20,125,U of R
+202010015,Water,SUVA,125, ,,04-Oct-20,125,U of R
+202107050,Water,SO4,125, ,,22-Jul-21,125,U of R
+202108013,Water,DOC,125, ,,04-Aug-21,125,U of R
+202108014,Water,SO4,125, ,,04-Aug-21,125,U of R
+202108030,Water,DOC ,125, ,,18-Aug-21,125,U of R
+202108031,Water,SO4,125, ,,18-Aug-21,125,U of R
+202109010,Water,DOC,125, ,,01-Sep-21,125,U of R
+202109011,Water,SO4,125, ,,01-Sep-21,125,U of R
+202109030,Water,DOC,125, ,,19-Sep-21,125,U of R
+202109031,Water,SO4,125, ,,19-Sep-21,125,U of R
+202205015,Water,DOC,125, ,,10-May-22,125,U of R
+202205016,Water,SO4,125, ,,10-May-22,125,U of R
+202205070,Water,DOC,125, ,,24-May-22,125,U of R
+202205071,Water,SO4,125, ,,24-May-22,125,U of R
+202206015,Water,DOC,125, ,,08-Jun-22,125,U of R
+202206016,Water,SO4,125, ,,08-Jun-22,125,U of R
+202206076,Water,DOC,125, ,,21-Jun-22,125,U of R
+202206077,Water,SO4,125, ,,21-Jun-22,125,U of R
+202207015,Water,DOC,125, ,,06-Jul-22,125,U of R
+202207016,Water,SO4,125, ,,06-Jul-22,125,U of R
+202207066,Water,DOC,125, ,,19-Jul-22,125,U of R
+202207067,Water,SO4,125, ,,19-Jul-22,125,U of R
+202006013,Water,DOC,130, ,,11-Jun-20,130,U of R
+202006014,Water,SO4,130, ,,11-Jun-20,130,U of R
+202006015,Water,SUVA,130, ,,11-Jun-20,130,U of R
+202006043,Water,DOC,130, ,,29-Jun-20,130,U of R
+202006044,Water,SUVA,130, ,,29-Jun-20,130,U of R
+202006045,Water,SO4,130, ,,29-Jun-20,130,U of R
+202007004,Water,DOC,130, ,,15-Jul-20,130,U of R
+202007005,Water,SO4,130, ,,15-Jul-20,130,U of R
+202007006,Water,SUVA,130, ,,15-Jul-20,130,U of R
+202007055,Water,DOC,130, ,,29-Jul-20,130,U of R
+202007056,Water,SUVA,130, ,,29-Jul-20,130,U of R
+202007057,Water,SO4,130, ,,29-Jul-20,130,U of R
+202008025,Water,DOC,130, ,,12-Aug-20,130,U of R
+202008026,Water,SUVA,130, ,,12-Aug-20,130,U of R
+202008027,Water,SO4,130, ,,12-Aug-20,130,U of R
+202008031,Water,DOC,130, ,,23-Aug-20,130,U of R
+202008032,Water,SUVA,130, ,,23-Aug-20,130,U of R
+202008033,Water,SO4,130, ,,23-Aug-20,130,U of R
+202009019,Water,DOC,130, ,,05-Sep-20,130,U of R
+202009020,Water,SUVA,130, ,,05-Sep-20,130,U of R
+202009021,Water,SO4,130, ,,05-Sep-20,130,U of R
+202009034,Water,DOC,130, ,,23-Sep-20,130,U of R
+202009035,Water,SUVA,130, ,,23-Sep-20,130,U of R
+202009036,Water,SO4,130, ,,23-Sep-20,130,U of R
+202010016,Water,DOC,130, ,,04-Oct-20,130,U of R
+202010017,Water,SO4,130, ,,04-Oct-20,130,U of R
+202010018,Water,SUVA,130, ,,04-Oct-20,130,U of R
+201905018,Water,DOC,139, ,,30-May-19,139,U of R
+201905019,Water,SO4,139, ,,30-May-19,139,U of R
+201905020,Water,SUVA,139, ,,30-May-19,139,U of R
+202006007,Water,DOC,139, ,,11-Jun-20,139,U of R
+202006008,Water,SO4,139, ,,11-Jun-20,139,U of R
+202006009,Water,SUVA,139, ,,11-Jun-20,139,U of R
+202006040,Water,DOC,139, ,,29-Jun-20,139,U of R
+202006041,Water,SUVA,139, ,,29-Jun-20,139,U of R
+202006042,Water,SO4,139, ,,29-Jun-20,139,U of R
+202007022,Water,DOC,139, ,,15-Jul-20,139,U of R
+202007023,Water,SO4,139, ,,15-Jul-20,139,U of R
+201907013,Water,DOC,125N, ,,02-Jul-19,125N,U of R
+201907014,Water,SUVA,125N, ,,02-Jul-19,125N,U of R
+201907015,Water,SO4,125N, ,,02-Jul-19,125N,U of R
+202006010,Water,DOC,125N, ,,11-Jun-20,125N,U of R
+202006011,Water,SO4,125N, ,,11-Jun-20,125N,U of R
+202006012,Water,SUVA,125N, ,,11-Jun-20,125N,U of R
+202006031,Water,DOC,125N, ,,29-Jun-20,125N,U of R
+202006032,Water,SUVA,125N, ,,29-Jun-20,125N,U of R
+202006033,Water,SO4,125N, ,,29-Jun-20,125N,U of R
+202006019,Water,DOC,97/98, ,,11-Jun-20,97/98,U of R
+202006020,Water,SUVA,97/98, ,,11-Jun-20,97/98,U of R
+202006021,Water,SO4,97/98, ,,11-Jun-20,97/98,U of R
+202006034,Water,DOC,97/98, ,,29-Jun-20,97/98,U of R
+202006035,Water,SUVA,97/98, ,,29-Jun-20,97/98,U of R
+202006036,Water,SO4,97/98, ,,29-Jun-20,97/98,U of R
+20060749,Water,DOC,1, ,,20-Jul-06,Pond 1,U of R
+201007036,Water,DOC,1, ,,05-Jul-10,Pond 1,U of R
+201007037,Water,SO4,1, ,,05-Jul-10,Pond 1,U of R
+201007038,Water,SUVA,1, ,,05-Jul-10,Pond 1,U of R
+201007039,Water,THg,1, ,,05-Jul-10,Pond 1,U of R
+201007040,Water,MeHg,1, ,,05-Jul-10,Pond 1,U of R
+201008006,Water,DOC,1, ,,04-Aug-10,Pond 1,U of R
+201008007,Water,SO4,1, ,,04-Aug-10,Pond 1,U of R
+201008008,Water,SUVA,1, ,,04-Aug-10,Pond 1,U of R
+201008009,Water,THg,1, ,,04-Aug-10,Pond 1,U of R
+201008010,Water,MeHg,1, ,,04-Aug-10,Pond 1,U of R
+201007026,Water,DOC,100, ,,06-Jul-10,Pond 100,U of R
+201007027,Water,SO4,100, ,,06-Jul-10,Pond 100,U of R
+201007028,Water,SUVA,100, ,,06-Jul-10,Pond 100,U of R
+201007029,Water,THg,100, ,,06-Jul-10,Pond 100,U of R
+201007030,Water,MeHg,100, ,,06-Jul-10,Pond 100,U of R
+20060769,Water,DOC,104, ,,21-Jul-06,Pond 104,U of R
+201007011,Water,DOC,104, ,,06-Jul-10,Pond 104,U of R
+201007012,Water,SO4,104, ,,06-Jul-10,Pond 104,U of R
+201007013,Water,SUVA,104, ,,06-Jul-10,Pond 104,U of R
+201007014,Water,THg,104, ,,06-Jul-10,Pond 104,U of R
+201007015,Water,MeHg,104, ,,06-Jul-10,Pond 104,U of R
+201008021,Water,DOC,104, ,,04-Aug-10,Pond 104,U of R
+201008022,Water,SO4,104, ,,04-Aug-10,Pond 104,U of R
+201008023,Water,SUVA,104, ,,04-Aug-10,Pond 104,U of R
+201008024,Water,THg,104, ,,04-Aug-10,Pond 104,U of R
+201008025,Water,MeHg,104, ,,04-Aug-10,Pond 104,U of R
+20060774,Water,DOC,109, ,,21-Jul-06,Pond 109,U of R
+201007031,Water,DOC,109, ,,06-Jul-10,Pond 109,U of R
+201007032,Water,SO4,109, ,,06-Jul-10,Pond 109,U of R
+201007033,Water,SUVA,109, ,,06-Jul-10,Pond 109,U of R
+201007034,Water,THg,109, ,,06-Jul-10,Pond 109,U of R
+201007035,Water,MeHg,109, ,,06-Jul-10,Pond 109,U of R
+201008026,Water,DOC,109, ,,04-Aug-10,Pond 109,U of R
+201008027,Water,SO4,109, ,,04-Aug-10,Pond 109,U of R
+201008028,Water,SUVA,109, ,,04-Aug-10,Pond 109,U of R
+201008029,Water,THg,109, ,,04-Aug-10,Pond 109,U of R
+201008030,Water,MeHg,109, ,,04-Aug-10,Pond 109,U of R
+20060788,Water,DOC,110, ,,21-Jul-06,Pond 110,U of R
+200607101,Water,DOC,113, ,,21-Jul-06,Pond 113,U of R
+201007016,Water,DOC,113, ,,06-Jul-10,Pond 113,U of R
+201007017,Water,SO4,113, ,,06-Jul-10,Pond 113,U of R
+201007018,Water,SUVA,113, ,,06-Jul-10,Pond 113,U of R
+201007019,Water,THg,113, ,,06-Jul-10,Pond 113,U of R
+201007020,Water,MeHg,113, ,,06-Jul-10,Pond 113,U of R
+20060779,Water,DOC,118, ,,21-Jul-06,Pond 118,U of R
+201007006,Water,DOC,118, ,,06-Jul-10,Pond 118,U of R
+201007007,Water,SO4,118, ,,06-Jul-10,Pond 118,U of R
+201007008,Water,SUVA,118, ,,06-Jul-10,Pond 118,U of R
+201007009,Water,THg,118, ,,06-Jul-10,Pond 118,U of R
+201007010,Water,MeHg,118, ,,06-Jul-10,Pond 118,U of R
+20060744,Water,DOC, 125N, ,,20-Jul-06,Pond 125N,U of R
+20060930,Water,DOC, 125N, ,,06-Sep-06,Pond 125N,U of R
+20060932,Water,SUVA, 125N, ,,06-Sep-06,Pond 125N,U of R
+20060759,Water,DOC,130, ,,20-Jul-06,Pond 130,U of R
+20060934,Water,DOC,130, ,,06-Sep-06,Pond 130,U of R
+20060936,Water,SUVA,130, ,,06-Sep-06,Pond 130,U of R
+201007041,Water,DOC,130, ,,05-Jul-10,Pond 130,U of R
+201007042,Water,SO4,130, ,,05-Jul-10,Pond 130,U of R
+201007043,Water,SUVA,130, ,,05-Jul-10,Pond 130,U of R
+201007044,Water,THg,130, ,,05-Jul-10,Pond 130,U of R
+201007045,Water,MeHg,130, ,,05-Jul-10,Pond 130,U of R
+201008036,Water,DOC,130, ,,04-Aug-10,Pond 130,U of R
+201008037,Water,SO4,130, ,,04-Aug-10,Pond 130,U of R
+201008038,Water,SUVA,130, ,,04-Aug-10,Pond 130,U of R
+201008039,Water,THg,130, ,,04-Aug-10,Pond 130,U of R
+201008040,Water,MeHg,130, ,,04-Aug-10,Pond 130,U of R
+200607121,Water,DOC,137, ,,22-Jul-06,Pond 137,U of R
+201007056,Water,DOC,139, ,,05-Jul-10,Pond 139,U of R
+201007057,Water,SO4,139, ,,05-Jul-10,Pond 139,U of R
+201007058,Water,SUVA,139, ,,05-Jul-10,Pond 139,U of R
+201007059,Water,THg,139, ,,05-Jul-10,Pond 139,U of R
+201007060,Water,MeHg,139, ,,05-Jul-10,Pond 139,U of R
+201008031,Water,DOC,139, ,,04-Aug-10,Pond 139,U of R
+201008032,Water,SO4,139, ,,04-Aug-10,Pond 139,U of R
+201008033,Water,SUVA,139, ,,04-Aug-10,Pond 139,U of R
+201008034,Water,THg,139, ,,04-Aug-10,Pond 139,U of R
+201008035,Water,MeHg,139, ,,04-Aug-10,Pond 139,U of R
+20060739,Water,DOC,2, ,,20-Jul-06,Pond 2,U of R
+20060926,Water,DOC,2, ,,06-Sep-06,Pond 2,U of R
+20060928,Water,SUVA,2, ,,06-Sep-06,Pond 2,U of R
+201007061,Water,DOC,2, ,,05-Jul-10,Pond 2,U of R
+201007062,Water,SO4,2, ,,05-Jul-10,Pond 2,U of R
+201007063,Water,SUVA,2, ,,05-Jul-10,Pond 2,U of R
+201007064,Water,THg,2, ,,05-Jul-10,Pond 2,U of R
+201007065,Water,MeHg,2, ,,05-Jul-10,Pond 2,U of R
+201008016,Water,DOC,2, ,,04-Aug-10,Pond 2,U of R
+201008017,Water,SO4,2, ,,04-Aug-10,Pond 2,U of R
+201008018,Water,SUVA,2, ,,04-Aug-10,Pond 2,U of R
+201008019,Water,THg,2, ,,04-Aug-10,Pond 2,U of R
+201008020,Water,MeHg,2, ,,04-Aug-10,Pond 2,U of R
+200607105,Water,DOC,26, ,,22-Jul-06,Pond 26,U of R
+201007046,Water,DOC,3, ,,05-Jul-10,Pond 3,U of R
+201007047,Water,SO4,3, ,,05-Jul-10,Pond 3,U of R
+201007048,Water,SUVA,3, ,,05-Jul-10,Pond 3,U of R
+201007049,Water,THg,3, ,,05-Jul-10,Pond 3,U of R
+201007050,Water,MeHg,3, ,,05-Jul-10,Pond 3,U of R
+201008011,Water,DOC,3, ,,04-Aug-10,Pond 3,U of R
+201008012,Water,SO4,3, ,,04-Aug-10,Pond 3,U of R
+201008013,Water,SUVA,3, ,,04-Aug-10,Pond 3,U of R
+201008014,Water,THg,3, ,,04-Aug-10,Pond 3,U of R
+201008015,Water,MeHg,3, ,,04-Aug-10,Pond 3,U of R
+20060793,Water,DOC,50, ,,21-Jul-06,Pond 50,U of R
+20060797,Water,DOC,60, ,,21-Jul-06,Pond 60,U of R
+200607113,Water,DOC,60, ,,22-Jul-06,Pond 60,U of R
+200607117,Water,DOC,65, ,,22-Jul-06,Pond 65,U of R
+200607109,Water,DOC,67, ,,22-Jul-06,Pond 67,U of R
+20060784,Water,DOC,88, ,,21-Jul-06,Pond 88,U of R
+20060754,Water,DOC,97, ,,20-Jul-06,Pond 97,U of R
+20060938,Water,DOC,97, ,,06-Sep-06,Pond 97,U of R
+20060940,Water,SUVA,97, ,,06-Sep-06,Pond 97,U of R
+201006027,Water,THg,1, ,,02-Jun-10,POND1,U of R
+201006028,Water,SO4,1, ,,02-Jun-10,POND1,U of R
+201006029,Water,DOC,1, ,,02-Jun-10,POND1,U of R
+201006030,Water,SUVA,1, ,,02-Jun-10,POND1,U of R
+201105051,Water,DOC,1, ,,21-May-11,POND1,U of R
+201105052,Water,SO4,1, ,,21-May-11,POND1,U of R
+201105053,Water,SUVA,1, ,,21-May-11,POND1,U of R
+201105054,Water,THg,1, ,,21-May-11,POND1,U of R
+201105055,Water,MeHg,1, ,,21-May-11,POND1,U of R
+201006041,Water,MeHg,100, ,,01-Jun-10,POND100,U of R
+201006042,Water,THg,100, ,,01-Jun-10,POND100,U of R
+201006043,Water,SO4,100, ,,01-Jun-10,POND100,U of R
+201006044,Water,DOC,100, ,,01-Jun-10,POND100,U of R
+201006045,Water,SUVA,100, ,,01-Jun-10,POND100,U of R
+201105056,Water,DOC,100, ,,21-May-11,POND100,U of R
+201105057,Water,SO4,100, ,,21-May-11,POND100,U of R
+201105058,Water,SUVA,100, ,,21-May-11,POND100,U of R
+201105059,Water,THg,100, ,,21-May-11,POND100,U of R
+201105060,Water,MeHg,100, ,,21-May-11,POND100,U of R
+201006057,Water,THg,104, ,,01-Jun-10,POND104,U of R
+201006058,Water,SO4,104, ,,01-Jun-10,POND104,U of R
+201006059,Water,DOC,104, ,,01-Jun-10,POND104,U of R
+201006060,Water,SUVA,104, ,,01-Jun-10,POND104,U of R
+201105041,Water,DOC,104, ,,21-May-11,POND104,U of R
+201105042,Water,SO4,104, ,,21-May-11,POND104,U of R
+201105043,Water,SUVA,104, ,,21-May-11,POND104,U of R
+201105044,Water,THg,104, ,,21-May-11,POND104,U of R
+201105045,Water,MeHg,104, ,,21-May-11,POND104,U of R
+201006047,Water,THg,109, ,,01-Jun-10,POND109,U of R
+201006048,Water,SO4,109, ,,01-Jun-10,POND109,U of R
+201006049,Water,DOC,109, ,,01-Jun-10,POND109,U of R
+201006050,Water,SUVA,109, ,,01-Jun-10,POND109,U of R
+201006002,Water,THg,110, ,,01-Jun-10,POND110,U of R
+201006003,Water,SO4,110, ,,01-Jun-10,POND110,U of R
+201006004,Water,DOC,110, ,,01-Jun-10,POND110,U of R
+201006005,Water,SUVA,110, ,,01-Jun-10,POND110,U of R
+201105011,Water,DOC,110, ,,21-May-11,POND110,U of R
+201105012,Water,SO4,110, ,,21-May-11,POND110,U of R
+201105013,Water,SUVA,110, ,,21-May-11,POND110,U of R
+201105014,Water,THg,110, ,,21-May-11,POND110,U of R
+201105015,Water,MeHg,110, ,,21-May-11,POND110,U of R
+201006022,Water,THg,113, ,,01-Jun-10,POND113,U of R
+201006023,Water,SO4,113, ,,01-Jun-10,POND113,U of R
+201006024,Water,DOC,113, ,,01-Jun-10,POND113,U of R
+201006025,Water,SUVA,113, ,,01-Jun-10,POND113,U of R
+201105031,Water,DOC,113, ,,21-May-11,POND113,U of R
+201105032,Water,SO4,113, ,,21-May-11,POND113,U of R
+201105033,Water,SUVA,113, ,,21-May-11,POND113,U of R
+201105034,Water,THg,113, ,,21-May-11,POND113,U of R
+201105035,Water,MeHg,113, ,,21-May-11,POND113,U of R
+201006017,Water,THg,118, ,,01-Jun-10,POND118,U of R
+201006018,Water,SO4,118, ,,01-Jun-10,POND118,U of R
+201006019,Water,DOC,118, ,,01-Jun-10,POND118,U of R
+201006020,Water,SUVA,118, ,,01-Jun-10,POND118,U of R
+201105021,Water,DOC,118, ,,21-May-11,POND118,U of R
+201105022,Water,SO4,118, ,,21-May-11,POND118,U of R
+201105023,Water,SUVA,118, ,,21-May-11,POND118,U of R
+201105024,Water,THg,118, ,,21-May-11,POND118,U of R
+201105025,Water,MeHg,118, ,,21-May-11,POND118,U of R
+201006032,Water,THg,130, ,,02-Jun-10,POND130,U of R
+201006033,Water,SO4,130, ,,02-Jun-10,POND130,U of R
+201006034,Water,DOC,130, ,,02-Jun-10,POND130,U of R
+201006035,Water,SUVA,130, ,,02-Jun-10,POND130,U of R
+201105026,Water,DOC,130, ,,21-May-11,POND130,U of R
+201105027,Water,SO4,130, ,,21-May-11,POND130,U of R
+201105028,Water,SUVA,130, ,,21-May-11,POND130,U of R
+201105029,Water,THg,130, ,,21-May-11,POND130,U of R
+201105030,Water,MeHg,130, ,,21-May-11,POND130,U of R
+201006072,Water,THg,139, ,,02-Jun-10,POND139,U of R
+201006073,Water,SO4,139, ,,02-Jun-10,POND139,U of R
+201006074,Water,DOC,139, ,,02-Jun-10,POND139,U of R
+201006075,Water,SUVA,139, ,,02-Jun-10,POND139,U of R
+201105006,Water,DOC,139, ,,21-May-11,POND139,U of R
+201105007,Water,SO4,139, ,,21-May-11,POND139,U of R
+201105008,Water,SUVA,139, ,,21-May-11,POND139,U of R
+201105009,Water,THg,139, ,,21-May-11,POND139,U of R
+201105010,Water,MeHg,139, ,,21-May-11,POND139,U of R
+201006067,Water,THg,2, ,,02-Jun-10,POND2,U of R
+201006068,Water,SO4,2, ,,02-Jun-10,POND2,U of R
+201006069,Water,DOC,2, ,,02-Jun-10,POND2,U of R
+201006070,Water,SUVA,2, ,,02-Jun-10,POND2,U of R
+201105061,Water,DOC,2, ,,21-May-11,POND2,U of R
+201105062,Water,SO4,2, ,,21-May-11,POND2,U of R
+201105063,Water,SUVA,2, ,,21-May-11,POND2,U of R
+201105064,Water,THg,2, ,,21-May-11,POND2,U of R
+201105065,Water,MeHg,2, ,,21-May-11,POND2,U of R
+201006012,Water,THg,3, ,,02-Jun-10,POND3,U of R
+201006013,Water,SO4,3, ,,02-Jun-10,POND3,U of R
+201006014,Water,DOC,3, ,,02-Jun-10,POND3,U of R
+201006015,Water,SUVA,3, ,,02-Jun-10,POND3,U of R
+201105046,Water,DOC,3, ,,21-May-11,POND3,U of R
+201105047,Water,SO4,3, ,,21-May-11,POND3,U of R
+201105048,Water,SUVA,3, ,,21-May-11,POND3,U of R
+201105049,Water,THg,3, ,,21-May-11,POND3,U of R
+201105050,Water,MeHg,3, ,,21-May-11,POND3,U of R
+201107156,Water,DOC,1, ,,28-Jul-11,SD1,U of R
+201107157,Water,SO4,1, ,,28-Jul-11,SD1,U of R
+201107158,Water,SUVA,1, ,,28-Jul-11,SD1,U of R
+201107159,Water,THg,1, ,,28-Jul-11,SD1,U of R
+201107160,Water,MeHg,1, ,,28-Jul-11,SD1,U of R
+201107141,Water,DOC,100, ,,28-Jul-11,SD100,U of R
+201107142,Water,SO4,100, ,,28-Jul-11,SD100,U of R
+201107143,Water,SUVA,100, ,,28-Jul-11,SD100,U of R
+201107144,Water,THg,100, ,,28-Jul-11,SD100,U of R
+201107145,Water,MeHg,100, ,,28-Jul-11,SD100,U of R
+201107131,Water,DOC,104, ,,28-Jul-11,SD104,U of R
+201107132,Water,SO4,104, ,,28-Jul-11,SD104,U of R
+201107133,Water,SUVA,104, ,,28-Jul-11,SD104,U of R
+201107134,Water,THg,104, ,,28-Jul-11,SD104,U of R
+201107135,Water,MeHg,104, ,,28-Jul-11,SD104,U of R
+201107126,Water,DOC,110, ,,28-Jul-11,SD110,U of R
+201107127,Water,SO4,110, ,,28-Jul-11,SD110,U of R
+201107128,Water,SUVA,110, ,,28-Jul-11,SD110,U of R
+201107129,Water,THg,110, ,,28-Jul-11,SD110,U of R
+201107130,Water,MeHg,110, ,,28-Jul-11,SD110,U of R
+201107146,Water,DOC,113, ,,28-Jul-11,SD113,U of R
+201107147,Water,SO4,113, ,,28-Jul-11,SD113,U of R
+201107148,Water,SUVA,113, ,,28-Jul-11,SD113,U of R
+201107149,Water,THg,113, ,,28-Jul-11,SD113,U of R
+201107150,Water,MeHg,113, ,,28-Jul-11,SD113,U of R
+201107136,Water,DOC,118, ,,28-Jul-11,SD118,U of R
+201107137,Water,SO4,118, ,,28-Jul-11,SD118,U of R
+201107138,Water,SUVA,118, ,,28-Jul-11,SD118,U of R
+201107139,Water,THg,118, ,,28-Jul-11,SD118,U of R
+201107140,Water,MeHg,118, ,,28-Jul-11,SD118,U of R
+201107171,Water,DOC,130, ,,28-Jul-11,SD130,U of R
+201107172,Water,SO4,130, ,,28-Jul-11,SD130,U of R
+201107173,Water,SUVA,130, ,,28-Jul-11,SD130,U of R
+201107174,Water,THg,130, ,,28-Jul-11,SD130,U of R
+201107175,Water,MeHg,130, ,,28-Jul-11,SD130,U of R
+201107166,Water,DOC,139, ,,28-Jul-11,SD139,U of R
+201107167,Water,SO4,139, ,,28-Jul-11,SD139,U of R
+201107168,Water,SUVA,139, ,,28-Jul-11,SD139,U of R
+201107169,Water,THg,139, ,,28-Jul-11,SD139,U of R
+201107170,Water,MeHg,139, ,,28-Jul-11,SD139,U of R
+201107161,Water,DOC,2, ,,28-Jul-11,SD2,U of R
+201107162,Water,SO4,2, ,,28-Jul-11,SD2,U of R
+201107163,Water,SUVA,2, ,,28-Jul-11,SD2,U of R
+201107164,Water,THg,2, ,,28-Jul-11,SD2,U of R
+201107165,Water,MeHg,2, ,,28-Jul-11,SD2,U of R
+201107151,Water,DOC,3, ,,28-Jul-11,SD3,U of R
+201107152,Water,SO4,3, ,,28-Jul-11,SD3,U of R
+201107153,Water,SUVA,3, ,,28-Jul-11,SD3,U of R
+201107154,Water,THg,3, ,,28-Jul-11,SD3,U of R
+201107155,Water,MeHg,3, ,,28-Jul-11,SD3,U of R
+20060922,Water,DOC,1, ,,06-Sep-06,SDNWA Pond 1,U of R
+20060924,Water,SUVA,1, ,,06-Sep-06,SDNWA Pond 1,U of R
+202105014,Water ,DOC,1, ,,19-May-21,1,U of R
+202105015,Water ,SO4,1, ,,19-May-21,1,U of R
+202106031,Water ,DOC,1, ,,06-Jun-21,1,U of R
+202106032,Water ,SO4,1, ,,06-Jun-21,1,U of R
+202106071,Water , ,1, ,,22-Jun-21,1,U of R
+202106072,Water , ,1, ,,22-Jun-21,1,U of R
+202107010,Water ,DOC,1, ,,06-Jul-21,1,U of R
+202107011,Water ,SO4,1, ,,06-Jul-21,1,U of R
+202107055,Water ,DOC,1, ,,22-Jul-21,1,U of R
+202105023,Water ,DOC,2, ,,19-May-21,2,U of R
+202105024,Water ,SO4,2, ,,19-May-21,2,U of R
+202106019,Water ,DOC,2, ,,06-Jun-21,2,U of R
+202106020,Water ,SO4,2, ,,06-Jun-21,2,U of R
+202105053,Water ,DOC,6, ,,23-May-21,6,U of R
+202105054,Water ,SO4,6, ,,23-May-21,6,U of R
+202106028,Water ,DOC,6, ,,06-Jun-21,6,U of R
+202106029,Water ,SO4,6, ,,06-Jun-21,6,U of R
+202106086,Water , ,6, ,,23-Jun-21,6,U of R
+202106087,Water , ,6, ,,23-Jun-21,6,U of R
+202105017,Water ,DOC,15, ,,19-May-21,15,U of R
+202105018,Water ,SO4,15, ,,19-May-21,15,U of R
+202106034,Water ,DOC,15, ,,06-Jun-21,15,U of R
+202106035,Water ,SO4,15, ,,06-Jun-21,15,U of R
+202106074,Water , ,15, ,,22-Jun-21,15,U of R
+202106075,Water , ,15, ,,22-Jun-21,15,U of R
+202107016,Water ,DOC,15, ,,06-Jul-21,15,U of R
+202107017,Water ,SO4,15, ,,06-Jul-21,15,U of R
+202107043,Water ,DOC,15, ,,22-Jul-21,15,U of R
+202105062,Water ,DOC,25, ,,23-May-21,25,U of R
+202105063,Water ,SO4,25, ,,23-May-21,25,U of R
+202106010,Water ,DOC,25, ,,06-Jun-21,25,U of R
+202106011,Water ,SO4,25, ,,06-Jun-21,25,U of R
+202106090,Water , ,25, ,,23-Jun-21,25,U of R
+202106091,Water , ,25, ,,23-Jun-21,25,U of R
+202107004,Water ,DOC,25, ,,06-Jul-21,25,U of R
+202107005,Water ,SO4,25, ,,06-Jul-21,25,U of R
+202107040,Water ,DOC,25, ,,22-Jul-21,25,U of R
+202105035,Water ,DOC,35, ,,23-May-21,35,U of R
+202105036,Water ,SO4,35, ,,23-May-21,35,U of R
+202106013,Water ,DOC,35, ,,06-Jun-21,35,U of R
+202106014,Water ,SO4,35, ,,06-Jun-21,35,U of R
+202106084,Water , ,35, ,,23-Jun-21,35,U of R
+202106085,Water , ,35, ,,23-Jun-21,35,U of R
+202107019,Water ,DOC,35, ,,06-Jul-21,35,U of R
+202107020,Water ,SO4,35, ,,06-Jul-21,35,U of R
+202105032,Water ,DOC,37, ,,23-May-21,37,U of R
+202105033,Water ,SO4,37, ,,23-May-21,37,U of R
+202106022,Water ,DOC,37, ,,06-Jun-21,37,U of R
+202106023,Water ,SO4,37, ,,06-Jun-21,37,U of R
+202106099,Water , ,37, ,,23-Jun-21,37,U of R
+202106100,Water , ,37, ,,23-Jun-21,37,U of R
+202105059,Water ,DOC,70, ,,23-May-21,70,U of R
+202105060,Water ,SO4,70, ,,23-May-21,70,U of R
+202106001,Water ,DOC,70, ,,06-Jun-21,70,U of R
+202106002,Water ,SO4,70, ,,06-Jun-21,70,U of R
+202106093,Water , ,70, ,,23-Jun-21,70,U of R
+202106094,Water , ,70, ,,23-Jun-21,70,U of R
+202105029,Water ,DOC,97, ,,19-May-21,97,U of R
+202105030,Water ,SO4,97, ,,19-May-21,97,U of R
+202106016,Water ,DOC,97, ,,06-Jun-21,97,U of R
+202106017,Water ,SO4,97, ,,06-Jun-21,97,U of R
+202106065,Water ,DOC,97, ,,22-Jun-21,97,U of R
+202106066,Water ,SO4,97, ,,22-Jun-21,97,U of R
+202107022,Water ,DOC,97, ,,06-Jul-21,97,U of R
+202107023,Water ,SO4,97, ,,06-Jul-21,97,U of R
+202107046,Water ,DOC,97, ,,22-Jul-21,97,U of R
+202105056,Water ,DOC,109, ,,23-May-21,109,U of R
+202105057,Water ,SO4,109, ,,23-May-21,109,U of R
+202106037,Water ,DOC,109, ,,07-Jun-21,109,U of R
+202106038,Water ,SO4,109, ,,07-Jun-21,109,U of R
+202106096,Water , ,109, ,,23-Jun-21,109,U of R
+202106097,Water , ,109, ,,23-Jun-21,109,U of R
+202107001,Water ,DOC,109, ,,06-Jul-21,109,U of R
+202107002,Water ,SO4,109, ,,06-Jul-21,109,U of R
+202107052,Water ,DOC,109, ,,22-Jul-21,109,U of R
+202105038,Water ,DOC,118, ,,23-May-21,118,U of R
+202105039,Water ,SO4,118, ,,23-May-21,118,U of R
+202106040,Water ,DOC,118, ,,07-Jun-21,118,U of R
+202106041,Water ,SO4,118, ,,07-Jun-21,118,U of R
+202105001,Water ,DOC,124, ,,19-May-21,124,U of R
+202105002,Water ,SO4,124, ,,19-May-21,124,U of R
+202106004,Water ,DOC,124, ,,07-Jun-21,124,U of R
+202106005,Water ,SO4,124, ,,07-Jun-21,124,U of R
+202106077,Water , ,124, ,,23-Jun-21,124,U of R
+202106078,Water , ,124, ,,23-Jun-21,124,U of R
+202107013,Water ,DOC,124, ,,06-Jul-21,124,U of R
+202107014,Water ,SO4,124, ,,06-Jul-21,124,U of R
+202105020,Water ,DOC,125, ,,19-May-21,125,U of R
+202105021,Water ,SO4,125, ,,19-May-21,125,U of R
+202106025,Water ,DOC,125, ,,06-Jun-21,125,U of R
+202106026,Water ,SO4,125, ,,06-Jun-21,125,U of R
+202106068,Water ,DOC,125, ,,22-Jun-21,125,U of R
+202106069,Water ,SO4,125, ,,22-Jun-21,125,U of R
+202107007,Water ,DOC,125, ,,06-Jul-21,125,U of R
+202107008,Water ,SO4,125, ,,06-Jul-21,125,U of R
+202107049,Water ,DOC,125, ,,22-Jul-21,125,U of R
+202105026,Water ,DOC,140, ,,19-May-21,140,U of R
+202105027,Water ,SO4,140, ,,19-May-21,140,U of R
+202106007,Water ,DOC,140, ,,07-Jun-21,140,U of R
+202106008,Water ,SO4,140, ,,07-Jun-21,140,U of R
+202106080,Water , ,140, ,,24-Jun-21,140,U of R
+202106081,Water , ,140, ,,24-Jun-21,140,U of R
+201107067,Sediment ,LOI,100,0-2,,06-Jul-11,Pond 100,U of R
+201107070,Sediment ,Particle Size ,100,0-2,,06-Jul-11,Pond 100,U of R
+201107203,Sediment ,Kmeth,100,0-2,,06-Jul-11,Pond 100,U of R
+201107206,Sediment ,Kmeth,100,0-2,,06-Jul-11,Pond 100,U of R
+201107209,Sediment ,Kmeth,100,0-2,,06-Jul-11,Pond 100,U of R
+201107073,Sediment ,LOI,104,0-2,,06-Jul-11,Pond 104,U of R
+201107076,Sediment ,Particle Size ,104,0-2,,06-Jul-11,Pond 104,U of R
+201107212,Sediment ,Kmeth,104,0-2,,06-Jul-11,Pond 104,U of R
+201107215,Sediment ,Kmeth,104,0-2,,06-Jul-11,Pond 104,U of R
+201107218,Sediment ,Kmeth,104,0-2,,06-Jul-11,Pond 104,U of R
+201107079,Sediment ,LOI,110,0-2,,06-Jul-11,Pond 110,U of R
+201107082,Sediment ,Particle Size ,110,0-2,,06-Jul-11,Pond 110,U of R
+201107221,Sediment ,Kmeth,110,0-2,,06-Jul-11,Pond 110,U of R
+201107224,Sediment ,Kmeth,110,0-2,,06-Jul-11,Pond 110,U of R
+201107227,Sediment ,Kmeth,110,0-2,,06-Jul-11,Pond 110,U of R
+201107085,Sediment ,LOI,113,0-2,,06-Jul-11,Pond 113,U of R
+201107088,Sediment ,Particle Size ,113,0-2,,06-Jul-11,Pond 113,U of R
+201107230,Sediment ,Kmeth,113,0-2,,06-Jul-11,Pond 113,U of R
+201107233,Sediment ,Kmeth,113,0-2,,06-Jul-11,Pond 113,U of R
+201107236,Sediment ,Kmeth,113,0-2,,06-Jul-11,Pond 113,U of R
+201107091,Sediment ,LOI,118,0-2,,06-Jul-11,Pond 118,U of R
+201107094,Sediment ,Particle Size ,118,0-2,,06-Jul-11,Pond 118,U of R
+201107239,Sediment ,Kmeth,118,0-2,,06-Jul-11,Pond 118,U of R
+201107242,Sediment ,Kmeth,118,0-2,,06-Jul-11,Pond 118,U of R
+201107245,Sediment ,Kmeth,118,0-2,,06-Jul-11,Pond 118,U of R
+201107097,Sediment ,LOI,130,0-2,,07-Jul-11,Pond 130,U of R
+201107100,Sediment ,Particle Size ,130,0-2,,07-Jul-11,Pond 130,U of R
+201107266,Sediment ,Kmeth,130,0-2,,07-Jul-11,Pond 130,U of R
+201107269,Sediment ,Kmeth,130,0-2,,07-Jul-11,Pond 130,U of R
+201107272,Sediment ,Kmeth,130,0-2,,07-Jul-11,Pond 130,U of R
+201107275,Sediment ,Kmeth,139,0-2,,07-Jul-11,Pond 139 ,U of R
+201107278,Sediment ,Kmeth,139,0-2,,07-Jul-11,Pond 139 ,U of R
+201107281,Sediment ,Kmeth,139,0-2,,07-Jul-11,Pond 139 ,U of R
+201107061,Sediment ,Particle Size ,2,0-2,,07-Jul-11,Pond 2,U of R
+201107248,Sediment ,Kmeth,2,0-2,,07-Jul-11,Pond 2,U of R
+201107251,Sediment ,Kmeth,2,0-2,,07-Jul-11,Pond 2,U of R
+201107254,Sediment ,Kmeth,2,0-2,,07-Jul-11,Pond 2,U of R
+201107064,Sediment ,Particle Size ,3,0-2,,07-Jul-11,Pond 3,U of R
+201107257,Sediment ,Kmeth,3,0-2,,07-Jul-11,Pond 3,U of R
+201107260,Sediment ,Kmeth,3,0-2,,07-Jul-11,Pond 3,U of R
+201107263,Sediment ,Kmeth,3,0-2,,07-Jul-11,Pond 3,U of R
+201108170,Sediment ,KMeth,100,0-2,,24-Aug-11,SD100,U of R
+201108173,Sediment ,KMeth,100,0-2,,24-Aug-11,SD100,U of R
+201108176,Sediment ,KMeth,100,0-2,,24-Aug-11,SD100,U of R
+201108251,Sediment ,LOI,100,0-2,,24-Aug-11,SD100,U of R
+201108254,Sediment ,Particle Size ,100,0-2,,24-Aug-11,SD100,U of R
+201108152,Sediment ,KMeth,104,0-2,,24-Aug-11,SD104,U of R
+201108155,Sediment ,KMeth,104,0-2,,24-Aug-11,SD104,U of R
+201108158,Sediment ,KMeth,104,0-2,,24-Aug-11,SD104,U of R
+201108239,Sediment ,LOI,104,0-2,,24-Aug-11,SD104,U of R
+201108242,Sediment ,Particle Size ,104,0-2,,24-Aug-11,SD104,U of R
+201108134,Sediment ,KMeth,110,0-2,,24-Aug-11,SD110,U of R
+201108137,Sediment ,KMeth,110,0-2,,24-Aug-11,SD110,U of R
+201108140,Sediment ,KMeth,110,0-2,,24-Aug-11,SD110,U of R
+201108227,Sediment ,LOI,110,0-2,,24-Aug-11,SD110,U of R
+201108230,Sediment ,Particle Size ,110,0-2,,24-Aug-11,SD110,U of R
+201108143,Sediment ,KMeth,113,0-2,,24-Aug-11,SD113,U of R
+201108146,Sediment ,KMeth,113,0-2,,24-Aug-11,SD113,U of R
+201108149,Sediment ,KMeth,113,0-2,,24-Aug-11,SD113,U of R
+201108233,Sediment ,LOI,113,0-2,,24-Aug-11,SD113,U of R
+201108236,Sediment ,Particle Size ,113,0-2,,24-Aug-11,SD113,U of R
+201108161,Sediment ,KMeth,118,0-2,,24-Aug-11,SD118,U of R
+201108164,Sediment ,KMeth,118,0-2,,24-Aug-11,SD118,U of R
+201108167,Sediment ,KMeth,118,0-2,,24-Aug-11,SD118,U of R
+201108245,Sediment ,LOI,118,0-2,,24-Aug-11,SD118,U of R
+201108248,Sediment ,Particle Size ,118,0-2,,24-Aug-11,SD118,U of R
+201108206,Sediment ,KMeth,130,0-2,,25-Aug-11,SD130,U of R
+201108209,Sediment ,KMeth,130,0-2,,25-Aug-11,SD130,U of R
+201108212,Sediment ,KMeth,130,0-2,,25-Aug-11,SD130,U of R
+201108275,Sediment ,LOI,130,0-2,,25-Aug-11,SD130,U of R
+201108278,Sediment ,Particle Size ,130,0-2,,25-Aug-11,SD130,U of R
+201108197,Sediment ,KMeth,139,0-2,,25-Aug-11,SD139,U of R
+201108200,Sediment ,KMeth,139,0-2,,25-Aug-11,SD139,U of R
+201108203,Sediment ,KMeth,139,0-2,,25-Aug-11,SD139,U of R
+201108269,Sediment ,LOI,139,0-2,,25-Aug-11,SD139,U of R
+201108272,Sediment ,Particle Size ,139,0-2,,25-Aug-11,SD139,U of R
+201108188,Sediment ,KMeth,2,0-2,,25-Aug-11,SD2,U of R
+201108191,Sediment ,KMeth,2,0-2,,25-Aug-11,SD2,U of R
+201108194,Sediment ,KMeth,2,0-2,,25-Aug-11,SD2,U of R
+201108263,Sediment ,LOI,2,0-2,,25-Aug-11,SD2,U of R
+201108266,Sediment ,Particle Size ,2,0-2,,25-Aug-11,SD2,U of R
+201108179,Sediment ,KMeth,3,0-2,,25-Aug-11,SD3,U of R
+201108182,Sediment ,KMeth,3,0-2,,25-Aug-11,SD3,U of R
+201108185,Sediment ,KMeth,3,0-2,,25-Aug-11,SD3,U of R
+201108257,Sediment ,LOI,3,0-2,,25-Aug-11,SD3,U of R
+201108260,Sediment ,Particle Size ,3,0-2,,25-Aug-11,SD3,U of R
+201106076 S,Sediment ,Kmeth,139,0-2 cm,,29-Jun-11,Pond 139 ,U of R
+201106079 S,Sediment ,Kmeth,139,0-2 cm,,29-Jun-11,Pond 139 ,U of R
+201106082 S,Sediment ,Kmeth,139,0-2 cm,,29-Jun-11,Pond 139 ,U of R
+201106046 S,Sediment ,Kmeth,2,0-2 cm,,28-Jun-11,Pond 2,U of R
+201106049 S,Sediment ,Kmeth,2,0-2 cm,,28-Jun-11,Pond 2,U of R
+201106052 S,Sediment ,Kmeth,2,0-2 cm,,28-Jun-11,Pond 2,U of R
+201106061 S,Sediment ,Kmeth,3,0-2 cm,,28-Jun-11,Pond 3,U of R
+201106064 S,Sediment ,Kmeth,3,0-2 cm,,28-Jun-11,Pond 3,U of R
+201106067 S,Sediment ,Kmeth,3,0-2 cm,,28-Jun-11,Pond 3,U of R
+201905007,Water,THg,1,0.125 mL (HCl),,29-May-19,1,U of R
+201907001,Water,THg,1,0.125 mL (HCl),,02-Jul-19,1,U of R
+201907008A,Water,THg,1,0.125 mL (HCl),,07-Jul-19,1,U of R
+201908001,Water,THg,1,0.125 mL (HCl),,21-Aug-19,1,U of R
+202305042,Water,THg,1,0.125 mL (HCl),,17-May-23,1,U of R
+201905005,Water,THg,2,0.125 mL (HCl),,29-May-19,2,U of R
+201907006,Water,THg,2,0.125 mL (HCl),,02-Jul-19,2,U of R
+202205009,Water,THg,2,0.125 mL (HCl),,10-May-22,2,U of R
+202205064,Water,THg,2,0.125 mL (HCl),,24-May-22,2,U of R
+202206007,Water,THg,2,0.125 mL (HCl),,08-Jun-22,2,U of R
+202206068,Water,THg,2,0.125 mL (HCl),,21-Jun-22,2,U of R
+202207012,Water,THg,2,0.125 mL (HCl),,06-Jul-22,2,U of R
+202205032,Water,THg,6,0.125 mL (HCl),,10-May-22,6,U of R
+202205087,Water,THg,6,0.125 mL (HCl),,24-May-22,6,U of R
+202206042,Water,THg,6,0.125 mL (HCl),,09-Jun-22,6,U of R
+202206098,Water,THg,6,0.125 mL (HCl),,21-Jun-22,6,U of R
+202207032,Water,THg,6,0.125 mL (HCl),,06-Jul-22,6,U of R
+202107061,Water,THg,15,0.125 mL (HCl),,22-Jul-21,15,U of R
+202108018,Water,THg,15,0.125 mL (HCl),,04-Aug-21,15,U of R
+202108044,Water,THg,15,0.125 mL (HCl),,18-Aug-21,15,U of R
+202109017,Water,THg,15,0.125 mL (HCl),,01-Sep-21,15,U of R
+202109038,Water,Thg,15,0.125 mL (HCl),,19-Sep-21,15,U of R
+202205004,Water,THg,15,0.125 mL (HCl),,10-May-22,15,U of R
+202205059,Water,THg,15,0.125 mL (HCl),,24-May-22,15,U of R
+202206012,Water,THg,15,0.125 mL (HCl),,08-Jun-22,15,U of R
+202206060,Water,THg,15,0.125 mL (HCl),,21-Jun-22,15,U of R
+202207004,Water,THg,15,0.125 mL (HCl),,06-Jul-22,15,U of R
+202207060,Water,THg,15,0.125 mL (HCl),,19-Jul-22,15,U of R
+202208004,Water,THg,15,0.125 mL (HCl),,03-Aug-22,15,U of R
+202208049,Water,THg,15,0.125 mL (HCl),,16-Aug-22,15,U of R
+202208084,Water,THg,15,0.125 mL (HCl),,29-Aug-22,15,U of R
+202209004,Water,THg,15,0.125 mL (HCl),,12-Sep-22,15,U of R
+202305028,Water,THg,15,0.125 mL (HCl),,17-May-23,15,U of R
+202305066,Water,THg,15,0.125 mL (HCl),Duplicate,17-May-23,15,U of R
+202305105,Water,THg,15,0.125 mL (HCl),,30-May-23,15,U of R
+202305107,Water,THg,15,0.125 mL (HCl),Duplicate,30-May-23,15,U of R
+202306007,Water,THg,15,0.125 mL (HCl),,13-Jun-23,15,U of R
+202306009,Water,THg,15,0.125 mL (HCl),Duplicate,13-Jun-23,15,U of R
+202306075,Water,THg,15,0.125 mL (HCl),,27-Jun-23,15,U of R
+202306077,Water,THg,15,0.125 mL (HCl),Duplicate,27-Jun-23,15,U of R
+202307012,Water,THg,15,0.125 mL (HCl),,11-Jul-23,15,U of R
+202307014,Water,THg,15,0.125 mL (HCl),Duplicate,11-Jul-23,15,U of R
+202307042,Water,THg,15,0.125 mL (HCl),,20-Jul-23,15,U of R
+202307044,Water,THg,15,0.125 mL (HCl),Duplicate,20-Jul-23,15,U of R
+202308012,Water,THg,15,0.125 mL (HCl),,15-Aug-23,15,U of R
+202308014,Water,THg,15,0.125 mL (HCl),Duplicate,15-Aug-23,15,U of R
+202107058,Water,THg,25,0.125 mL (HCl),,22-Jul-21,25,U of R
+202108017,Water,THg,25,0.125 mL (HCl),,04-Aug-21,25,U of R
+202108045,Water,THg,25,0.125 mL (HCl),,18-Aug-21,25,U of R
+202109018,Water,THg,25,0.125 mL (HCl),,01-Sep-21,25,U of R
+202109036,Water,THg,25,0.125 mL (HCl),,19-Sep-21,25,U of R
+202205047,Water,THg,35,0.125 mL (HCl),,10-May-22,35,U of R
+202205102,Water,THg,35,0.125 mL (HCl),,24-May-22,35,U of R
+202206032,Water,THg,35,0.125 mL (HCl),,08-Jun-22,35,U of R
+202206103,Water,THg,35,0.125 mL (HCl),,21-Jun-22,35,U of R
+202207042,Water,THg,35,0.125 mL (HCl),,06-Jul-22,35,U of R
+202207088,Water,THg,35,0.125 mL (HCl),,19-Jul-22,35,U of R
+202208027,Water,THg,35,0.125 mL (HCl),,03-Aug-22,35,U of R
+202208067,Water,THg,35,0.125 mL (HCl),,16-Aug-22,35,U of R
+202305007,Water,THg,35,0.125 mL (HCl),,17-May-23,35,U of R
+202305073,Water,THg,35,0.125 mL (HCl),,30-May-23,35,U of R
+202306048,Water,THg,35,0.125 mL (HCl),,13-Jun-23,35,U of R
+202306050,Water,THg,35,0.125 mL (HCl),Duplicate,13-Jun-23,35,U of R
+202306084,Water,THg,35,0.125 mL (HCl),,27-Jun-23,35,U of R
+202306086,Water,THg,35,0.125 mL (HCl),Duplicate,27-Jun-23,35,U of R
+202205052,Water,THg,37,0.125 mL (HCl),,10-May-22,37,U of R
+202205107,Water,THg,37,0.125 mL (HCl),,24-May-22,37,U of R
+202206037,Water,THg,37,0.125 mL (HCl),,08-Jun-22,37,U of R
+202206108,Water,THg,37,0.125 mL (HCl),,21-Jun-22,37,U of R
+202207047,Water,THg,37,0.125 mL (HCl),,06-Jul-22,37,U of R
+202207083,Water,THg,37,0.125 mL (HCl),,19-Jul-22,37,U of R
+202305014,Water,THg,37,0.125 mL (HCl),,17-May-23,37,U of R
+202305080,Water,THg,37,0.125 mL (HCl),,30-May-23,37,U of R
+202107062,Water,THg,97,0.125 mL (HCl),,22-Jul-21,97,U of R
+202108019,Water,THg,97,0.125 mL (HCl),,04-Aug-21,97,U of R
+202108046,Water,THg,97,0.125 mL (HCl),,18-Aug-21,97,U of R
+202109019,Water,THg,97,0.125 mL (HCl),,01-Sep-21,97,U of R
+202205027,Water,THg,97,0.125 mL (HCl),,10-May-22,97,U of R
+202205082,Water,THg,97,0.125 mL (HCl),,24-May-22,97,U of R
+202206027,Water,THg,97,0.125 mL (HCl),,08-Jun-22,97,U of R
+202206083,Water,THg,97,0.125 mL (HCl),,21-Jun-22,97,U of R
+202207027,Water,THg,97,0.125 mL (HCl),,06-Jul-22,97,U of R
+202207073,Water,THg,97,0.125 mL (HCl),,19-Jul-22,97,U of R
+202208017,Water,THg,97,0.125 mL (HCl),,03-Aug-22,97,U of R
+202107059,Water,THg,109,0.125 mL (HCl),,22-Jul-21,109,U of R
+202205037,Water,THg,109,0.125 mL (HCl),,10-May-22,109,U of R
+202205092,Water,THg,109,0.125 mL (HCl),,24-May-22,109,U of R
+202206048,Water,THg,109,0.125 mL (HCl),,09-Jun-22,109,U of R
+202206088,Water,THg,109,0.125 mL (HCl),,21-Jun-22,109,U of R
+202207037,Water,THg,109,0.125 mL (HCl),,06-Jul-22,109,U of R
+202207078,Water,THg,109,0.125 mL (HCl),,19-Jul-22,109,U of R
+202208022,Water,THg,109,0.125 mL (HCl),,03-Aug-22,109,U of R
+202208062,Water,THg,109,0.125 mL (HCl),,16-Aug-22,109,U of R
+202208099,Water,THg,109,0.125 mL (HCl),,29-Aug-22,109,U of R
+202305035,Water,THg,109,0.125 mL (HCl),,17-May-23,109,U of R
+202305114,Water,THg,109,0.125 mL (HCl),,30-May-23,109,U of R
+202305116,Water,THg,109,0.125 mL (HCl),Duplicate,30-May-23,109,U of R
+202306021,Water,THg,109,0.125 mL (HCl),,13-Jun-23,109,U of R
+202306023,Water,THg,109,0.125 mL (HCl),Duplicate,13-Jun-23,109,U of R
+201905022,Water,THg,118,0.125 mL (HCl),,30-May-19,118,U of R
+201907021,Water,THg,118,0.125 mL (HCl),,02-Jul-19,118,U of R
+202205042,Water,THg,118,0.125 mL (HCl),,10-May-22,118,U of R
+202205097,Water,THg,118,0.125 mL (HCl),,24-May-22,118,U of R
+202206053,Water,THg,118,0.125 mL (HCl),,09-Jun-22,118,U of R
+202206093,Water,THg,118,0.125 mL (HCl),,21-Jun-22,118,U of R
+201905012,Water,THg,120,0.125 mL (HCl),,30-May-19,120,U of R
+201907016,Water,THg,120,0.125 mL (HCl),,02-Jul-19,120,U of R
+202205022,Water,THg,124,0.125 mL (HCl),,10-May-22,124,U of R
+202205077,Water,THg,124,0.125 mL (HCl),,24-May-22,124,U of R
+202206022,Water,THg,124,0.125 mL (HCl),,08-Jun-22,124,U of R
+202206073,Water,THg,124,0.125 mL (HCl),,21-Jun-22,124,U of R
+202207022,Water,THg,124,0.125 mL (HCl),,06-Jul-22,124,U of R
+202107060,Water,THg,125,0.125 mL (HCl),,22-Jul-21,125,U of R
+202108016,Water,THg,125,0.125 mL (HCl),,04-Aug-21,125,U of R
+202108043,Water,THg,125,0.125 mL (HCl),,18-Aug-21,125,U of R
+202109016,Water,THg,125,0.125 mL (HCl),,01-Sep-21,125,U of R
+202109037,Water,Thg,125,0.125 mL (HCl),,19-Sep-21,125,U of R
+202205017,Water,THg,125,0.125 mL (HCl),,10-May-22,125,U of R
+202205072,Water,THg,125,0.125 mL (HCl),,24-May-22,125,U of R
+202206017,Water,THg,125,0.125 mL (HCl),,08-Jun-22,125,U of R
+202206078,Water,THg,125,0.125 mL (HCl),,21-Jun-22,125,U of R
+202207017,Water,THg,125,0.125 mL (HCl),,06-Jul-22,125,U of R
+202207068,Water,THg,125,0.125 mL (HCl),,19-Jul-22,125,U of R
+202208012,Water,THg,125,0.125 mL (HCl),,03-Aug-22,125,U of R
+202208057,Water,THg,125,0.125 mL (HCl),,16-Aug-22,125,U of R
+202208094,Water,THg,125,0.125 mL (HCl),,29-Aug-22,125,U of R
+202209011,Water,THg,125,0.125 mL (HCl),,12-Sep-22,125,U of R
+202305021,Water,THg,125,0.125 mL (HCl),,17-May-23,125,U of R
+202305087,Water,THg,125,0.125 mL (HCl),,30-May-23,125,U of R
+202305089,Water,THg,125,0.125 mL (HCl),Duplicate,30-May-23,125,U of R
+202306030,Water,THg,125,0.125 mL (HCl),,13-Jun-23,125,U of R
+202306032,Water,THg,125,0.125 mL (HCl),Duplicate,13-Jun-23,125,U of R
+202306093,Water,THg,125,0.125 mL (HCl),,27-Jun-23,125,U of R
+202306095,Water,THg,125,0.125 mL (HCl),Duplicate,27-Jun-23,125,U of R
+201905016,Water,THg,139,0.125 mL (HCl),,30-May-19,139,U of R
+202205054,Water,THg,118D,0.125 mL (HCl),,10-May-22,118D,U of R
+202206055,Water,THg,118D,0.125 mL (HCl),,09-Jun-22,118D,U of R
+201907011,Water,THg,125N,0.125 mL (HCl),,02-Jul-19,125N,U of R
+202305049,Water,THg,125S,0.125 mL (HCl),,17-May-23,125S,U of R
+202305096,Water,THg,125S,0.125 mL (HCl),,30-May-23,125S,U of R
+202305098,Water,THg,125S,0.125 mL (HCl),Duplicate,30-May-23,125S,U of R
+202306039,Water,THg,125S,0.125 mL (HCl),,13-Jun-23,125S,U of R
+202306041,Water,THg,125S,0.125 mL (HCl),Duplicate,13-Jun-23,125S,U of R
+202306102,Water,THg,125S,0.125 mL (HCl),,27-Jun-23,125S,U of R
+202306104,Water,THg,125S,0.125 mL (HCl),Duplicate,27-Jun-23,125S,U of R
+202307021,Water,THg,125S,0.125 mL (HCl),,11-Jul-23,125S,U of R
+202307023,Water,THg,125S,0.125 mL (HCl),Duplicate,11-Jul-23,125S,U of R
+202307051,Water,THg,125S,0.125 mL (HCl),,20-Jul-23,125S,U of R
+202307053,Water,THg,125S,0.125 mL (HCl),Duplicate,20-Jul-23,125S,U of R
+202308021,Water,THg,125S,0.125 mL (HCl),,15-Aug-23,125S,U of R
+202308023,Water,THg,125S,0.125 mL (HCl),Duplicate,15-Aug-23,125S,U of R
+202208086,Water,THg,15D,0.125 mL (HCl),,29-Aug-22,15D,U of R
+202209015,Water,THg,15D,0.125 mL (HCl),,12-Sep-22,15D,U of R
+202207090,Water,THg,35D,0.125 mL (HCl),,19-Jul-22,35D,U of R
+202208069,Water,THg,35D,0.125 mL (HCl),,16-Aug-22,35D,U of R
+202206110,Water,THg,37D,0.125 mL (HCl),,21-Jun-22,37D,U of R
+202207049,Water,THg,37D,0.125 mL (HCl),,06-Jul-22,37D,U of R
+202105006,Water ,THg,2,0.125 mL (HCl),,19-May-21,2,U of R
+202106045,Water ,THg,2,0.125 mL (HCl),,08-Jun-21,2,U of R
+202105042,Water ,THg,6,0.125 mL (HCl),,23-May-21,6,U of R
+202106046,Water ,THg,6,0.125 mL (HCl),,09-Jun-21,6,U of R
+202106119,Water ,THg,6,0.125 mL (HCl),,22-Jun-21,6,U of R
+202105007,Water ,THg,15,0.125 mL (HCl),,19-May-21,15,U of R
+202106043,Water ,THg,15,0.125 mL (HCl),,06-Jun-21,15,U of R
+202106112,Water ,THg,15,0.125 mL (HCl),,22-Jun-21,15,U of R
+202107037,Water ,THg,15,0.125 mL (HCl),,06-Jul-21,15,U of R
+202105046,Water ,THg,25,0.125 mL (HCl),,23-May-21,25,U of R
+202106049,Water ,THg,25,0.125 mL (HCl),,12-Jun-21,25,U of R
+202106118,Water ,THg,25,0.125 mL (HCl),,22-Jun-21,25,U of R
+202107038,Water ,THg,25,0.125 mL (HCl),,06-Jul-21,25,U of R
+202105043,Water ,THg,35,0.125 mL (HCl),,23-May-21,35,U of R
+202106050,Water ,THg,35,0.125 mL (HCl),,13-Jun-21,35,U of R
+202106116,Water ,THg,35,0.125 mL (HCl),,22-Jun-21,35,U of R
+202107033,Water ,THg,35,0.125 mL (HCl),,06-Jul-21,35,U of R
+202105047,Water ,THg,37,0.125 mL (HCl),,23-May-21,37,U of R
+202106044,Water ,THg,37,0.125 mL (HCl),,07-Jun-21,37,U of R
+202106115,Water ,THg,37,0.125 mL (HCl),,22-Jun-21,37,U of R
+202105008,Water ,THg,97,0.125 mL (HCl),,19-May-21,97,U of R
+202106048,Water ,THg,97,0.125 mL (HCl),,11-Jun-21,97,U of R
+202106111,Water ,THg,97,0.125 mL (HCl),,22-Jun-21,97,U of R
+202107036,Water ,THg,97,0.125 mL (HCl),,06-Jul-21,97,U of R
+202105045,Water ,THg,109,0.125 mL (HCl),,23-May-21,109,U of R
+202106063,Water ,THg,109,0.125 mL (HCl),,11-Jun-21,109,U of R
+202106114,Water ,THg,109,0.125 mL (HCl),,22-Jun-21,109,U of R
+202107034,Water ,THg,109,0.125 mL (HCl),,06-Jul-21,109,U of R
+202105044,Water ,THg,118,0.125 mL (HCl),,23-May-21,118,U of R
+202105003,Water ,THg,124,0.125 mL (HCl),,19-May-21,124,U of R
+202106064,Water ,THg,124,0.125 mL (HCl),,12-Jun-21,124,U of R
+202106117,Water ,THg,124,0.125 mL (HCl),,22-Jun-21,124,U of R
+202107039,Water ,THg,124,0.125 mL (HCl),,06-Jul-21,124,U of R
+202105005,Water ,THg,125,0.125 mL (HCl),,19-May-21,125,U of R
+202106047,Water ,THg,125,0.125 mL (HCl),,10-Jun-21,125,U of R
+202106113,Water ,THg,125,0.125 mL (HCl),,22-Jun-21,125,U of R
+202107035,Water ,THg,125,0.125 mL (HCl),,06-Jul-21,125,U of R
+201905006,Water,MeHg,1,0.25 mL (HCl),,29-May-19,1,U of R
+201907002,Water,MeHg,1,0.25 mL (HCl),,02-Jul-19,1,U of R
+201907009A,Water,MeHg,1,0.25 mL (HCl),,07-Jul-19,1,U of R
+201908002,Water,MeHg,1,0.25 mL (HCl),,21-Aug-19,1,U of R
+202305041,Water,MeHg,1,0.25 mL (HCl),,17-May-23,1,U of R
+201905004,Water,MeHg,2,0.25 mL (HCl),,29-May-19,2,U of R
+201907007,Water,MeHg,2,0.25 mL (HCl),,02-Jul-19,2,U of R
+202205010,Water,MeHg,2,0.25 mL (HCl),,10-May-22,2,U of R
+202205065,Water,MeHg,2,0.25 mL (HCl),,24-May-22,2,U of R
+202206008,Water,MeHg,2,0.25 mL (HCl),,08-Jun-22,2,U of R
+202206069,Water,MeHg,2,0.25 mL (HCl),,21-Jun-22,2,U of R
+202207013,Water,MeHg,2,0.25 mL (HCl),,06-Jul-22,2,U of R
+202205033,Water,MeHg,6,0.25 mL (HCl),,10-May-22,6,U of R
+202205088,Water,MeHg,6,0.25 mL (HCl),,24-May-22,6,U of R
+202206043,Water,MeHg,6,0.25 mL (HCl),,09-Jun-22,6,U of R
+202206099,Water,MeHg,6,0.25 mL (HCl),,21-Jun-22,6,U of R
+202207033,Water,MeHg,6,0.25 mL (HCl),,06-Jul-22,6,U of R
+202107065,Water,MeHg,15,0.25 mL (HCl),,22-Jul-21,15,U of R
+202108021,Water,MeHg,15,0.25 mL (HCl),,04-Aug-21,15,U of R
+202108039,Water,MeHg,15,0.25 mL (HCl),,18-Aug-21,15,U of R
+202109021,Water,MeHg,15,0.25 mL (HCl),,01-Sep-21,15,U of R
+202109040,Water,MeHg,15,0.25 mL (HCl),,19-Sep-21,15,U of R
+202205005,Water,MeHg,15,0.25 mL (HCl),,10-May-22,15,U of R
+202205060,Water,MeHg,15,0.25 mL (HCl),,24-May-22,15,U of R
+202206013,Water,MeHg,15,0.25 mL (HCl),,08-Jun-22,15,U of R
+202206061,Water,MeHg,15,0.25 mL (HCl),,21-Jun-22,15,U of R
+202207005,Water,MeHg,15,0.25 mL (HCl),,06-Jul-22,15,U of R
+202207061,Water,MeHg,15,0.25 mL (HCl),,19-Jul-22,15,U of R
+202208005,Water,MeHg,15,0.25 mL (HCl),,03-Aug-22,15,U of R
+202208050,Water,MeHg,15,0.25 mL (HCl),,16-Aug-22,15,U of R
+202208085,Water,MeHg,15,0.25 mL (HCl),,29-Aug-22,15,U of R
+202209005,Water,MeHg,15,0.25 mL (HCl),,12-Sep-22,15,U of R
+202305027,Water,MeHg,15,0.25 mL (HCl),,17-May-23,15,U of R
+202305065,Water,MeHg,15,0.25 mL (HCl),Duplicate,17-May-23,15,U of R
+202305104,Water,MeHg,15,0.25 mL (HCl),,30-May-23,15,U of R
+202305106,Water,MeHg,15,0.25 mL (HCl),Duplicate,30-May-23,15,U of R
+202306006,Water,MeHg,15,0.25 mL (HCl),,13-Jun-23,15,U of R
+202306008,Water,MeHg,15,0.25 mL (HCl),Duplicate,13-Jun-23,15,U of R
+202306074,Water,MeHg,15,0.25 mL (HCl),,27-Jun-23,15,U of R
+202306076,Water,MeHg,15,0.25 mL (HCl),Duplicate,27-Jun-23,15,U of R
+202307011,Water,MeHg,15,0.25 mL (HCl),,11-Jul-23,15,U of R
+202307013,Water,MeHg,15,0.25 mL (HCl),Duplicate,11-Jul-23,15,U of R
+202307041,Water,MeHg,15,0.25 mL (HCl),,20-Jul-23,15,U of R
+202307043,Water,MeHg,15,0.25 mL (HCl),Duplicate,20-Jul-23,15,U of R
+202308011,Water,MeHg,15,0.25 mL (HCl),,15-Aug-23,15,U of R
+202308013,Water,MeHg,15,0.25 mL (HCl),Duplicate,15-Aug-23,15,U of R
+202107064,Water,MeHg,25,0.25 mL (HCl),,22-Jul-21,25,U of R
+202108022,Water,MeHg,25,0.25 mL (HCl),,04-Aug-21,25,U of R
+202108042,Water,MeHg,25,0.25 mL (HCl),,18-Aug-21,25,U of R
+202109022,Water,MeHg,25,0.25 mL (HCl),,01-Sep-21,25,U of R
+202109041,Water,MeHg,25,0.25 mL (HCl),,19-Sep-21,25,U of R
+202205048,Water,MeHg,35,0.25 mL (HCl),,10-May-22,35,U of R
+202205103,Water,MeHg,35,0.25 mL (HCl),,24-May-22,35,U of R
+202206033,Water,MeHg,35,0.25 mL (HCl),,08-Jun-22,35,U of R
+202206104,Water,MeHg,35,0.25 mL (HCl),,21-Jun-22,35,U of R
+202207043,Water,MeHg,35,0.25 mL (HCl),,06-Jul-22,35,U of R
+202207089,Water,MeHg,35,0.25 mL (HCl),,19-Jul-22,35,U of R
+202208028,Water,MeHg,35,0.25 mL (HCl),,03-Aug-22,35,U of R
+202208068,Water,MeHg,35,0.25 mL (HCl),,16-Aug-22,35,U of R
+202305006,Water,MeHg,35,0.25 mL (HCl),,17-May-23,35,U of R
+202305072,Water,MeHg,35,0.25 mL (HCl),,30-May-23,35,U of R
+202306047,Water,MeHg,35,0.25 mL (HCl),,13-Jun-23,35,U of R
+202306049,Water,MeHg,35,0.25 mL (HCl),Duplicate,13-Jun-23,35,U of R
+202306083,Water,MeHg,35,0.25 mL (HCl),,27-Jun-23,35,U of R
+202306085,Water,MeHg,35,0.25 mL (HCl),Duplicate,27-Jun-23,35,U of R
+202205053,Water,MeHg,37,0.25 mL (HCl),,10-May-22,37,U of R
+202205108,Water,MeHg,37,0.25 mL (HCl),,24-May-22,37,U of R
+202206038,Water,MeHg,37,0.25 mL (HCl),,08-Jun-22,37,U of R
+202206109,Water,MeHg,37,0.25 mL (HCl),,21-Jun-22,37,U of R
+202207048,Water,MeHg,37,0.25 mL (HCl),,06-Jul-22,37,U of R
+202207084,Water,MeHg,37,0.25 mL (HCl),,19-Jul-22,37,U of R
+202305013,Water,MeHg,37,0.25 mL (HCl),,17-May-23,37,U of R
+202305079,Water,MeHg,37,0.25 mL (HCl),,30-May-23,37,U of R
+202107063,Water,MeHg,97,0.25 mL (HCl),,22-Jul-21,97,U of R
+202108020,Water,MeHg,97,0.25 mL (HCl),,04-Aug-21,97,U of R
+202108041,Water,MeHg,97,0.25 mL (HCl),,18-Aug-21,97,U of R
+202109023,Water,MeHg,97,0.25 mL (HCl),,01-Sep-21,97,U of R
+202205028,Water,MeHg,97,0.25 mL (HCl),,10-May-22,97,U of R
+202205083,Water,MeHg,97,0.25 mL (HCl),,24-May-22,97,U of R
+202206028,Water,MeHg,97,0.25 mL (HCl),,08-Jun-22,97,U of R
+202206084,Water,MeHg,97,0.25 mL (HCl),,21-Jun-22,97,U of R
+202207028,Water,MeHg,97,0.25 mL (HCl),,06-Jul-22,97,U of R
+202207074,Water,MeHg,97,0.25 mL (HCl),,19-Jul-22,97,U of R
+202208018,Water,MeHg,97,0.25 mL (HCl),,03-Aug-22,97,U of R
+202107066,Water,MeHg,109,0.25 mL (HCl),,22-Jul-21,109,U of R
+202205038,Water,MeHg,109,0.25 mL (HCl),,10-May-22,109,U of R
+202205093,Water,MeHg,109,0.25 mL (HCl),,24-May-22,109,U of R
+202206049,Water,MeHg,109,0.25 mL (HCl),,09-Jun-22,109,U of R
+202206089,Water,MeHg,109,0.25 mL (HCl),,21-Jun-22,109,U of R
+202207038,Water,MeHg,109,0.25 mL (HCl),,06-Jul-22,109,U of R
+202207079,Water,MeHg,109,0.25 mL (HCl),,19-Jul-22,109,U of R
+202208023,Water,MeHg,109,0.25 mL (HCl),,03-Aug-22,109,U of R
+202208063,Water,MeHg,109,0.25 mL (HCl),,16-Aug-22,109,U of R
+202208100,Water,MeHg,109,0.25 mL (HCl),,29-Aug-22,109,U of R
+202305034,Water,MeHg,109,0.25 mL (HCl),,17-May-23,109,U of R
+202305113,Water,MeHg,109,0.25 mL (HCl),,30-May-23,109,U of R
+202305115,Water,MeHg,109,0.25 mL (HCl),Duplicate,30-May-23,109,U of R
+202306020,Water,MeHg,109,0.25 mL (HCl),,13-Jun-23,109,U of R
+202306022,Water,MeHg,109,0.25 mL (HCl),Duplicate,13-Jun-23,109,U of R
+201905021,Water,MeHg,118,0.25 mL (HCl),,30-May-19,118,U of R
+201907022,Water,MeHg,118,0.25 mL (HCl),,02-Jul-19,118,U of R
+202205043,Water,MeHg,118,0.25 mL (HCl),,10-May-22,118,U of R
+202205098,Water,MeHg,118,0.25 mL (HCl),,24-May-22,118,U of R
+202206054,Water,MeHg,118,0.25 mL (HCl),,09-Jun-22,118,U of R
+202206094,Water,MeHg,118,0.25 mL (HCl),,21-Jun-22,118,U of R
+201905011,Water,MeHg,120,0.25 mL (HCl),,30-May-19,120,U of R
+201907017,Water,MeHg,120,0.25 mL (HCl),,02-Jul-19,120,U of R
+202205023,Water,MeHg,124,0.25 mL (HCl),,10-May-22,124,U of R
+202205078,Water,MeHg,124,0.25 mL (HCl),,24-May-22,124,U of R
+202206023,Water,MeHg,124,0.25 mL (HCl),,08-Jun-22,124,U of R
+202206074,Water,MeHg,124,0.25 mL (HCl),,21-Jun-22,124,U of R
+202207023,Water,MeHg,124,0.25 mL (HCl),,06-Jul-22,124,U of R
+202107067,Water,MeHg,125,0.25 mL (HCl),,22-Jul-21,125,U of R
+202108023,Water,MeHg,125,0.25 mL (HCl),,04-Aug-21,125,U of R
+202108040,Water,MeHg,125,0.25 mL (HCl),,18-Aug-21,125,U of R
+202109020,Water,MeHg,125,0.25 mL (HCl),,01-Sep-21,125,U of R
+202109039,Water,MeHg,125,0.25 mL (HCl),,19-Sep-21,125,U of R
+202205018,Water,MeHg,125,0.25 mL (HCl),,10-May-22,125,U of R
+202205073,Water,MeHg,125,0.25 mL (HCl),,24-May-22,125,U of R
+202206018,Water,MeHg,125,0.25 mL (HCl),,08-Jun-22,125,U of R
+202206079,Water,MeHg,125,0.25 mL (HCl),,21-Jun-22,125,U of R
+202207018,Water,MeHg,125,0.25 mL (HCl),,06-Jul-22,125,U of R
+202207069,Water,MeHg,125,0.25 mL (HCl),,19-Jul-22,125,U of R
+202208013,Water,MeHg,125,0.25 mL (HCl),,03-Aug-22,125,U of R
+202208058,Water,MeHg,125,0.25 mL (HCl),,16-Aug-22,125,U of R
+202208095,Water,MeHg,125,0.25 mL (HCl),,29-Aug-22,125,U of R
+202209012,Water,MeHg,125,0.25 mL (HCl),,12-Sep-22,125,U of R
+202305020,Water,MeHg,125,0.25 mL (HCl),,17-May-23,125,U of R
+202305086,Water,MeHg,125,0.25 mL (HCl),,30-May-23,125,U of R
+202305088,Water,MeHg,125,0.25 mL (HCl),Duplicate,30-May-23,125,U of R
+202306029,Water,MeHg,125,0.25 mL (HCl),,13-Jun-23,125,U of R
+202306031,Water,MeHg,125,0.25 mL (HCl),Duplicate,13-Jun-23,125,U of R
+202306092,Water,MeHg,125,0.25 mL (HCl),,27-Jun-23,125,U of R
+202306094,Water,MeHg,125,0.25 mL (HCl),Duplicate,27-Jun-23,125,U of R
+201905017,Water,MeHg,139,0.25 mL (HCl),,30-May-19,139,U of R
+202205055,Water,MeHg,118D,0.25 mL (HCl),,10-May-22,118D,U of R
+202206056,Water,MeHg,118D,0.25 mL (HCl),,09-Jun-22,118D,U of R
+201907012,Water,MeHg,125N,0.25 mL (HCl),,02-Jul-19,125N,U of R
+202305048,Water,MeHg,125S,0.25 mL (HCl),,17-May-23,125S,U of R
+202305095,Water,MeHg,125S,0.25 mL (HCl),,30-May-23,125S,U of R
+202305097,Water,MeHg,125S,0.25 mL (HCl),Duplicate,30-May-23,125S,U of R
+202306038,Water,MeHg,125S,0.25 mL (HCl),,13-Jun-23,125S,U of R
+202306040,Water,MeHg,125S,0.25 mL (HCl),Duplicate,13-Jun-23,125S,U of R
+202306101,Water,MeHg,125S,0.25 mL (HCl),,27-Jun-23,125S,U of R
+202306103,Water,MeHg,125S,0.25 mL (HCl),Duplicate,27-Jun-23,125S,U of R
+202307020,Water,MeHg,125S,0.25 mL (HCl),,11-Jul-23,125S,U of R
+202307022,Water,MeHg,125S,0.25 mL (HCl),Duplicate,11-Jul-23,125S,U of R
+202307050,Water,MeHg,125S,0.25 mL (HCl),,20-Jul-23,125S,U of R
+202307052,Water,MeHg,125S,0.25 mL (HCl),Duplicate,20-Jul-23,125S,U of R
+202308020,Water,MeHg,125S,0.25 mL (HCl),,15-Aug-23,125S,U of R
+202308022,Water,MeHg,125S,0.25 mL (HCl),Duplicate,15-Aug-23,125S,U of R
+202208087,Water,MeHg,15D,0.25 mL (HCl),,29-Aug-22,15D,U of R
+202209016,Water,MeHg,15D,0.25 mL (HCl),,12-Sep-22,15D,U of R
+202207091,Water,MeHg,35D,0.25 mL (HCl),,19-Jul-22,35D,U of R
+202208070,Water,MeHg,35D,0.25 mL (HCl),,16-Aug-22,35D,U of R
+202206111,Water,MeHg,37D,0.25 mL (HCl),,21-Jun-22,37D,U of R
+202207050,Water,MeHg,37D,0.25 mL (HCl),,06-Jul-22,37D,U of R
+202105011,Water ,MeHg,2,0.25 mL (HCl),,19-May-21,2,U of R
+202106053,Water ,MeHg,2,0.25 mL (HCl),,06-Jun-21,2,U of R
+202105051,Water ,MeHg,6,0.25 mL (HCl),,23-May-21,6,U of R
+202106054,Water ,MeHg,6,0.25 mL (HCl),,06-Jun-21,6,U of R
+202106110,Water ,MeHg,6,0.25 mL (HCl),,23-Jun-21,6,U of R
+202105010,Water ,MeHg,15,0.25 mL (HCl),,19-May-21,15,U of R
+202106051,Water ,MeHg,15,0.25 mL (HCl),,06-Jun-21,15,U of R
+202106103,Water ,MeHg,15,0.25 mL (HCl),,22-Jun-21,15,U of R
+202107028,Water ,MeHg,15,0.25 mL (HCl),,06-Jul-21,15,U of R
+202105052,Water ,MeHg,25,0.25 mL (HCl),,23-May-21,25,U of R
+202106055,Water ,MeHg,25,0.25 mL (HCl),,06-Jun-21,25,U of R
+202106109,Water ,MeHg,25,0.25 mL (HCl),,23-Jun-21,25,U of R
+202107027,Water ,MeHg,25,0.25 mL (HCl),,06-Jul-21,25,U of R
+202105048,Water ,MeHg,35,0.25 mL (HCl),,23-May-21,35,U of R
+202106057,Water ,MeHg,35,0.25 mL (HCl),,06-Jun-21,35,U of R
+202106107,Water ,MeHg,35,0.25 mL (HCl),,23-Jun-21,35,U of R
+202107029,Water ,MeHg,35,0.25 mL (HCl),,06-Jul-21,35,U of R
+202105041,Water ,MeHg,37,0.25 mL (HCl),,23-May-21,37,U of R
+202106052,Water ,MeHg,37,0.25 mL (HCl),,06-Jun-21,37,U of R
+202106106,Water ,MeHg,37,0.25 mL (HCl),,23-Jun-21,37,U of R
+202105009,Water ,MeHg,97,0.25 mL (HCl),,19-May-21,97,U of R
+202106058,Water ,MeHg,97,0.25 mL (HCl),,06-Jun-21,97,U of R
+202106102,Water ,MeHg,97,0.25 mL (HCl),,22-Jun-21,97,U of R
+202107026,Water ,MeHg,97,0.25 mL (HCl),,06-Jul-21,97,U of R
+202105049,Water ,MeHg,109,0.25 mL (HCl),,23-May-21,109,U of R
+202106060,Water ,MeHg,109,0.25 mL (HCl),,07-Jun-21,109,U of R
+202106105,Water ,MeHg,109,0.25 mL (HCl),,23-Jun-21,109,U of R
+202107031,Water ,MeHg,109,0.25 mL (HCl),,06-Jul-21,109,U of R
+202105050,Water ,MeHg,118,0.25 mL (HCl),,23-May-21,118,U of R
+202106059,Water ,MeHg,118,0.25 mL (HCl),,07-Jun-21,118,U of R
+202105004,Water ,MeHg,124,0.25 mL (HCl),,19-May-21,124,U of R
+202106061,Water ,MeHg,124,0.25 mL (HCl),,07-Jun-21,124,U of R
+202106108,Water ,MeHg,124,0.25 mL (HCl),,23-Jun-21,124,U of R
+202107032,Water ,MeHg,124,0.25 mL (HCl),,06-Jul-21,124,U of R
+202105012,Water ,MeHg,125,0.25 mL (HCl),,19-May-21,125,U of R
+202106056,Water ,MeHg,125,0.25 mL (HCl),,06-Jun-21,125,U of R
+202106104,Water ,MeHg,125,0.25 mL (HCl),,22-Jun-21,125,U of R
+202107030,Water ,MeHg,125,0.25 mL (HCl),,06-Jul-21,125,U of R
+202106062,Water ,THg,118,0.25 mL (HCl) Note: Collected in 250 mL bottle instead of 125 mL,,10-Jun-21,118,U of R
+202208034,Water,DOC,1,0.45 μm filter,,03-Aug-22,1,U of R
+202208035,Water,SO4,1,0.45 μm filter,,03-Aug-22,1,U of R
+202208073,Water,DOC,1,0.45 μm filter,,16-Aug-22,1,U of R
+202208074,Water,SO4,1,0.45 μm filter,,16-Aug-22,1,U of R
+202208103,Water,DOC,1,0.45 μm filter,,29-Aug-22,1,U of R
+202208104,Water,SO4,1,0.45 μm filter,,29-Aug-22,1,U of R
+202209020,Water,DOC,1,0.45 μm filter,,12-Sep-22,1,U of R
+202209021,Water,SO4,1,0.45 μm filter,,12-Sep-22,1,U of R
+202305039,Water,DOC,1,0.45 μm filter,,17-May-23,1,U of R
+202305040,Water,SO4,1,0.45 μm filter,,17-May-23,1,U of R
+202305120,Water,DOC,1,0.45 μm filter,,30-May-23,1,U of R
+202305121,Water,SO4,1,0.45 μm filter,,30-May-23,1,U of R
+202306013,Water,DOC,1,0.45 μm filter,,13-Jun-23,1,U of R
+202306014,Water,SO4,1,0.45 μm filter,,13-Jun-23,1,U of R
+202306067,Water,DOC,1,0.45 μm filter,,27-Jun-23,1,U of R
+202306068,Water,SO4,1,0.45 μm filter,,27-Jun-23,1,U of R
+202307004,Water,DOC,1,0.45 μm filter,,11-Jul-23,1,U of R
+202307005,Water,SO4,1,0.45 μm filter,,11-Jul-23,1,U of R
+202307034,Water,DOC,1,0.45 μm filter,,20-Jul-23,1,U of R
+202307035,Water,SO4,1,0.45 μm filter,,20-Jul-23,1,U of R
+202308004,Water,DOC,1,0.45 μm filter,,15-Aug-23,1,U of R
+202308005,Water,SO4,1,0.45 μm filter,,15-Aug-23,1,U of R
+202208032,Water,DOC,15,0.45 μm filter,,03-Aug-22,15,U of R
+202208033,Water,SO4,15,0.45 μm filter,,03-Aug-22,15,U of R
+202208071,Water,DOC,15,0.45 μm filter,,16-Aug-22,15,U of R
+202208072,Water,SO4,15,0.45 μm filter,,16-Aug-22,15,U of R
+202208101,Water,DOC,15,0.45 μm filter,,29-Aug-22,15,U of R
+202208102,Water,SO4,15,0.45 μm filter,,29-Aug-22,15,U of R
+202209006,Water,DOC,15,0.45 μm filter,,12-Sep-22,15,U of R
+202209007,Water,SO4,15,0.45 μm filter,,12-Sep-22,15,U of R
+202305025,Water,DOC,15,0.45 μm filter,,17-May-23,15,U of R
+202305026,Water,SO4,15,0.45 μm filter,,17-May-23,15,U of R
+202305102,Water,DOC,15,0.45 μm filter,,30-May-23,15,U of R
+202305103,Water,SO4,15,0.45 μm filter,,30-May-23,15,U of R
+202306004,Water,DOC,15,0.45 μm filter,,13-Jun-23,15,U of R
+202306005,Water,SO4,15,0.45 μm filter,,13-Jun-23,15,U of R
+202306072,Water,DOC,15,0.45 μm filter,,27-Jun-23,15,U of R
+202306073,Water,SO4,15,0.45 μm filter,,27-Jun-23,15,U of R
+202307009,Water,DOC,15,0.45 μm filter,,11-Jul-23,15,U of R
+202307010,Water,SO4,15,0.45 μm filter,,11-Jul-23,15,U of R
+202307039,Water,DOC,15,0.45 μm filter,,20-Jul-23,15,U of R
+202307040,Water,SO4,15,0.45 μm filter,,20-Jul-23,15,U of R
+202308009,Water,DOC,15,0.45 μm filter,,15-Aug-23,15,U of R
+202308010,Water,SO4,15,0.45 μm filter,,15-Aug-23,15,U of R
+202208042,Water,DOC,35,0.45 μm filter,,03-Aug-22,35,U of R
+202208043,Water,SO4,35,0.45 μm filter,,03-Aug-22,35,U of R
+202208079,Water,DOC,35,0.45 μm filter,,16-Aug-22,35,U of R
+202208080,Water,SO4,35,0.45 μm filter,,16-Aug-22,35,U of R
+202305004,Water,DOC,35,0.45 μm filter,,17-May-23,35,U of R
+202305005,Water,SO4,35,0.45 μm filter,,17-May-23,35,U of R
+202305070,Water,DOC,35,0.45 μm filter,,30-May-23,35,U of R
+202305071,Water,SO4,35,0.45 μm filter,,30-May-23,35,U of R
+202306045,Water,DOC,35,0.45 μm filter,,13-Jun-23,35,U of R
+202306046,Water,SO4,35,0.45 μm filter,,13-Jun-23,35,U of R
+202306081,Water,DOC,35,0.45 μm filter,,27-Jun-23,35,U of R
+202306082,Water,SO4,35,0.45 μm filter,,27-Jun-23,35,U of R
+202208044,Water,DOC,37,0.45 μm filter,,03-Aug-22,37,U of R
+202208045,Water,SO4,37,0.45 μm filter,,03-Aug-22,37,U of R
+202305011,Water,DOC,37,0.45 μm filter,,17-May-23,37,U of R
+202305012,Water,SO4,37,0.45 μm filter,,17-May-23,37,U of R
+202305077,Water,DOC,37,0.45 μm filter,,30-May-23,37,U of R
+202305078,Water,SO4,37,0.45 μm filter,,30-May-23,37,U of R
+202208038,Water,DOC,97,0.45 μm filter,,03-Aug-22,97,U of R
+202208039,Water,SO4,97,0.45 μm filter,,03-Aug-22,97,U of R
+202208040,Water,DOC,109,0.45 μm filter,,03-Aug-22,109,U of R
+202208041,Water,SO4,109,0.45 μm filter,,03-Aug-22,109,U of R
+202208077,Water,DOC,109,0.45 μm filter,,16-Aug-22,109,U of R
+202208078,Water,SO4,109,0.45 μm filter,,16-Aug-22,109,U of R
+202208107,Water,DOC,109,0.45 μm filter,,29-Aug-22,109,U of R
+202208108,Water,SO4,109,0.45 μm filter,,29-Aug-22,109,U of R
+202305032,Water,DOC,109,0.45 μm filter,,17-May-23,109,U of R
+202305033,Water,SO4,109,0.45 μm filter,,17-May-23,109,U of R
+202305111,Water,DOC,109,0.45 μm filter,,30-May-23,109,U of R
+202305112,Water,SO4,109,0.45 μm filter,,30-May-23,109,U of R
+202306018,Water,DOC,109,0.45 μm filter,,13-Jun-23,109,U of R
+202306019,Water,SO4,109,0.45 μm filter,,13-Jun-23,109,U of R
+202208036,Water,DOC,125,0.45 μm filter,,03-Aug-22,125,U of R
+202208037,Water,SO4,125,0.45 μm filter,,03-Aug-22,125,U of R
+202208075,Water,DOC,125,0.45 μm filter,,16-Aug-22,125,U of R
+202208076,Water,SO4,125,0.45 μm filter,,16-Aug-22,125,U of R
+202208105,Water,DOC,125,0.45 μm filter,,29-Aug-22,125,U of R
+202208106,Water,SO4,125,0.45 μm filter,,29-Aug-22,125,U of R
+202209009,Water,DOC,125,0.45 μm filter,,12-Sep-22,125,U of R
+202209010,Water,SO4,125,0.45 μm filter,,12-Sep-22,125,U of R
+202305018,Water,DOC,125,0.45 μm filter,,17-May-23,125,U of R
+202305019,Water,SO4,125,0.45 μm filter,,17-May-23,125,U of R
+202305084,Water,DOC,125,0.45 μm filter,,30-May-23,125,U of R
+202305085,Water,SO4,125,0.45 μm filter,,30-May-23,125,U of R
+202306027,Water,DOC,125,0.45 μm filter,,13-Jun-23,125,U of R
+202306028,Water,SO4,125,0.45 μm filter,,13-Jun-23,125,U of R
+202306090,Water,DOC,125,0.45 μm filter,,27-Jun-23,125,U of R
+202306091,Water,SO4,125,0.45 μm filter,,27-Jun-23,125,U of R
+202305046,Water,DOC,125S,0.45 μm filter,,17-May-23,125S,U of R
+202305047,Water,SO4,125S,0.45 μm filter,,17-May-23,125S,U of R
+202305093,Water,DOC,125S,0.45 μm filter,,30-May-23,125S,U of R
+202305094,Water,SO4,125S,0.45 μm filter,,30-May-23,125S,U of R
+202306036,Water,DOC,125S,0.45 μm filter,,13-Jun-23,125S,U of R
+202306037,Water,SO4,125S,0.45 μm filter,,13-Jun-23,125S,U of R
+202306099,Water,DOC,125S,0.45 μm filter,,27-Jun-23,125S,U of R
+202306100,Water,SO4,125S,0.45 μm filter,,27-Jun-23,125S,U of R
+202307018,Water,DOC,125S,0.45 μm filter,,11-Jul-23,125S,U of R
+202307019,Water,SO4,125S,0.45 μm filter,,11-Jul-23,125S,U of R
+202307048,Water,DOC,125S,0.45 μm filter,,20-Jul-23,125S,U of R
+202307049,Water,SO4,125S,0.45 μm filter,,20-Jul-23,125S,U of R
+202308018,Water,DOC,125S,0.45 μm filter,,15-Aug-23,125S,U of R
+202308019,Water,SO4,125S,0.45 μm filter,,15-Aug-23,125S,U of R
+202208007,Water,DOC,1,1.2 μm filter,,03-Aug-22,1,U of R
+202208008,Water,SO4,1,1.2 μm filter,,03-Aug-22,1,U of R
+202208052,Water,DOC,1,1.2 μm filter,,16-Aug-22,1,U of R
+202208053,Water,SO4,1,1.2 μm filter,,16-Aug-22,1,U of R
+202208089,Water,DOC,1,1.2 μm filter,,29-Aug-22,1,U of R
+202208090,Water,SO4,1,1.2 μm filter,,29-Aug-22,1,U of R
+202209018,Water,DOC,1,1.2 μm filter,,12-Sep-22,1,U of R
+202209019,Water,SO4,1,1.2 μm filter,,12-Sep-22,1,U of R
+202305037,Water,DOC,1,1.2 μm filter,,17-May-23,1,U of R
+202305038,Water,SO4,1,1.2 μm filter,,17-May-23,1,U of R
+202305118,Water,DOC,1,1.2 μm filter,,30-May-23,1,U of R
+202305119,Water,SO4,1,1.2 μm filter,,30-May-23,1,U of R
+202306011,Water,DOC,1,1.2 μm filter,,13-Jun-23,1,U of R
+202306012,Water,SO4,1,1.2 μm filter,,13-Jun-23,1,U of R
+202306065,Water,DOC,1,1.2 μm filter,,27-Jun-23,1,U of R
+202306066,Water,SO4,1,1.2 μm filter,,27-Jun-23,1,U of R
+202307002,Water,DOC,1,1.2 μm filter,,11-Jul-23,1,U of R
+202307003,Water,SO4,1,1.2 μm filter,,11-Jul-23,1,U of R
+202307032,Water,DOC,1,1.2 μm filter,,20-Jul-23,1,U of R
+202307033,Water,SO4,1,1.2 μm filter,,20-Jul-23,1,U of R
+202308002,Water,DOC,1,1.2 μm filter,,15-Aug-23,1,U of R
+202308003,Water,SO4,1,1.2 μm filter,,15-Aug-23,1,U of R
+202208002,Water,DOC,15,1.2 μm filter,,03-Aug-22,15,U of R
+202208003,Water,SO4,15,1.2 μm filter,,03-Aug-22,15,U of R
+202208047,Water,DOC,15,1.2 μm filter,,16-Aug-22,15,U of R
+202208048,Water,SO4,15,1.2 μm filter,,16-Aug-22,15,U of R
+202208082,Water,DOC,15,1.2 μm filter,,29-Aug-22,15,U of R
+202208083,Water,SO4,15,1.2 μm filter,,29-Aug-22,15,U of R
+202209002,Water,DOC,15,1.2 μm filter,,12-Sep-22,15,U of R
+202209003,Water,SO4,15,1.2 μm filter,,12-Sep-22,15,U of R
+202305023,Water,DOC,15,1.2 μm filter,,17-May-23,15,U of R
+202305024,Water,SO4,15,1.2 μm filter,,17-May-23,15,U of R
+202305100,Water,DOC,15,1.2 μm filter,,30-May-23,15,U of R
+202305101,Water,SO4,15,1.2 μm filter,,30-May-23,15,U of R
+202306002,Water,DOC,15,1.2 μm filter,,13-Jun-23,15,U of R
+202306003,Water,SO4,15,1.2 μm filter,,13-Jun-23,15,U of R
+202306070,Water,DOC,15,1.2 μm filter,,27-Jun-23,15,U of R
+202306071,Water,SO4,15,1.2 μm filter,,27-Jun-23,15,U of R
+202307007,Water,DOC,15,1.2 μm filter,,11-Jul-23,15,U of R
+202307008,Water,SO4,15,1.2 μm filter,,11-Jul-23,15,U of R
+202307037,Water,DOC,15,1.2 μm filter,,20-Jul-23,15,U of R
+202307038,Water,SO4,15,1.2 μm filter,,20-Jul-23,15,U of R
+202308007,Water,DOC,15,1.2 μm filter,,15-Aug-23,15,U of R
+202308008,Water,SO4,15,1.2 μm filter,,15-Aug-23,15,U of R
+202208025,Water,DOC,35,1.2 μm filter,,03-Aug-22,35,U of R
+202208026,Water,SO4,35,1.2 μm filter,,03-Aug-22,35,U of R
+202208065,Water,DOC,35,1.2 μm filter,,16-Aug-22,35,U of R
+202208066,Water,SO4,35,1.2 μm filter,,16-Aug-22,35,U of R
+202305002,Water,DOC,35,1.2 μm filter,,17-May-23,35,U of R
+202305003,Water,SO4,35,1.2 μm filter,,17-May-23,35,U of R
+202305068,Water,DOC,35,1.2 μm filter,,30-May-23,35,U of R
+202305069,Water,SO4,35,1.2 μm filter,,30-May-23,35,U of R
+202306043,Water,DOC,35,1.2 μm filter,,13-Jun-23,35,U of R
+202306044,Water,SO4,35,1.2 μm filter,,13-Jun-23,35,U of R
+202306079,Water,DOC,35,1.2 μm filter,,27-Jun-23,35,U of R
+202306080,Water,SO4,35,1.2 μm filter,,27-Jun-23,35,U of R
+202208030,Water,DOC,37,1.2 μm filter,,03-Aug-22,37,U of R
+202208031,Water,SO4,37,1.2 μm filter,,03-Aug-22,37,U of R
+202305009,Water,DOC,37,1.2 μm filter,,17-May-23,37,U of R
+202305010,Water,SO4,37,1.2 μm filter,,17-May-23,37,U of R
+202305075,Water,DOC,37,1.2 μm filter,,30-May-23,37,U of R
+202305076,Water,SO4,37,1.2 μm filter,,30-May-23,37,U of R
+202208015,Water,DOC,97,1.2 μm filter,,03-Aug-22,97,U of R
+202208016,Water,SO4,97,1.2 μm filter,,03-Aug-22,97,U of R
+202208020,Water,DOC,109,1.2 μm filter,,03-Aug-22,109,U of R
+202208021,Water,SO4,109,1.2 μm filter,,03-Aug-22,109,U of R
+202208060,Water,DOC,109,1.2 μm filter,,16-Aug-22,109,U of R
+202208061,Water,SO4,109,1.2 μm filter,,16-Aug-22,109,U of R
+202208097,Water,DOC,109,1.2 μm filter,,29-Aug-22,109,U of R
+202208098,Water,SO4,109,1.2 μm filter,,29-Aug-22,109,U of R
+202305030,Water,DOC,109,1.2 μm filter,,17-May-23,109,U of R
+202305031,Water,SO4,109,1.2 μm filter,,17-May-23,109,U of R
+202305109,Water,DOC,109,1.2 μm filter,,30-May-23,109,U of R
+202305110,Water,SO4,109,1.2 μm filter,,30-May-23,109,U of R
+202306016,Water,DOC,109,1.2 μm filter,,13-Jun-23,109,U of R
+202306017,Water,SO4,109,1.2 μm filter,,13-Jun-23,109,U of R
+202208010,Water,DOC,125,1.2 μm filter,,03-Aug-22,125,U of R
+202208011,Water,SO4,125,1.2 μm filter,,03-Aug-22,125,U of R
+202208055,Water,DOC,125,1.2 μm filter,,16-Aug-22,125,U of R
+202208056,Water,SO4,125,1.2 μm filter,,16-Aug-22,125,U of R
+202208092,Water,DOC,125,1.2 μm filter,,29-Aug-22,125,U of R
+202208093,Water,SO4,125,1.2 μm filter,,29-Aug-22,125,U of R
+202209013,Water,DOC,125,1.2 μm filter,,12-Sep-22,125,U of R
+202209014,Water,SO4,125,1.2 μm filter,,12-Sep-22,125,U of R
+202305016,Water,DOC,125,1.2 μm filter,,17-May-23,125,U of R
+202305017,Water,SO4,125,1.2 μm filter,,17-May-23,125,U of R
+202305082,Water,DOC,125,1.2 μm filter,,30-May-23,125,U of R
+202305083,Water,SO4,125,1.2 μm filter,,30-May-23,125,U of R
+202306025,Water,DOC,125,1.2 μm filter,,13-Jun-23,125,U of R
+202306026,Water,SO4,125,1.2 μm filter,,13-Jun-23,125,U of R
+202306088,Water,DOC,125,1.2 μm filter,,27-Jun-23,125,U of R
+202306089,Water,SO4,125,1.2 μm filter,,27-Jun-23,125,U of R
+202305044,Water,DOC,125S,1.2 μm filter,,17-May-23,125S,U of R
+202305045,Water,SO4,125S,1.2 μm filter,,17-May-23,125S,U of R
+202305091,Water,DOC,125S,1.2 μm filter,,30-May-23,125S,U of R
+202305092,Water,SO4,125S,1.2 μm filter,,30-May-23,125S,U of R
+202306034,Water,DOC,125S,1.2 μm filter,,13-Jun-23,125S,U of R
+202306035,Water,SO4,125S,1.2 μm filter,,13-Jun-23,125S,U of R
+202306097,Water,DOC,125S,1.2 μm filter,,27-Jun-23,125S,U of R
+202306098,Water,SO4,125S,1.2 μm filter,,27-Jun-23,125S,U of R
+202307016,Water,DOC,125S,1.2 μm filter,,11-Jul-23,125S,U of R
+202307017,Water,SO4,125S,1.2 μm filter,,11-Jul-23,125S,U of R
+202307046,Water,DOC,125S,1.2 μm filter,,20-Jul-23,125S,U of R
+202307047,Water,SO4,125S,1.2 μm filter,,20-Jul-23,125S,U of R
+202308016,Water,DOC,125S,1.2 μm filter,,15-Aug-23,125S,U of R
+202308017,Water,SO4,125S,1.2 μm filter,,15-Aug-23,125S,U of R
+202208051,Filter,Chloro,1,100 mL (H2O),,16-Aug-22,1,U of R
+202209017,Filter,Chloro,1,100 mL (H2O),,12-Sep-22,1,U of R
+202307031,Filter,Chloro,1,100 mL (H2O),,20-Jul-23,1,U of R
+202107057,Filter ,Chloro,1,100 mL (H2O),,22-Jul-21,1,U of R
+202108006,Filter ,Chloro,1,100 mL (H2O),,04-Aug-21,1,U of R
+202205066,Filter ,Chloro,1,100 mL (H2O),,24-May-22,1,U of R
+202206001,Filter ,Chloro,1,100 mL (H2O),,08-Jun-22,1,U of R
+202207006,Filter ,Chloro,1,100 mL (H2O),,06-Jul-22,1,U of R
+202207062,Filter ,Chloro,1,100 mL (H2O),,19-Jul-22,1,U of R
+202106012,Filter ,Chloro,25,100 mL (H2O),,06-Jun-21,25,U of R
+202108029,Filter ,Chloro,97,100 mL (H2O),,18-Aug-21,97,U of R
+202106027,Filter ,Chloro,125,100 mL (H2O),,06-Jun-21,125,U of R
+202205069,Filter ,Chloro,125,100 mL (H2O),,24-May-22,125,U of R
+202109029,Filter ,Chloro,1,120 mL (H2O),,19-Sep-21,1,U of R
+202305036,Filter,Chloro,1,125 mL (H2O),,17-May-23,1,U of R
+202107012,Filter ,Chloro,1,130 mL (H2O),,06-Jul-21,1,U of R
+202109012,Filter ,Chloro,125,15 mL (H2O),,01-Sep-21,125,U of R
+202306010,Filter,Chloro,1,150 mL (H2O),,13-Jun-23,1,U of R
+202306064,Filter,Chloro,1,150 mL (H2O),,27-Jun-23,1,U of R
+202105016,Filter ,Chloro,1,150 mL (H2O),,19-May-21,1,U of R
+202106033,Filter ,Chloro,1,150 mL (H2O),,06-Jun-21,1,U of R
+202109007,Filter ,Chloro,1,150 mL (H2O),,01-Sep-21,1,U of R
+202109006,Filter ,Chloro,15,150 mL (H2O),,01-Sep-21,15,U of R
+202107048,Filter ,Chloro,97,150 mL (H2O),,22-Jul-21,97,U of R
+202105022,Filter ,Chloro,125,150 mL (H2O),,19-May-21,125,U of R
+202206014,Filter ,Chloro,125,150 mL (H2O),,08-Jun-22,125,U of R
+202205006,Filter ,Chloro,2,175 mL (H2O),,10-May-22,2,U of R
+201106077 S,Sediment ,Kmeth,139,2-4 cm,,29-Jun-11,Pond 139 ,U of R
+201106080 S,Sediment ,Kmeth,139,2-4 cm,,29-Jun-11,Pond 139 ,U of R
+201106083 S,Sediment ,Kmeth,139,2-4 cm,,29-Jun-11,Pond 139 ,U of R
+201106047 S,Sediment ,Kmeth,2,2-4 cm,,28-Jun-11,Pond 2,U of R
+201106050 S,Sediment ,Kmeth,2,2-4 cm,,28-Jun-11,Pond 2,U of R
+201106053 S,Sediment ,Kmeth,2,2-4 cm,,28-Jun-11,Pond 2,U of R
+201106062 S,Sediment ,Kmeth,3,2-4 cm,,28-Jun-11,Pond 3,U of R
+201106065 S,Sediment ,Kmeth,3,2-4 cm,,28-Jun-11,Pond 3,U of R
+201106068 S,Sediment ,Kmeth,3,2-4 cm,,28-Jun-11,Pond 3,U of R
+202305050,Air,GHG,15,20 mL (Air),S1 Shallow,17-May-23,15,U of R
+202305051,Air,GHG,15,20 mL (Air),S2 Deep,17-May-23,15,U of R
+202305052,Air,GHG,15,20 mL (Air),R1 Shallow,17-May-23,15,U of R
+202305053,Air,GHG,15,20 mL (Air),R2 Deep,17-May-23,15,U of R
+202305122,Air,GHG,15,20 mL (Air),S1 Shallow,30-May-23,15,U of R
+202305123,Air,GHG,15,20 mL (Air),S2 Deep,30-May-23,15,U of R
+202305124,Air,GHG,15,20 mL (Air),R1 Shallow,30-May-23,15,U of R
+202305125,Air,GHG,15,20 mL (Air),R2 Deep,30-May-23,15,U of R
+202306051,Air,GHG,15,20 mL (Air),S1 Shallow,13-Jun-23,15,U of R
+202306052,Air,GHG,15,20 mL (Air),S2 Deep,13-Jun-23,15,U of R
+202306053,Air,GHG,15,20 mL (Air),R1 Shallow,13-Jun-23,15,U of R
+202306054,Air,GHG,15,20 mL (Air),R2 Deep,13-Jun-23,15,U of R
+202306105,Air,GHG,15,20 mL (Air),S1 Shallow,27-Jun-23,15,U of R
+202306106,Air,GHG,15,20 mL (Air),S2 Deep,27-Jun-23,15,U of R
+202306107,Air,GHG,15,20 mL (Air),R1 Shallow,27-Jun-23,15,U of R
+202306108,Air,GHG,15,20 mL (Air),R2 Deep,27-Jun-23,15,U of R
+202307024,Air,GHG,15,20 mL (Air),S1 Shallow,11-Jul-23,15,U of R
+202307025,Air,GHG,15,20 mL (Air),S2 Deep,11-Jul-23,15,U of R
+202307026,Air,GHG,15,20 mL (Air),R1 Shallow,11-Jul-23,15,U of R
+202307027,Air,GHG,15,20 mL (Air),R2 Deep,11-Jul-23,15,U of R
+202308024,Air,GHG,15,20 mL (Air),S1 Shallow,15-Aug-23,15,U of R
+202308025,Air,GHG,15,20 mL (Air),S2 Deep,15-Aug-23,15,U of R
+202308026,Air,GHG,15,20 mL (Air),R1 Shallow,15-Aug-23,15,U of R
+202308027,Air,GHG,15,20 mL (Air),R2 Deep,15-Aug-23,15,U of R
+202305054,Air,GHG,35,20 mL (Air),S1,17-May-23,35,U of R
+202305055,Air,GHG,35,20 mL (Air),R1,17-May-23,35,U of R
+202305056,Air,GHG,37,20 mL (Air),S1,17-May-23,37,U of R
+202305057,Air,GHG,37,20 mL (Air),R1,17-May-23,37,U of R
+202305126,Air,GHG,37,20 mL (Air),S1,30-May-23,37,U of R
+202305127,Air,GHG,37,20 mL (Air),R1,30-May-23,37,U of R
+202306055,Air,GHG,37,20 mL (Air),S1,13-Jun-23,37,U of R
+202306056,Air,GHG,37,20 mL (Air),R1,13-Jun-23,37,U of R
+202305058,Air,GHG,109,20 mL (Air),S1,17-May-23,109,U of R
+202305059,Air,GHG,109,20 mL (Air),R1,17-May-23,109,U of R
+202305128,Air,GHG,109,20 mL (Air),S1,30-May-23,109,U of R
+202305129,Air,GHG,109,20 mL (Air),R1,30-May-23,109,U of R
+202306057,Air,GHG,109,20 mL (Air),S1,13-Jun-23,109,U of R
+202306058,Air,GHG,109,20 mL (Air),R1,13-Jun-23,109,U of R
+202305060,Air,GHG,125,20 mL (Air),S1,17-May-23,125,U of R
+202305061,Air,GHG,125,20 mL (Air),R1,17-May-23,125,U of R
+202305130,Air,GHG,125,20 mL (Air),S1,30-May-23,125,U of R
+202305131,Air,GHG,125,20 mL (Air),R1,30-May-23,125,U of R
+202306059,Air,GHG,125,20 mL (Air),S1,13-Jun-23,125,U of R
+202306060,Air,GHG,125,20 mL (Air),R1,13-Jun-23,125,U of R
+202305062,Air,GHG,125S,20 mL (Air),S1,17-May-23,125S,U of R
+202305063,Air,GHG,125S,20 mL (Air),R1,17-May-23,125S,U of R
+202305132,Air,GHG,125S,20 mL (Air),S1,30-May-23,125S,U of R
+202305133,Air,GHG,125S,20 mL (Air),R1,30-May-23,125S,U of R
+202306061,Air,GHG,125S,20 mL (Air),S1,13-Jun-23,125S,U of R
+202306062,Air,GHG,125S,20 mL (Air),R1,13-Jun-23,125S,U of R
+202307028,Air,GHG,125S,20 mL (Air),S1,11-Jul-23,125S,U of R
+202307029,Air,GHG,125S,20 mL (Air),R1,11-Jul-23,125S,U of R
+202308028,Air,GHG,125S,20 mL (Air),S1,15-Aug-23,125S,U of R
+202308029,Air,GHG,125S,20 mL (Air),R1,15-Aug-23,125S,U of R
+202305064,Air,GHG,,20 mL (Air),,17-May-23,SDNWA,U of R
+202305134,Air,GHG,,20 mL (Air),,30-May-23,SDNWA,U of R
+202306063,Air,GHG,,20 mL (Air),,13-Jun-23,SDNWA,U of R
+202306109,Air,GHG,,20 mL (Air),,27-Jun-23,SDNWA,U of R
+202307030,Air,GHG,,20 mL (Air),,11-Jul-23,SDNWA,U of R
+202308030,Air,GHG,,20 mL (Air),,15-Aug-23,SDNWA,U of R
+202106070,Filter ,Chloro,125,20 mL (H2O),,22-Jun-21,125,U of R
+202107051,Filter ,Chloro,125,20 mL (H2O),,22-Jul-21,125,U of R
+202108032,Filter ,Chloro,125,20 mL (H2O),,18-Aug-21,125,U of R
+202306024,Filter,Chloro,125,200 mL (H2O),,13-Jun-23,125,U of R
+202105025,Filter ,Chloro,2,200 mL (H2O),,19-May-21,2,U of R
+202107021,Filter ,Chloro,35,200 mL (H2O),,06-Jul-21,35,U of R
+202109013,Filter ,Chloro,97,200 mL (H2O),,01-Sep-21,97,U of R
+202206070,Filter ,Chloro,124,200 mL (H2O),,21-Jun-22,124,U of R
+202105028,Filter ,Chloro,140,200 mL (H2O),,19-May-21,140,U of R
+202106009,Filter ,Chloro,140,200 mL (H2O),,07-Jun-21,140,U of R
+202106101,Filter , ,37,240 mL (H2O),,23-Jun-21,37,U of R
+202109026,Filter ,Chloro,25,25 mL (H2O),,19-Sep-21,25,U of R
+202109032,Filter ,Chloro,125,25 mL (H2O),,19-Sep-21,125,U of R
+202208088,Filter,Chloro,1,250 mL (H2O),,29-Aug-22,1,U of R
+202208001,Filter,Chloro,15,250 mL (H2O),,03-Aug-22,15,U of R
+202208046,Filter,Chloro,15,250 mL (H2O),,16-Aug-22,15,U of R
+202209001,Filter,Chloro,15,250 mL (H2O),,12-Sep-22,15,U of R
+202305022,Filter,Chloro,15,250 mL (H2O),,17-May-23,15,U of R
+202305099,Filter,Chloro,15,250 mL (H2O),,30-May-23,15,U of R
+202306001,Filter,Chloro,15,250 mL (H2O),,13-Jun-23,15,U of R
+202306069,Filter,Chloro,15,250 mL (H2O),,27-Jun-23,15,U of R
+202307006,Filter,Chloro,15,250 mL (H2O),,11-Jul-23,15,U of R
+202307036,Filter,Chloro,15,250 mL (H2O),,20-Jul-23,15,U of R
+202308006,Filter,Chloro,15,250 mL (H2O),,15-Aug-23,15,U of R
+202208024,Filter,Chloro,35,250 mL (H2O),,03-Aug-22,35,U of R
+202208064,Filter,Chloro,35,250 mL (H2O),,16-Aug-22,35,U of R
+202305001,Filter,Chloro,35,250 mL (H2O),,17-May-23,35,U of R
+202305067,Filter,Chloro,35,250 mL (H2O),,30-May-23,35,U of R
+202306042,Filter,Chloro,35,250 mL (H2O),,13-Jun-23,35,U of R
+202306078,Filter,Chloro,35,250 mL (H2O),,27-Jun-23,35,U of R
+202208029,Filter,Chloro,37,250 mL (H2O),,03-Aug-22,37,U of R
+202305008,Filter,Chloro,37,250 mL (H2O),,17-May-23,37,U of R
+202305074,Filter,Chloro,37,250 mL (H2O),,30-May-23,37,U of R
+202208014,Filter,Chloro,97,250 mL (H2O),,03-Aug-22,97,U of R
+202208019,Filter,Chloro,109,250 mL (H2O),,03-Aug-22,109,U of R
+202208059,Filter,Chloro,109,250 mL (H2O),,16-Aug-22,109,U of R
+202208096,Filter,Chloro,109,250 mL (H2O),,29-Aug-22,109,U of R
+202305029,Filter,Chloro,109,250 mL (H2O),,17-May-23,109,U of R
+202305108,Filter,Chloro,109,250 mL (H2O),,30-May-23,109,U of R
+202306015,Filter,Chloro,109,250 mL (H2O),,13-Jun-23,109,U of R
+202208009,Filter,Chloro,125,250 mL (H2O),,03-Aug-22,125,U of R
+202208054,Filter,Chloro,125,250 mL (H2O),,16-Aug-22,125,U of R
+202208091,Filter,Chloro,125,250 mL (H2O),,29-Aug-22,125,U of R
+202209008,Filter,Chloro,125,250 mL (H2O),,12-Sep-22,125,U of R
+202305015,Filter,Chloro,125,250 mL (H2O),,17-May-23,125,U of R
+202305081,Filter,Chloro,125,250 mL (H2O),,30-May-23,125,U of R
+202306087,Filter,Chloro,125,250 mL (H2O),,27-Jun-23,125,U of R
+202305043,Filter,Chloro,125S,250 mL (H2O),,17-May-23,125S,U of R
+202305090,Filter,Chloro,125S,250 mL (H2O),,30-May-23,125S,U of R
+202306033,Filter,Chloro,125S,250 mL (H2O),,13-Jun-23,125S,U of R
+202306096,Filter,Chloro,125S,250 mL (H2O),,27-Jun-23,125S,U of R
+202307015,Filter,Chloro,125S,250 mL (H2O),,11-Jul-23,125S,U of R
+202307045,Filter,Chloro,125S,250 mL (H2O),,20-Jul-23,125S,U of R
+202308015,Filter,Chloro,125S,250 mL (H2O),,15-Aug-23,125S,U of R
+202106073,Filter , ,1,250 mL (H2O),,22-Jun-21,1,U of R
+202106021,Filter ,Chloro,2,250 mL (H2O),,06-Jun-21,2,U of R
+202205061,Filter ,Chloro,2,250 mL (H2O),,24-May-22,2,U of R
+202206004,Filter ,Chloro,2,250 mL (H2O),,08-Jun-22,2,U of R
+202206065,Filter ,Chloro,2,250 mL (H2O),,21-Jun-22,2,U of R
+202207009,Filter ,Chloro,2,250 mL (H2O),,06-Jul-22,2,U of R
+202105055,Filter ,Chloro,6,250 mL (H2O),,23-May-21,6,U of R
+202106030,Filter ,Chloro,6,250 mL (H2O),,06-Jun-21,6,U of R
+202106089,Filter , ,6,250 mL (H2O),,23-Jun-21,6,U of R
+202205029,Filter ,Chloro,6,250 mL (H2O),,10-May-22,6,U of R
+202205084,Filter ,Chloro,6,250 mL (H2O),,24-May-22,6,U of R
+202206039,Filter ,Chloro,6,250 mL (H2O),,09-Jun-22,6,U of R
+202206095,Filter ,Chloro,6,250 mL (H2O),,21-Jun-22,6,U of R
+202207029,Filter ,Chloro,6,250 mL (H2O),,06-Jul-22,6,U of R
+202105019,Filter ,Chloro,15,250 mL (H2O),,19-May-21,15,U of R
+202106036,Filter ,Chloro,15,250 mL (H2O),,06-Jun-21,15,U of R
+202106076,Filter , ,15,250 mL (H2O),,22-Jun-21,15,U of R
+202107018,Filter ,Chloro,15,250 mL (H2O),,06-Jul-21,15,U of R
+202107045,Filter ,Chloro,15,250 mL (H2O),,22-Jul-21,15,U of R
+202108012,Filter ,Chloro,15,250 mL (H2O),,04-Aug-21,15,U of R
+202108035,Filter ,Chloro,15,250 mL (H2O),,18-Aug-21,15,U of R
+202205001,Filter ,Chloro,15,250 mL (H2O),,10-May-22,15,U of R
+202205056,Filter ,Chloro,15,250 mL (H2O),,24-May-22,15,U of R
+202206009,Filter ,Chloro,15,250 mL (H2O),,08-Jun-22,15,U of R
+202206057,Filter ,Chloro,15,250 mL (H2O),,21-Jun-22,15,U of R
+202207001,Filter ,Chloro,15,250 mL (H2O),,06-Jul-22,15,U of R
+202207057,Filter ,Chloro,15,250 mL (H2O),,19-Jul-22,15,U of R
+202208081,Filter ,Chloro,15,250 mL (H2O),,29-Aug-22,15,U of R
+202106092,Filter , ,25,250 mL (H2O),,23-Jun-21,25,U of R
+202105037,Filter ,Chloro,35,250 mL (H2O),,23-May-21,35,U of R
+202106015,Filter ,Chloro,35,250 mL (H2O),,06-Jun-21,35,U of R
+202106083,Filter ,Chloro,35,250 mL (H2O),,23-Jun-21,35,U of R
+202205044,Filter ,Chloro,35,250 mL (H2O),,10-May-22,35,U of R
+202205099,Filter ,Chloro,35,250 mL (H2O),,24-May-22,35,U of R
+202206029,Filter ,Chloro,35,250 mL (H2O),,08-Jun-22,35,U of R
+202206100,Filter ,Chloro,35,250 mL (H2O),,21-Jun-22,35,U of R
+202207039,Filter ,Chloro,35,250 mL (H2O),,06-Jul-22,35,U of R
+202207085,Filter ,Chloro,35,250 mL (H2O),,19-Jul-22,35,U of R
+202105034,Filter ,Chloro,37,250 mL (H2O),,23-May-21,37,U of R
+202106024,Filter ,Chloro,37,250 mL (H2O),,06-Jun-21,37,U of R
+202205049,Filter ,Chloro,37,250 mL (H2O),,10-May-22,37,U of R
+202205104,Filter ,Chloro,37,250 mL (H2O),,24-May-22,37,U of R
+202206034,Filter ,Chloro,37,250 mL (H2O),,08-Jun-22,37,U of R
+202206105,Filter ,Chloro,37,250 mL (H2O),,21-Jun-22,37,U of R
+202207044,Filter ,Chloro,37,250 mL (H2O),,06-Jul-22,37,U of R
+202207080,Filter ,Chloro,37,250 mL (H2O),,19-Jul-22,37,U of R
+202105061,Filter ,Chloro,70,250 mL (H2O),,23-May-21,70,U of R
+202106003,Filter ,Chloro,70,250 mL (H2O),,06-Jun-21,70,U of R
+202106095,Filter , ,70,250 mL (H2O),,23-Jun-21,70,U of R
+202105031,Filter ,Chloro,97,250 mL (H2O),,19-May-21,97,U of R
+202106018,Filter ,Chloro,97,250 mL (H2O),,06-Jun-21,97,U of R
+202106067,Filter ,Chloro,97,250 mL (H2O),,22-Jun-21,97,U of R
+202107024,Filter ,Chloro,97,250 mL (H2O),,06-Jul-21,97,U of R
+202108009,Filter ,Chloro,97,250 mL (H2O),,04-Aug-21,97,U of R
+202205024,Filter ,Chloro,97,250 mL (H2O),,10-May-22,97,U of R
+202205079,Filter ,Chloro,97,250 mL (H2O),,24-May-22,97,U of R
+202206024,Filter ,Chloro,97,250 mL (H2O),,08-Jun-22,97,U of R
+202206080,Filter ,Chloro,97,250 mL (H2O),,21-Jun-22,97,U of R
+202207024,Filter ,Chloro,97,250 mL (H2O),,06-Jul-22,97,U of R
+202207070,Filter ,Chloro,97,250 mL (H2O),,19-Jul-22,97,U of R
+202105058,Filter ,Chloro,109,250 mL (H2O),,23-May-21,109,U of R
+202106039,Filter ,Chloro,109,250 mL (H2O),,07-Jun-21,109,U of R
+202106098,Filter , ,109,250 mL (H2O),,23-Jun-21,109,U of R
+202107003,Filter ,Chloro,109,250 mL (H2O),,06-Jul-21,109,U of R
+202107054,Filter ,Chloro,109,250 mL (H2O),,22-Jul-21,109,U of R
+202205034,Filter ,Chloro,109,250 mL (H2O),,10-May-22,109,U of R
+202205089,Filter ,Chloro,109,250 mL (H2O),,24-May-22,109,U of R
+202206045,Filter ,Chloro,109,250 mL (H2O),,09-Jun-22,109,U of R
+202206085,Filter ,Chloro,109,250 mL (H2O),,21-Jun-22,109,U of R
+202207034,Filter ,Chloro,109,250 mL (H2O),,06-Jul-22,109,U of R
+202207075,Filter ,Chloro,109,250 mL (H2O),,19-Jul-22,109,U of R
+202105040,Filter ,Chloro,118,250 mL (H2O),,23-May-21,118,U of R
+202106042,Filter ,Chloro,118,250 mL (H2O),,07-Jun-21,118,U of R
+202205039,Filter ,Chloro,118,250 mL (H2O),,10-May-22,118,U of R
+202205094,Filter ,Chloro,118,250 mL (H2O),,24-May-22,118,U of R
+202206050,Filter ,Chloro,118,250 mL (H2O),,09-Jun-22,118,U of R
+202206090,Filter ,Chloro,118,250 mL (H2O),,21-Jun-22,118,U of R
+202105013,Filter ,Chloro,124,250 mL (H2O),,19-May-21,124,U of R
+202106006,Filter ,Chloro,124,250 mL (H2O),,07-Jun-21,124,U of R
+202106079,Filter , ,124,250 mL (H2O),,23-Jun-21,124,U of R
+202107015,Filter ,Chloro,124,250 mL (H2O),,06-Jul-21,124,U of R
+202205019,Filter ,Chloro,124,250 mL (H2O),,10-May-22,124,U of R
+202205074,Filter ,Chloro,124,250 mL (H2O),,24-May-22,124,U of R
+202206019,Filter ,Chloro,124,250 mL (H2O),,08-Jun-22,124,U of R
+202207019,Filter ,Chloro,124,250 mL (H2O),,06-Jul-22,124,U of R
+202206075,Filter ,Chloro,125,250 mL (H2O),,21-Jun-22,125,U of R
+202207014,Filter ,Chloro,125,250 mL (H2O),,06-Jul-22,125,U of R
+202207065,Filter ,Chloro,125,250 mL (H2O),,19-Jul-22,125,U of R
+202106082,Filter , ,140,250 mL (H2O),,24-Jun-21,140,U of R
+202109001,Filter ,Chloro,25,30 mL (H2O),,01-Sep-21,25,U of R
+201106078 S,Sediment ,Kmeth,139,4-8 cm,,29-Jun-11,Pond 139 ,U of R
+201106081 S,Sediment ,Kmeth,139,4-8 cm,,29-Jun-11,Pond 139 ,U of R
+201106084 S,Sediment ,Kmeth,139,4-8 cm,,29-Jun-11,Pond 139 ,U of R
+201106048 S,Sediment ,Kmeth,2,4-8 cm,,28-Jun-11,Pond 2,U of R
+201106051 S,Sediment ,Kmeth,2,4-8 cm,,28-Jun-11,Pond 2,U of R
+201106054 S,Sediment ,Kmeth,2,4-8 cm,,28-Jun-11,Pond 2,U of R
+201106063 S,Sediment ,Kmeth,3,4-8 cm,,28-Jun-11,Pond 3,U of R
+201106066 S,Sediment ,Kmeth,3,4-8 cm,,28-Jun-11,Pond 3,U of R
+201106069 S,Sediment ,Kmeth,3,4-8 cm,,28-Jun-11,Pond 3,U of R
+202108038,Filter ,Chloro,25,40 mL (H2O),,18-Aug-21,25,U of R
+202108003,Filter ,Chloro,25,45 mL (H2O),,04-Aug-21,25,U of R
+202208006,Filter,Chloro,1,50 mL (H2O),,03-Aug-22,1,U of R
+202105064,Filter ,Chloro,25,50 mL (H2O),,23-May-21,25,U of R
+202108015,Filter ,Chloro,125,50 mL (H2O),,04-Aug-21,125,U of R
+202305117,Filter,Chloro,1,60 mL (H2O),,30-May-23,1,U of R
+202308001,Filter,Chloro,1,60 mL (H2O),,15-Aug-23,1,U of R
+202108026,Filter ,Chloro,1,60 mL (H2O),,18-Aug-21,1,U of R
+202206062,Filter ,Chloro,1,60 mL (H2O),,21-Jun-22,1,U of R
+202109035,Filter ,Chloro,15,60 mL (H2O),,19-Sep-21,15,U of R
+202107006,Filter ,Chloro,25,60 mL (H2O),,06-Jul-21,25,U of R
+202107042,Filter ,Chloro,25,60 mL (H2O),,22-Jul-21,25,U of R
+202107009,Filter ,Chloro,125,60 mL (H2O),,06-Jul-21,125,U of R
+202307001,Filter,Chloro,1,75 mL (H2O),,11-Jul-23,1,U of R
+202205014,Filter ,Chloro,125,75 mL (H2O),,10-May-22,125,U of R
+202205011,Filter ,Chloro,1,90 mL (H2O),,10-May-22,1,U of R
+201006046,Water,MeHg,109,BDH 104,,01-Jun-10,POND109,U of R
+201006016,Water,MeHg,118,BDH 32,,01-Jun-10,POND118,U of R
+201006056,Water,MeHg,104,BDH 51,,01-Jun-10,POND104,U of R
+201006001,Water,MeHg,110,BDH 55,,01-Jun-10,POND110,U of R
+200607111,Water,THg,60,ENK 005,,22-Jul-06,Pond 60,U of R
+20060795,Water,THg,60,ENK 036,,21-Jul-06,Pond 60,U of R
+200607104,Water,MeHg,26,LAKE 016,,22-Jul-06,Pond 26,U of R
+201106085 S,Sediment ,LOI,139,LOI 0-2,,29-Jun-11,Pond 139 ,U of R
+201106055 S,Sediment ,LOI,2,LOI 0-2,,29-Jun-11,Pond 2,U of R
+201106070 S,Sediment ,LOI,3,LOI 0-2,,29-Jun-11,Pond 3,U of R
+201106086 S,Sediment ,LOI,139,LOI 2-4,,29-Jun-11,Pond 139 ,U of R
+201106056 S,Sediment ,LOI,2,LOI 2-4,,29-Jun-11,Pond 2,U of R
+201106071 S,Sediment ,LOI,3,LOI 2-4,,29-Jun-11,Pond 3,U of R
+201106087 S,Sediment ,LOI,139,LOI 4-8,,29-Jun-11,Pond 139 ,U of R
+201106057 S,Sediment ,LOI,2,LOI 4-8,,29-Jun-11,Pond 2,U of R
+201106072 S,Sediment ,LOI,3,LOI 4-8,,29-Jun-11,Pond 3,U of R
+201006026,Water,MeHg,1,No gas,,02-Jun-10,POND1,U of R
+201006021,Water,MeHg,113,No gas,,01-Jun-10,POND113,U of R
+201006031,Water,MeHg,130,No gas,,02-Jun-10,POND130,U of R
+201006071,Water,MeHg,139,No gas,,02-Jun-10,POND139,U of R
+201006066,Water,MeHg,2,No gas,,02-Jun-10,POND2,U of R
+201006011,Water,MeHg,3,No gas,,02-Jun-10,POND3,U of R
+201106088 S,Sediment ,PS,139,Parsiz 0-2,,29-Jun-11,Pond 139 ,U of R
+201106089 S,Sediment ,PS,139,Parsiz 2-4,,29-Jun-11,Pond 139 ,U of R
+201106090 S,Sediment ,PS,139,Parsiz 4-8,,29-Jun-11,Pond 139 ,U of R
+201106121,Water,THg,130,PORE,,29-Jun-11,Pond 130,U of R
+201106122,Water,MeHg,130,PORE,,29-Jun-11,Pond 130,U of R
+201106123,Water,SO4,130,PORE,,29-Jun-11,Pond 130,U of R
+201106124,Water,DOC,130,PORE,,29-Jun-11,Pond 130,U of R
+201106125,Water,SUVA,130,PORE,,29-Jun-11,Pond 130,U of R
+201106111,Water,THg,139,PORE,,29-Jun-11,Pond 139 ,U of R
+201106112,Water,MeHg,139,PORE,,29-Jun-11,Pond 139 ,U of R
+201106113,Water,SO4,139,PORE,,29-Jun-11,Pond 139 ,U of R
+201106114,Water,DOC,139,PORE,,29-Jun-11,Pond 139 ,U of R
+201106115,Water,SUVA,139,PORE,,29-Jun-11,Pond 139 ,U of R
+201106151,Water,THg,2,PORE,,28-Jun-11,Pond 2,U of R
+201106152,Water,MeHg,2,PORE,,28-Jun-11,Pond 2,U of R
+201106153,Water,SO4,2,PORE,,28-Jun-11,Pond 2,U of R
+201106154,Water,DOC,2,PORE,,28-Jun-11,Pond 2,U of R
+201106155,Water,SUVA,2,PORE,,28-Jun-11,Pond 2,U of R
+201106131,Water,THg,3,PORE,,28-Jun-11,Pond 3,U of R
+201106132,Water,MeHg,3,PORE,,28-Jun-11,Pond 3,U of R
+201106133,Water,SO4,3,PORE,,28-Jun-11,Pond 3,U of R
+201106134,Water,DOC,3,PORE,,28-Jun-11,Pond 3,U of R
+201106135,Water,SUVA,3,PORE,,28-Jun-11,Pond 3,U of R
+201108061,Water,THg,100,Pore,,23-Aug-11,SD100,U of R
+201108062,Water,MeHg,100,Pore,,23-Aug-11,SD100,U of R
+201108063,Water,SO4,100,Pore,,23-Aug-11,SD100,U of R
+201108064,Water,DOC,100,Pore,,23-Aug-11,SD100,U of R
+201108065,Water,SUVA,100,Pore,,23-Aug-11,SD100,U of R
+201108071,Water,THg,104,Pore,,22-Aug-11,SD104,U of R
+201108072,Water,MeHg,104,Pore,,22-Aug-11,SD104,U of R
+201108073,Water,SO4,104,Pore,,22-Aug-11,SD104,U of R
+201108074,Water,DOC,104,Pore,,22-Aug-11,SD104,U of R
+201108075,Water,SUVA,104,Pore,,22-Aug-11,SD104,U of R
+201108081,Water,THg,110,Pore,,23-Aug-11,SD110,U of R
+201108082,Water,MeHg,110,Pore,,23-Aug-11,SD110,U of R
+201108083,Water,SO4,110,Pore,,23-Aug-11,SD110,U of R
+201108084,Water,DOC,110,Pore,,23-Aug-11,SD110,U of R
+201108085,Water,SUVA,110,Pore,,23-Aug-11,SD110,U of R
+201108111,Water,THg,113,Pore,,23-Aug-11,SD113,U of R
+201108112,Water,MeHg,113,Pore,,23-Aug-11,SD113,U of R
+201108113,Water,SO4,113,Pore,,23-Aug-11,SD113,U of R
+201108114,Water,DOC,113,Pore,,23-Aug-11,SD113,U of R
+201108115,Water,SUVA,113,Pore,,23-Aug-11,SD113,U of R
+201108031,Water,THg,118,Pore,,23-Aug-11,SD118,U of R
+201108032,Water,MeHg,118,Pore,,23-Aug-11,SD118,U of R
+201108033,Water,SO4,118,Pore,,23-Aug-11,SD118,U of R
+201108034,Water,DOC,118,Pore,,23-Aug-11,SD118,U of R
+201108035,Water,SUVA,118,Pore,,23-Aug-11,SD118,U of R
+201108051,Water,THg,130,Pore,,23-Aug-11,SD130,U of R
+201108052,Water,MeHg,130,Pore,,23-Aug-11,SD130,U of R
+201108053,Water,SO4,130,Pore,,23-Aug-11,SD130,U of R
+201108054,Water,DOC,130,Pore,,23-Aug-11,SD130,U of R
+201108055,Water,SUVA,130,Pore,,23-Aug-11,SD130,U of R
+201108041,Water,THg,139,Pore,,23-Aug-11,SD139,U of R
+201108042,Water,MeHg,139,Pore,,23-Aug-11,SD139,U of R
+201108043,Water,SO4,139,Pore,,23-Aug-11,SD139,U of R
+201108044,Water,DOC,139,Pore,,23-Aug-11,SD139,U of R
+201108045,Water,SUVA,139,Pore,,23-Aug-11,SD139,U of R
+201108011,Water,THg,2,Pore,,23-Aug-11,SD2,U of R
+201108012,Water,MeHg,2,Pore,,23-Aug-11,SD2,U of R
+201108013,Water,SO4,2,Pore,,23-Aug-11,SD2,U of R
+201108014,Water,DOC,2,Pore,,23-Aug-11,SD2,U of R
+201108015,Water,SUVA,2,Pore,,23-Aug-11,SD2,U of R
+201108021,Water,THg,3,Pore,,23-Aug-11,SD3,U of R
+201108022,Water,MeHg,3,Pore,,23-Aug-11,SD3,U of R
+201108023,Water,SO4,3,Pore,,23-Aug-11,SD3,U of R
+201108024,Water,DOC,3,Pore,,23-Aug-11,SD3,U of R
+201108025,Water,SUVA,3,Pore,,23-Aug-11,SD3,U of R
+202206112,Water,THg,15,Pore; ~0.08 mL (HCl),,21-Jun-22,15,U of R
+202206116,Water,THg,97,Pore; ~0.08 mL (HCl),,21-Jun-22,97,U of R
+202206115,Water,THg,124,Pore; ~0.11 mL (HCl),,21-Jun-22,124,U of R
+202207052,Water,MeHg,2,Pore; ~0.14 mL (HCl),,06-Jul-22,2,U of R
+202207055,Water,MeHg,97,Pore; ~0.2 mL (HCl),,06-Jul-22,97,U of R
+202207054,Water,MeHg,124,Pore; ~0.2 mL (HCl),,06-Jul-22,124,U of R
+202207053,Water,MeHg,125,Pore; ~0.2 mL (HCl),,06-Jul-22,125,U of R
+202206113,Water,THg,2,Pore; 0.125 mL (HCl),,21-Jun-22,2,U of R
+202206114,Water,THg,125,Pore; 0.125 mL (HCl),,21-Jun-22,125,U of R
+202207051,Water,MeHg,15,Pore; 0.25 mL (HCl),,06-Jul-22,15,U of R
+202207056,Water,MeHg,109,Pore; 0.25 mL (HCl),,06-Jul-22,109,U of R
+201106186,Water,THg,1,Surface,,28-Jun-11,Pond 1,U of R
+201106187,Water,MeHg,1,Surface,,28-Jun-11,Pond 1,U of R
+201106188,Water,SO4,1,Surface,,28-Jun-11,Pond 1,U of R
+201106189,Water,DOC,1,Surface,,28-Jun-11,Pond 1,U of R
+201106190,Water,SUVA,1,Surface,,28-Jun-11,Pond 1,U of R
+201106166,Water,THg,100,Surface,,29-Jun-11,Pond 100,U of R
+201106167,Water,MeHg,100,Surface,,29-Jun-11,Pond 100,U of R
+201106168,Water,SO4,100,Surface,,29-Jun-11,Pond 100,U of R
+201106169,Water,DOC,100,Surface,,29-Jun-11,Pond 100,U of R
+201106170,Water,SUVA,100,Surface,,29-Jun-11,Pond 100,U of R
+201106171,Water,THg,104,Surface,,29-Jun-11,Pond 104,U of R
+201106172,Water,MeHg,104,Surface,,29-Jun-11,Pond 104,U of R
+201106173,Water,SO4,104,Surface,,29-Jun-11,Pond 104,U of R
+201106174,Water,DOC,104,Surface,,29-Jun-11,Pond 104,U of R
+201106175,Water,SUVA,104,Surface,,29-Jun-11,Pond 104,U of R
+201106161,Water,THg,110,Surface,,29-Jun-11,Pond 110,U of R
+201106162,Water,MeHg,110,Surface,,29-Jun-11,Pond 110,U of R
+201106163,Water,SO4,110,Surface,,29-Jun-11,Pond 110,U of R
+201106164,Water,DOC,110,Surface,,29-Jun-11,Pond 110,U of R
+201106165,Water,SUVA,110,Surface,,29-Jun-11,Pond 110,U of R
+201106176,Water,THg,113,Surface,,29-Jun-11,Pond 113,U of R
+201106177,Water,MeHg,113,Surface,,29-Jun-11,Pond 113,U of R
+201106178,Water,SO4,113,Surface,,29-Jun-11,Pond 113,U of R
+201106179,Water,DOC,113,Surface,,29-Jun-11,Pond 113,U of R
+201106180,Water,SUVA,113,Surface,,29-Jun-11,Pond 113,U of R
+201106181,Water,THg,118,Surface,,29-Jun-11,Pond 118,U of R
+201106182,Water,MeHg,118,Surface,,29-Jun-11,Pond 118,U of R
+201106183,Water,SO4,118,Surface,,29-Jun-11,Pond 118,U of R
+201106184,Water,DOC,118,Surface,,29-Jun-11,Pond 118,U of R
+201106185,Water,SUVA,118,Surface,,29-Jun-11,Pond 118,U of R
+201106126,Water,THg,130,Surface,,29-Jun-11,Pond 130,U of R
+201106127,Water,MeHg,130,Surface,,29-Jun-11,Pond 130,U of R
+201106128,Water,SO4,130,Surface,,29-Jun-11,Pond 130,U of R
+201106129,Water,DOC,130,Surface,,29-Jun-11,Pond 130,U of R
+201106130,Water,SUVA,130,Surface,,29-Jun-11,Pond 130,U of R
+201106116,Water,THg,139,Surface,,29-Jun-11,Pond 139 ,U of R
+201106117,Water,MeHg,139,Surface,,29-Jun-11,Pond 139 ,U of R
+201106118,Water,SO4,139,Surface,,29-Jun-11,Pond 139 ,U of R
+201106119,Water,DOC,139,Surface,,29-Jun-11,Pond 139 ,U of R
+201106120,Water,SUVA,139,Surface,,29-Jun-11,Pond 139 ,U of R
+201106156,Water,THg,2,Surface,,28-Jun-11,Pond 2,U of R
+201106157,Water,MeHg,2,Surface,,28-Jun-11,Pond 2,U of R
+201106158,Water,SO4,2,Surface,,28-Jun-11,Pond 2,U of R
+201106159,Water,DOC,2,Surface,,28-Jun-11,Pond 2,U of R
+201106160,Water,SUVA,2,Surface,,28-Jun-11,Pond 2,U of R
+201106136,Water,THg,3,Surface,,28-Jun-11,Pond 3,U of R
+201106137,Water,MeHg,3,Surface,,28-Jun-11,Pond 3,U of R
+201106138,Water,SO4,3,Surface,,28-Jun-11,Pond 3,U of R
+201106139,Water,DOC,3,Surface,,28-Jun-11,Pond 3,U of R
+201106140,Water,SUVA,3,Surface,,28-Jun-11,Pond 3,U of R
+201108001,Water,THg,1,Surface,,22-Aug-11,SD1,U of R
+201108002,Water,MeHg,1,Surface,,22-Aug-11,SD1,U of R
+201108003,Water,SO4,1,Surface,,22-Aug-11,SD1,U of R
+201108004,Water,DOC,1,Surface,,22-Aug-11,SD1,U of R
+201108005,Water,SUVA,1,Surface,,22-Aug-11,SD1,U of R
+201108056,Water,THg,100,Surface,,22-Aug-11,SD100,U of R
+201108057,Water,MeHg,100,Surface,,22-Aug-11,SD100,U of R
+201108058,Water,SO4,100,Surface,,22-Aug-11,SD100,U of R
+201108059,Water,DOC,100,Surface,,22-Aug-11,SD100,U of R
+201108060,Water,SUVA,100,Surface,,22-Aug-11,SD100,U of R
+201108066,Water,THg,104,Surface,,22-Aug-11,SD104,U of R
+201108067,Water,MeHg,104,Surface,,22-Aug-11,SD104,U of R
+201108068,Water,SO4,104,Surface,,22-Aug-11,SD104,U of R
+201108069,Water,DOC,104,Surface,,22-Aug-11,SD104,U of R
+201108070,Water,SUVA,104,Surface,,22-Aug-11,SD104,U of R
+201108076,Water,THg,110,Surface,,22-Aug-11,SD110,U of R
+201108077,Water,MeHg,110,Surface,,22-Aug-11,SD110,U of R
+201108078,Water,SO4,110,Surface,,22-Aug-11,SD110,U of R
+201108079,Water,DOC,110,Surface,,22-Aug-11,SD110,U of R
+201108080,Water,SUVA,110,Surface,,22-Aug-11,SD110,U of R
+201108106,Water,THg,113,Surface,,22-Aug-11,SD113,U of R
+201108107,Water,MeHg,113,Surface,,22-Aug-11,SD113,U of R
+201108108,Water,SO4,113,Surface,,22-Aug-11,SD113,U of R
+201108109,Water,DOC,113,Surface,,22-Aug-11,SD113,U of R
+201108110,Water,SUVA,113,Surface,,22-Aug-11,SD113,U of R
+201108026,Water,THg,118,Surface,,22-Aug-11,SD118,U of R
+201108027,Water,MeHg,118,Surface,,22-Aug-11,SD118,U of R
+201108028,Water,SO4,118,Surface,,22-Aug-11,SD118,U of R
+201108029,Water,DOC,118,Surface,,22-Aug-11,SD118,U of R
+201108030,Water,SUVA,118,Surface,,22-Aug-11,SD118,U of R
+201108046,Water,THg,130,Surface,,22-Aug-11,SD130,U of R
+201108047,Water,MeHg,130,Surface,,22-Aug-11,SD130,U of R
+201108048,Water,SO4,130,Surface,,22-Aug-11,SD130,U of R
+201108049,Water,DOC,130,Surface,,22-Aug-11,SD130,U of R
+201108050,Water,SUVA,130,Surface,,22-Aug-11,SD130,U of R
+201108036,Water,THg,139,Surface,,22-Aug-11,SD139,U of R
+201108037,Water,MeHg,139,Surface,,22-Aug-11,SD139,U of R
+201108038,Water,SO4,139,Surface,,22-Aug-11,SD139,U of R
+201108039,Water,DOC,139,Surface,,22-Aug-11,SD139,U of R
+201108040,Water,SUVA,139,Surface,,22-Aug-11,SD139,U of R
+201108006,Water,THg,2,Surface,,22-Aug-11,SD2,U of R
+201108007,Water,MeHg,2,Surface,,22-Aug-11,SD2,U of R
+201108008,Water,SO4,2,Surface,,22-Aug-11,SD2,U of R
+201108009,Water,DOC,2,Surface,,22-Aug-11,SD2,U of R
+201108010,Water,SUVA,2,Surface,,22-Aug-11,SD2,U of R
+201108016,Water,THg,3,Surface,,22-Aug-11,SD3,U of R
+201108017,Water,MeHg,3,Surface,,22-Aug-11,SD3,U of R
+201108018,Water,SO4,3,Surface,,22-Aug-11,SD3,U of R
+201108019,Water,DOC,3,Surface,,22-Aug-11,SD3,U of R
+201108020,Water,SUVA,3,Surface,,22-Aug-11,SD3,U of R
+201907003A,Water,DOC,2,Time zero,,10-Jul-19,2,U of R
+201907001A,Water,DOC,118,Time zero,,10-Jul-19,118,U of R
+201907004A,Water,DOC,2,Time zero ,,10-Jul-19,2,U of R
+201907002A,Water,DOC,118,Time zero ,,10-Jul-19,118,U of R
+200705056,Water,MeHg,100,U of A,,24-May-07,Pond 100,U of A
+200705059,Water,SO4,100,U of A,,24-May-07,Pond 100,U of A
+200705046,Water,MeHg,113,U of A,,24-May-07,Pond 113,U of A
+200705049,Water,SO4,113,U of A,,24-May-07,Pond 113,U of A
+200705051,Water,MeHg,118,U of A,,24-May-07,Pond 118,U of A
+200705054,Water,SO4,118,U of A,,24-May-07,Pond 118,U of A
+200705041,Water,MeHg,130,U of A,,24-May-07,Pond 130,U of A
+200705044,Water,SO4,130,U of A,,24-May-07,Pond 130,U of A
+200705036,Water,MeHg,139,U of A,,24-May-07,Pond 139,U of A
+200705039,Water,SO4,139,U of A,,24-May-07,Pond 139,U of A
+200705031,Water,MeHg,2,U of A,,24-May-07,Pond 2,U of A
+200705034,Water,SO4,2,U of A,,24-May-07,Pond 2,U of A
+20060933,Water,MeHg,130,U of A  VS 079,,06-Sep-06,Pond 130,U of A
+20060925,Water,MeHg,2,U of A  VSL 408,,06-Sep-06,Pond 2,U of A
+20060937,Water,MeHg,97,U of A  VSL 533,,06-Sep-06,Pond 97,U of A
+20060921,Water,MeHg,1,U of A ARCTIC 537,,06-Sep-06,SDNWA Pond 1,U of A
+20060929,Water,MeHg, 125N,U of A VSL 211B,,06-Sep-06,Pond 125N,U of A
+20060751,Sediment, ,1,U of R,,20-Jul-06,Pond 1,U of R
+20060771,Sediment, ,104,U of R,,21-Jul-06,Pond 104,U of R
+20060776,Sediment, ,109,U of R,,21-Jul-06,Pond 109,U of R
+20060790,Sediment, ,110,U of R,,21-Jul-06,Pond 110,U of R
+20060781,Sediment, ,118,U of R,,21-Jul-06,Pond 118,U of R
+20060746,Sediment, , 125N,U of R,,20-Jul-06,Pond 125N,U of R
+20060761,Sediment, ,130,U of R,,20-Jul-06,Pond 130,U of R
+20060741,Sediment, ,2,U of R,,20-Jul-06,Pond 2,U of R
+20060756,Sediment, ,97,U of R,,20-Jul-06,Pond 97,U of R
+20060750,Water,SUVA,1,U of R,,20-Jul-06,Pond 1,U of R
+20060764,Water,DOC,100,U of R,,20-Jul-06,Pond 100,U of R
+20060765,Water,SUVA,100,U of R,,20-Jul-06,Pond 100,U of R
+200705057,Water,THg,100,U of R,,24-May-07,Pond 100,U of R
+200705058,Water,DOC,100,U of R,,24-May-07,Pond 100,U of R
+200705060,Water,SUVA,100,U of R,,24-May-07,Pond 100,U of R
+20060770,Water,SUVA,104,U of R,,21-Jul-06,Pond 104,U of R
+20060775,Water,SUVA,109,U of R,,21-Jul-06,Pond 109,U of R
+20060789,Water,SUVA,110,U of R,,21-Jul-06,Pond 110,U of R
+200607102,Water,SUVA,113,U of R,,21-Jul-06,Pond 113,U of R
+200705047,Water,THg,113,U of R,,24-May-07,Pond 113,U of R
+200705048,Water,DOC,113,U of R,,24-May-07,Pond 113,U of R
+200705050,Water,SUVA,113,U of R,,24-May-07,Pond 113,U of R
+20060780,Water,SUVA,118,U of R,,21-Jul-06,Pond 118,U of R
+200705052,Water,THg,118,U of R,,24-May-07,Pond 118,U of R
+200705053,Water,DOC,118,U of R,,24-May-07,Pond 118,U of R
+200705055,Water,SUVA,118,U of R,,24-May-07,Pond 118,U of R
+20060745,Water,SUVA, 125N,U of R,,20-Jul-06,Pond 125N,U of R
+20060760,Water,SUVA,130,U of R,,20-Jul-06,Pond 130,U of R
+200705042,Water,THg,130,U of R,,24-May-07,Pond 130,U of R
+200705043,Water,DOC,130,U of R,,24-May-07,Pond 130,U of R
+200705045,Water,SUVA,130,U of R,,24-May-07,Pond 130,U of R
+200607122,Water,SUVA,137,U of R,,22-Jul-06,Pond 137,U of R
+200705037,Water,THg,139,U of R,,24-May-07,Pond 139,U of R
+200705038,Water,DOC,139,U of R,,24-May-07,Pond 139,U of R
+200705040,Water,SUVA,139,U of R,,24-May-07,Pond 139,U of R
+20060740,Water,SUVA,2,U of R,,20-Jul-06,Pond 2,U of R
+200705032,Water,THg,2,U of R,,24-May-07,Pond 2,U of R
+200705033,Water,DOC,2,U of R,,24-May-07,Pond 2,U of R
+200705035,Water,SUVA,2,U of R,,24-May-07,Pond 2,U of R
+200607106,Water,SUVA,26,U of R,,22-Jul-06,Pond 26,U of R
+20060794,Water,SUVA,50,U of R,,21-Jul-06,Pond 50,U of R
+20060798,Water,SUVA,60,U of R,,21-Jul-06,Pond 60,U of R
+200607114,Water,SUVA,60,U of R,,22-Jul-06,Pond 60,U of R
+200607118,Water,SUVA,65,U of R,,22-Jul-06,Pond 65,U of R
+200607110,Water,SUVA,67,U of R,,22-Jul-06,Pond 67,U of R
+20060785,Water,SUVA,88,U of R,,21-Jul-06,Pond 88,U of R
+20060755,Water,SUVA,97,U of R,,20-Jul-06,Pond 97,U of R
+20060766,Sediment, ,100,U of R ,,20-Jul-06,Pond 100,U of R
+20060753,Water,MeHg,97,U of R 001,,20-Jul-06,Pond 97,U of R
+20060763,Water,MeHg,100,U of R 002,,20-Jul-06,Pond 100,U of R
+20060787,Water,MeHg,110,U of R 003,,21-Jul-06,Pond 110,U of R
+20060742,Water,THg, 125N,U of R 004,,20-Jul-06,Pond 125N,U of R
+20060738,Water,MeHg,2,U of R 005,,20-Jul-06,Pond 2,U of R
+20060773,Water,MeHg,109,U of R 006,,21-Jul-06,Pond 109,U of R
+20060778,Water,MeHg,118,U of R 008,,21-Jul-06,Pond 118,U of R
+20060768,Water,MeHg,104,U of R 009,,21-Jul-06,Pond 104,U of R
+20060752,Water,THg,97,U of R 010,,20-Jul-06,Pond 97,U of R
+20060782,Water,THg,88,U of R 011,,21-Jul-06,Pond 88,U of R
+20060737,Water,THg,2,U of R 012,,20-Jul-06,SDNWA #2,U of R
+200607100,Water,MeHg,113,U of R 015,,21-Jul-06,Pond 113,U of R
+20060743,Water,MeHg, 125N,U of R 016,,20-Jul-06,Pond 125N,U of R
+20060792,Water,MeHg,50,U of R 017,,21-Jul-06,Pond 50,U of R
+20060748,Water,MEHg,1,U of R 018,,20-Jul-06,Pond 1,U of R
+20060783,Water,MeHg,88,U of R 019,,21-Jul-06,Pond 88,U of R
+20060796,Water,MeHg,60,U of R 020,,21-Jul-06,Pond 60,U of R
+20060758,Water,MeHg,130,U of R 021,,20-Jul-06,Pond 130,U of R
+20060786,Water,THg,110,U of R 023,,21-Jul-06,Pond 110,U of R
+20060747,Water,THg,1,U of R 024,,20-Jul-06,Pond 1,U of R
+20060762,Water,THg,100,U of R 025,,20-Jul-06,Pond 100,U of R
+20060757,Water,THg,130,U of R 026,,20-Jul-06,Pond 130,U of R
+20060923,Water,THg,1,U of R VS 67,,06-Sep-06,SDNWA Pond 1,U of R
+20060939,Water,THg,97,U of R VSL 458,,06-Sep-06,Pond 97,U of R
+20060927,Water,THg,2,U of R VSL 487,,06-Sep-06,Pond 2,U of R
+20060935,Water,THg,130,U of R VSL 512,,06-Sep-06,Pond 130,U of R
+20060931,Water,THg, 125N,U of R VSL 575,,06-Sep-06,Pond 125N,U of R
+200907025,Water,SO4,1,UA,,06-Jul-09,POND1,U of A
+200907015,Water,SO4,139,UA,,06-Jul-09,POND139,U of A
+200907020,Water,SO4,2,UA,,06-Jul-09,POND2,U of A
+200907005,Water,SO4,60,UA,,06-Jul-09,POND60,U of A
+200907010,Water,SO4,88,UA,,06-Jul-09,POND88,U of A
+200805026,Water,MeHg,109,UA,,12-May-08,SDNWA 109,U of A
+200805029,Water,SO4,109,UA,,12-May-08,SDNWA 109,U of A
+200806011,Water,MeHg,109,UA,,09-Jun-08,SDNWA 109,U of A
+200806014,Water,SO4,109,UA,,09-Jun-08,SDNWA 109,U of A
+200807002,Water,MeHg,109,UA,,14-Jul-08,SDNWA 109,U of A
+200807004,Water,SO4,109,UA,,14-Jul-08,SDNWA 109,U of A
+200808007,Water,MeHg,109,UA,,11-Aug-08,SDNWA 109,U of A
+200808009,Water,SO4,109,UA,,11-Aug-08,SDNWA 109,U of A
+200806001,Water,MeHg,110,UA,,09-Jun-08,SDNWA 110,U of A
+200806004,Water,SO4,110,UA,,09-Jun-08,SDNWA 110,U of A
+200805031,Water,MeHg,113,UA,,12-May-08,SDNWA 113,U of A
+200805034,Water,SO4,113,UA,,12-May-08,SDNWA 113,U of A
+200805051,Water,MeHg,118,UA,,13-May-08,SDNWA 118,U of A
+200805054,Water,SO4,118,UA,,13-May-08,SDNWA 118,U of A
+200806006,Water,MeHg,118,UA,,09-Jun-08,SDNWA 118,U of A
+200806009,Water,SO4,118,UA,,09-Jun-08,SDNWA 118,U of A
+200805011,Water,MeHg,130,UA,,12-May-08,SDNWA 130,U of A
+200805014,Water,SO4,130,UA,,12-May-08,SDNWA 130,U of A
+200806026,Water,MeHg,130,UA,,10-Jun-08,SDNWA 130,U of A
+200806029,Water,SO4,130,UA,,10-Jun-08,SDNWA 130,U of A
+200807017,Water,MeHg,130,UA,,15-Jul-08,SDNWA 130,U of A
+200807019,Water,SO4,130,UA,,15-Jul-08,SDNWA 130,U of A
+200808017,Water,MeHg,130,UA,,12-Aug-08,SDNWA 130,U of A
+200808019,Water,SO4,130,UA,,12-Aug-08,SDNWA 130,U of A
+200805016,Water,MeHg,139,UA,,12-May-08,SDNWA 139,U of A
+200805019,Water,SO4,139,UA,,12-May-08,SDNWA 139,U of A
+200806031,Water,MeHg,139,UA,,11-Jun-08,SDNWA 139,U of A
+200806034,Water,SO4,139,UA,,11-Jun-08,SDNWA 139,U of A
+200807022,Water,MeHg,139,UA,,15-Jul-08,SDNWA 139,U of A
+200807024,Water,SO4,139,UA,,15-Jul-08,SDNWA 139,U of A
+200808012,Water,MeHg,139,UA,,12-Aug-08,SDNWA 139,U of A
+200808014,Water,SO4,139,UA,,12-Aug-08,SDNWA 139,U of A
+200805006,Water,MeHg,2,UA,,12-May-08,SDNWA 2,U of A
+200805009,Water,SO4,2,UA,,12-May-08,SDNWA 2,U of A
+200806041,Water,MeHg,2,UA,,11-Jun-08,SDNWA 2,U of A
+200806044,Water,SO4,2,UA,,11-Jun-08,SDNWA 2,U of A
+200807042,Water,MeHg,2,UA,,16-Jul-08,SDNWA 2,U of A
+200807044,Water,SO4,2,UA,,16-Jul-08,SDNWA 2,U of A
+200808027,Water,MeHg,2,UA,,12-Aug-08,SDNWA 2,U of A
+200808029,Water,SO4,2,UA,,12-Aug-08,SDNWA 2,U of A
+200805021,Water,MeHg,3,UA,,12-May-08,SDNWA 3,U of A
+200805024,Water,SO4,3,UA,,12-May-08,SDNWA 3,U of A
+200806036,Water,MeHg,3,UA,,11-Jun-08,SDNWA 3,U of A
+200806039,Water,SO4,3,UA,,11-Jun-08,SDNWA 3,U of A
+200807032,Water,MeHg,3,UA,,16-Jul-08,SDNWA 3,U of A
+200807034,Water,SO4,3,UA,,16-Jul-08,SDNWA 3,U of A
+200808022,Water,MeHg,3,UA,,12-Aug-08,SDNWA 3,U of A
+200808024,Water,SO4,3,UA,,12-Aug-08,SDNWA 3,U of A
+200806016,Water,MeHg,60,UA,,10-Jun-08,SDNWA 60,U of A
+200806019,Water,SO4,60,UA,,10-Jun-08,SDNWA 60,U of A
+200807062,Water,MeHg,60,UA,,17-Jul-08,SDNWA 60,U of A
+200807064,Water,SO4,60,UA,,17-Jul-08,SDNWA 60,U of A
+200808002,Water,MeHg,60,UA,,11-Aug-08,SDNWA 60,U of A
+200808004,Water,SO4,60,UA,,11-Aug-08,SDNWA 60,U of A
+200806021,Water,MeHg,88,UA,,10-Jun-08,SDNWA 88,U of A
+200806024,Water,SO4,88,UA,,10-Jun-08,SDNWA 88,U of A
+200807007,Water,MeHg,88,UA,,14-Jul-08,SDNWA 88,U of A
+200807009,Water,SO4,88,UA,,14-Jul-08,SDNWA 88,U of A
+200808032,Water,MeHg,88,UA,,12-Aug-08,SDNWA 88,U of A
+200808034,Water,SO4,88,UA,,12-Aug-08,SDNWA 88,U of A
+200906007,Water,SO4,130,UA,,01-Jun-09,SDNWA130,U of A
+200906017,Water,SO4,139,UA,,01-Jun-09,SDNWA139,U of A
+200906032,Water,SO4,3,UA,,01-Jun-09,SDNWA3,U of A
+200906037,Water,SO4,60,UA,,02-Jun-09,SDNWA60,U of A
+200906012,Water,SO4,88,UA,,01-Jun-09,SDNWA88,U of A
+200906002,Water,SO4,2,UA ,,01-Jun-09,SDNWA2,U of A
+200906001,Water,MeHg,2,UA - BDH 001,,01-Jun-09,SDNWA2,U of A
+200906031,Water,MeHg,3,UA - BDH 006,,01-Jun-09,SDNWA3,U of A
+200906036,Water,MeHg,60,UA - BDH 121,,02-Jun-09,SDNWA60,U of A
+200906011,Water,MeHg,88,UA - BDH 124,,01-Jun-09,SDNWA88,U of A
+200906006,Water,MeHg,130,UA - BDH 28,,01-Jun-09,SDNWA130,U of A
+200907001,Water,MeHg,60,UA - BDH 34,,06-Jul-09,POND60,U of A
+200907016,Water,MeHg,2,UA - BDH 53,,06-Jul-09,POND2,U of A
+200907006,Water,MeHg,88,UA - BDH 57,,06-Jul-09,POND88,U of A
+200907021,Water,MeHg,1,UA - BDH 58,,06-Jul-09,POND1,U of A
+200907011,Water,MeHg,139,UA - BDH 59,,06-Jul-09,POND139,U of A
+200906016,Water,MeHg,139,UA - BDH 77,,01-Jun-09,SDNWA139,U of A
+200907022,Water,THg,1,UR,,06-Jul-09,POND1,U of R
+200907023,Water,SUVA,1,UR,,06-Jul-09,POND1,U of R
+200907024,Water,DOC,1,UR,,06-Jul-09,POND1,U of R
+200907012,Water,THg,139,UR,,06-Jul-09,POND139,U of R
+200907013,Water,SUVA,139,UR,,06-Jul-09,POND139,U of R
+200907014,Water,DOC,139,UR,,06-Jul-09,POND139,U of R
+200907017,Water,THg,2,UR,,06-Jul-09,POND2,U of R
+200907018,Water,SUVA,2,UR,,06-Jul-09,POND2,U of R
+200907019,Water,DOC,2,UR,,06-Jul-09,POND2,U of R
+200907002,Water,THg,60,UR,,06-Jul-09,POND60,U of R
+200907003,Water,SUVA,60,UR,,06-Jul-09,POND60,U of R
+200907004,Water,DOC,60,UR,,06-Jul-09,POND60,U of R
+200907007,Water,THg,88,UR,,06-Jul-09,POND88,U of R
+200907008,Water,SUVA,88,UR,,06-Jul-09,POND88,U of R
+200907009,Water,DOC,88,UR,,06-Jul-09,POND88,U of R
+200805027,Water,THg,109,UR,,12-May-08,SDNWA 109,U of R
+200805028,Water,DOC,109,UR,,12-May-08,SDNWA 109,U of R
+200805030,Water,SUVA,109,UR,,12-May-08,SDNWA 109,U of R
+200806012,Water,THg,109,UR,,09-Jun-08,SDNWA 109,U of R
+200806013,Water,DOC,109,UR,,09-Jun-08,SDNWA 109,U of R
+200806015,Water,SUVA,109,UR,,09-Jun-08,SDNWA 109,U of R
+200807001,Water,THg,109,UR,,14-Jul-08,SDNWA 109,U of R
+200807003,Water,DOC,109,UR,,14-Jul-08,SDNWA 109,U of R
+200807005,Water,SUVA,109,UR,,14-Jul-08,SDNWA 109,U of R
+200808006,Water,THg,109,UR,,11-Aug-08,SDNWA 109,U of R
+200808008,Water,DOC,109,UR,,11-Aug-08,SDNWA 109,U of R
+200808010,Water,SUVA,109,UR,,11-Aug-08,SDNWA 109,U of R
+200806002,Water,THg,110,UR,,09-Jun-08,SDNWA 110,U of R
+200806003,Water,DOC,110,UR,,09-Jun-08,SDNWA 110,U of R
+200806005,Water,SUVA,110,UR,,09-Jun-08,SDNWA 110,U of R
+200805032,Water,THg,113,UR,,12-May-08,SDNWA 113,U of R
+200805033,Water,DOC,113,UR,,12-May-08,SDNWA 113,U of R
+200805035,Water,SUVA,113,UR,,12-May-08,SDNWA 113,U of R
+200805052,Water,THg,118,UR,,13-May-08,SDNWA 118,U of R
+200805053,Water,DOC,118,UR,,13-May-08,SDNWA 118,U of R
+200805055,Water,SUVA,118,UR,,13-May-08,SDNWA 118,U of R
+200806007,Water,THg,118,UR,,09-Jun-08,SDNWA 118,U of R
+200806008,Water,DOC,118,UR,,09-Jun-08,SDNWA 118,U of R
+200806010,Water,SUVA,118,UR,,09-Jun-08,SDNWA 118,U of R
+200805012,Water,THg,130,UR,,12-May-08,SDNWA 130,U of R
+200805013,Water,DOC,130,UR,,12-May-08,SDNWA 130,U of R
+200805015,Water,SUVA,130,UR,,12-May-08,SDNWA 130,U of R
+200806027,Water,THg,130,UR,,10-Jun-08,SDNWA 130,U of R
+200806028,Water,DOC,130,UR,,10-Jun-08,SDNWA 130,U of R
+200806030,Water,SUVA,130,UR,,10-Jun-08,SDNWA 130,U of R
+200807016,Water,THg,130,UR,,15-Jul-08,SDNWA 130,U of R
+200807018,Water,DOC,130,UR,,15-Jul-08,SDNWA 130,U of R
+200807020,Water,SUVA,130,UR,,15-Jul-08,SDNWA 130,U of R
+200808016,Water,THg,130,UR,,12-Aug-08,SDNWA 130,U of R
+200808018,Water,DOC,130,UR,,12-Aug-08,SDNWA 130,U of R
+200808020,Water,SUVA,130,UR,,12-Aug-08,SDNWA 130,U of R
+200805017,Water,THg,139,UR,,12-May-08,SDNWA 139,U of R
+200805018,Water,DOC,139,UR,,12-May-08,SDNWA 139,U of R
+200805020,Water,SUVA,139,UR,,12-May-08,SDNWA 139,U of R
+200806032,Water,THg,139,UR,,11-Jun-08,SDNWA 139,U of R
+200806033,Water,DOC,139,UR,,11-Jun-08,SDNWA 139,U of R
+200806035,Water,SUVA,139,UR,,11-Jun-08,SDNWA 139,U of R
+200807021,Water,THg,139,UR,,15-Jul-08,SDNWA 139,U of R
+200807023,Water,DOC,139,UR,,15-Jul-08,SDNWA 139,U of R
+200807025,Water,SUVA,139,UR,,15-Jul-08,SDNWA 139,U of R
+200808011,Water,THg,139,UR,,12-Aug-08,SDNWA 139,U of R
+200808013,Water,DOC,139,UR,,12-Aug-08,SDNWA 139,U of R
+200808015,Water,SUVA,139,UR,,12-Aug-08,SDNWA 139,U of R
+200805007,Water,THg,2,UR,,12-May-08,SDNWA 2,U of R
+200805008,Water,DOC,2,UR,,12-May-08,SDNWA 2,U of R
+200805010,Water,SUVA,2,UR,,12-May-08,SDNWA 2,U of R
+200806042,Water,THg,2,UR,,11-Jun-08,SDNWA 2,U of R
+200806043,Water,DOC,2,UR,,11-Jun-08,SDNWA 2,U of R
+200806045,Water,SUVA,2,UR,,11-Jun-08,SDNWA 2,U of R
+200807041,Water,THg,2,UR,,16-Jul-08,SDNWA 2,U of R
+200807043,Water,DOC,2,UR,,16-Jul-08,SDNWA 2,U of R
+200807045,Water,SUVA,2,UR,,16-Jul-08,SDNWA 2,U of R
+200808026,Water,THg,2,UR,,12-Aug-08,SDNWA 2,U of R
+200808028,Water,DOC,2,UR,,12-Aug-08,SDNWA 2,U of R
+200808030,Water,SUVA,2,UR,,12-Aug-08,SDNWA 2,U of R
+200805022,Water,THg,3,UR,,12-May-08,SDNWA 3,U of R
+200805023,Water,DOC,3,UR,,12-May-08,SDNWA 3,U of R
+200805025,Water,SUVA,3,UR,,12-May-08,SDNWA 3,U of R
+200806037,Water,THg,3,UR,,11-Jun-08,SDNWA 3,U of R
+200806038,Water,DOC,3,UR,,11-Jun-08,SDNWA 3,U of R
+200806040,Water,SUVA,3,UR,,11-Jun-08,SDNWA 3,U of R
+200807031,Water,THg,3,UR,,16-Jul-08,SDNWA 3,U of R
+200807033,Water,DOC,3,UR,,16-Jul-08,SDNWA 3,U of R
+200807035,Water,SUVA,3,UR,,16-Jul-08,SDNWA 3,U of R
+200808021,Water,THg,3,UR,,12-Aug-08,SDNWA 3,U of R
+200808023,Water,DOC,3,UR,,12-Aug-08,SDNWA 3,U of R
+200808025,Water,SUVA,3,UR,,12-Aug-08,SDNWA 3,U of R
+200806017,Water,THg,60,UR,,10-Jun-08,SDNWA 60,U of R
+200806018,Water,DOC,60,UR,,10-Jun-08,SDNWA 60,U of R
+200806020,Water,SUVA,60,UR,,10-Jun-08,SDNWA 60,U of R
+200807061,Water,THg,60,UR,,17-Jul-08,SDNWA 60,U of R
+200807063,Water,DOC,60,UR,,17-Jul-08,SDNWA 60,U of R
+200807065,Water,SUVA,60,UR,,17-Jul-08,SDNWA 60,U of R
+200808001,Water,THg,60,UR,,11-Aug-08,SDNWA 60,U of R
+200808003,Water,DOC,60,UR,,11-Aug-08,SDNWA 60,U of R
+200808005,Water,SUVA,60,UR,,11-Aug-08,SDNWA 60,U of R
+200806022,Water,THg,88,UR,,10-Jun-08,SDNWA 88,U of R
+200806023,Water,DOC,88,UR,,10-Jun-08,SDNWA 88,U of R
+200806025,Water,SUVA,88,UR,,10-Jun-08,SDNWA 88,U of R
+200807006,Water,THg,88,UR,,14-Jul-08,SDNWA 88,U of R
+200807008,Water,DOC,88,UR,,14-Jul-08,SDNWA 88,U of R
+200807010,Water,SUVA,88,UR,,14-Jul-08,SDNWA 88,U of R
+200808031,Water,THg,88,UR,,12-Aug-08,SDNWA 88,U of R
+200808033,Water,DOC,88,UR,,12-Aug-08,SDNWA 88,U of R
+200808035,Water,SUVA,88,UR,,12-Aug-08,SDNWA 88,U of R
+200906008,Water,THg,130,UR,,01-Jun-09,SDNWA130,U of R
+200906009,Water,SUVA,130,UR,,01-Jun-09,SDNWA130,U of R
+200906010,Water,DOC,130,UR,,01-Jun-09,SDNWA130,U of R
+200906018,Water,THg,139,UR,,01-Jun-09,SDNWA139,U of R
+200906019,Water,SUVA,139,UR,,01-Jun-09,SDNWA139,U of R
+200906020,Water,DOC,139,UR,,01-Jun-09,SDNWA139,U of R
+200906003,Water,THg,2,UR,,01-Jun-09,SDNWA2,U of R
+200906004,Water,SUVA,2,UR,,01-Jun-09,SDNWA2,U of R
+200906005,Water,DOC,2,UR,,01-Jun-09,SDNWA2,U of R
+200906033,Water,THg,3,UR,,01-Jun-09,SDNWA3,U of R
+200906034,Water,SUVA,3,UR,,01-Jun-09,SDNWA3,U of R
+200906035,Water,DOC,3,UR,,01-Jun-09,SDNWA3,U of R
+200906038,Water,THg,60,UR,,02-Jun-09,SDNWA60,U of R
+200906039,Water,SUVA,60,UR,,02-Jun-09,SDNWA60,U of R
+200906040,Water,DOC,60,UR,,02-Jun-09,SDNWA60,U of R
+200906013,Water,THg,88,UR,,01-Jun-09,SDNWA88,U of R
+200906014,Water,SUVA,88,UR,,01-Jun-09,SDNWA88,U of R
+200906015,Water,DOC,88,UR,,01-Jun-09,SDNWA88,U of R
+20060767,Water,THg,104,VS 66,,21-Jul-06,Pond 104,
+200607119,Water,THg,137,VSL 106C,,22-Jul-06,Pond 137,
+200607103,Water,THg,26,VSL 115C,,22-Jul-06,Pond 26,
+200607108,Water,MeHg,67,VSL 214B,,22-Jul-06,Pond 67,
+200607116,Water,MeHg,65,VSL 232,,22-Jul-06,Pond 65,
+200607120,Water,MeHg,137,VSL 246C,,22-Jul-06,Pond 137,
+20060772,Water,THg,109,VSL 491,,21-Jul-06,Pond 109,
+200607107,Water,THg,67,VSL 50Z,,22-Jul-06,Pond 67,
+200607112,Water,MeHg,60,VSL 625,,22-Jul-06,Pond 60,
+20060791,Water,THg,50,VSL 632,,21-Jul-06,Pond 50,
+20060799,Water,THg,113,VSL 639,,21-Jul-06,Pond 113,
+200607115,Water,THg,65,VSL 652,,22-Jul-06,Pond 65,
+20060777,Water,THg,118,VSLL 128C,,21-Jul-06,Pond 118,
