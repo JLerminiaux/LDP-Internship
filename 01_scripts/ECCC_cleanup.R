@@ -1096,7 +1096,7 @@ write.csv(ECCC_nut_merged,"02_tidydata/ECCC_nutrients_clean.csv")
 #
 ###-----------------------------------------------------------------------------
 
-# read in ECCC water level raw data
+# read in ECCC water level raw data (manually organized it on excel)
 ECCC_waterlevel <- read.csv("00_rawdata/VijayDriveSDNWA/Water level/ECCC_Waterlevel_1993-1996.csv", 
                             na = c("", "NA", "#N/A", "#VALUE!", "n/a",  "Not Measured", 
                                    "No Bar", "No bar", "Dry", "Stake snapped", "Not Sampled", "PEIV")) 
@@ -1119,11 +1119,17 @@ ECCC_waterlevel$Water_level_m <- as.numeric(ECCC_waterlevel$Water_level_m)
 # look for any outliers 
 boxplot(ECCC_waterlevel$Water_level_m, ylab = "Water level (m)") # looks good
 
+# remove Gursky pond because we don't have coordinates for it
+ECCC_waterlevel <- ECCC_waterlevel %>% 
+  filter(!Pond == "Gursky's")
+
+
 ### Export Water level data ----------------------------------------------------
 
 write.csv(ECCC_waterlevel,"02_tidydata/ECCC_waterlevel_clean.csv")
 
 #
+
 
 # convert to long format for DataStream template
 ECCC_waterlevel_long <- pivot_longer(ECCC_waterlevel, cols = Water_level_m, 
@@ -1134,51 +1140,7 @@ ECCC_waterlevel_long <- pivot_longer(ECCC_waterlevel, cols = Water_level_m,
 write.csv(ECCC_waterlevel_long,"05_DataStream/ECCC_waterlevel_long_1993-1996.csv")
 
 
-###-----------------------------------------------------------------------------
-#
-# Merging all three ECCC data sets
-#
-###-----------------------------------------------------------------------------
 
-# read in tidy data
-ECCC_hydrolab_clean <- read.csv("02_tidydata/ECCC_hydrolab_clean.csv")
-ECCC_nutrients_clean <- read.csv("02_tidydata/ECCC_nutrients_clean.csv")
-ECCC_waterlevel_clean <- read.csv("02_tidydata/ECCC_waterlevel_clean.csv")
-
-# merge hydrolab, nutrients, and water level df
-ECCC_master <- full_join(ECCC_hydrolab_clean, ECCC_nutrients_clean)
-ECCC_master <- full_join(ECCC_master, ECCC_waterlevel_clean)
-
-# remove X and Sample columns (irrelevant)
-ECCC_master <- ECCC_master %>% select(-c(X, Sample))
-
-# write as new csv
-write.csv(ECCC_master,"02_tidydata/merged_ECCC_clean.csv")
-
-
-###-----------------------------------------------------------------------------
-#
-# Converting ECCC data to long format for Data Stream template
-#
-###-----------------------------------------------------------------------------
-
-# read in merged tidy data
-ECCC <- read.csv("02_tidydata/merged_ECCC_clean.csv")
-
-# convert variables to long format
-ECCC_long <- pivot_longer(ECCC, cols = c("Temp_degC", "DO_mg.L", "SPC_mS.cm", "pH_hydro", 
-                          "Sal_ppt", "DO_sat", "Redox_mV", "Depth_m", "TDS_mg.L", "Cond_uS.cm", 
-                          "TOC_mg.L", "DOC_mg.L", "HCO3_mg.L", "CO3_mg.L", "FreeCO2_mg.L", "POC_mg.L", 
-                          "NO3NO2_mg.L", "NH3_tot_mg.L", "NH3_union_mg.L", "TN_mg.L", "DN_mg.L", "PN_mg.L", 
-                          "OH_mg.L", "F_diss_mg.L", "Alk_tot_mg.L", "Alk_p_mg.L", "pH", "Hard_tot_mg.L", 
-                          "Hard_nonCO3_mg.L", "Na_diss_mg.L", "Na_perc", "Mg_diss_mg.L", "SiO2_mg.L", 
-                          "P_diss_ortho_mg.L", "P_tot_mg.L", "P_diss_mg.L", "P_part_mg.L", "SO4_diss_mg.L", 
-                          "Cl_diss_mg.L", "K_diss_mg.L", "Ca_diss_mg.L", "PCPN", "PCPP", "PNPP", 
-                          "Chla_mg.L", "Water_level_m"), names_to = "CharacteristicID", 
-                          values_to = "ResultValue")
-
-# write as new csv
-write.csv(ECCC_long,"05_DataStream/ECCC_long.csv")
 
 
 
