@@ -38,18 +38,13 @@ SDWS_chla <- read.csv("02_tidydata/merged_ChlA_clean.csv", na = c("", "na", "NA"
 SDWS_iso <- read.csv("02_tidydata/merged_Isotopes_clean.csv", na = c("", "na", "NA", "n/a", "N/A"))
 SDWS_wq <- read.csv("02_tidydata/merged_SDWS_clean.csv", na = c("", "na", "NA", "n/a", "N/A"))
 
-# read in raw data to connect to PPR
+# read in more raw data for DataStream
 Baulch <- read_excel("00_rawdata/UofR data/SDWS 2015-2022 Baulch.xlsx")
 THG_data <- read.csv("00_rawdata/UofR data/DMA-80 THG Data_Cleandata.csv")
 Sed_moisture <- read_excel("00_rawdata/UofR data/(Logan Edited) Moisture-Content-of-Sediment.xlsx")
 Robbins <- read.csv("00_rawdata/UofR data/L.Robbins Lab Data 2021-2023 - SW Sed PW chem data.xlsx - Sediment bulk TM [clean].csv")
 MeHg2021 <- read_excel("00_rawdata/UofR data/MeHg_2021_ID_Samples_results.xlsx")
-SO4_CHmod <- read_excel("00_rawdata/UofR data/SO4_2021_2022 CH mod.xlsx")
-SO4 <- read_excel("00_rawdata/UofR data/SO4_2021_2022.xlsx")
 TICTOC <- read_excel("00_rawdata/UofR data/TICTOC Results May 30, 2023.xlsx")
-
-# figure out whether these are already included in the master file or if I need
-# to merge them with PPR_merged for DataStream
 
 #-------------------------------------------------------------------------------
 
@@ -292,6 +287,10 @@ if (length(missing_columns) > 0) {
   print("All expected columns are present.")
 }
 
+# remove duplicate
+PPR_merged <- PPR_merged %>% 
+  filter(!(Pond == "118" & DOC_mg.L_0.45 == 24.59))
+
 # write as new csv
 write.csv(PPR_merged,"02_tidydata/PPR_merged_2006-2024.csv")
 
@@ -325,7 +324,8 @@ PPR_merged$Chla <- as.character(PPR_merged$Chla)
 PPR_merged$Depth_m <- as.character(PPR_merged$Depth_m)
 PPR_merged$Cloud <- as.character(PPR_merged$Cloud)
 
-# convert to long format - leave out temp, DO, DO_perc, + Cond bc already on DataStream
+# convert to long format - leave in all variables already on DataStream
+# will update as new file so will overwrite what's already published
 PPR_merged_long <- pivot_longer(PPR_merged, 
                                        cols = c("250_nm", "254_nm", "280_nm", "350_nm", 
                                                 "365_nm", "370_nm", "pH", "Fe_mg.L", 
@@ -334,9 +334,9 @@ PPR_merged_long <- pivot_longer(PPR_merged,
                                                 "Wholewater_THg_ng.L", 
                                                 "Wholewater_MeHg_ng.L", "MeHg_perc", 
                                                 "CO2_umol.L", "CH4_umol.L", "DIC_mg.L", 
-                                                "DIC_mg.L_0.45", "TDC_mg.L", "Chla", 
-                                                "Secchi_cm", "Depth_m", "ORP", 
-                                                "Airtemp_C", "Cloud"),
+                                                "DIC_mg.L_0.45", "TDC_mg.L", "Chla", "Temp_degC",
+                                                "Cond_uS.cm", "DO_perc", "DO_mg.L", "Secchi_cm", 
+                                                "ORP", "Airtemp_C", "Cloud"),
                                        names_to = "CharacteristicID", 
                                        values_to = "ResultValue")
 
@@ -370,24 +370,59 @@ names(SDWS_chla)[7] <- "Abs_750nm"
 names(SDWS_chla)[8] <- "Abs_665nm"
 names(SDWS_chla)[9] <- "Abs_649nm"
 names(SDWS_chla)[10] <- "Chla_ug.L"
-names(SDWS_chla)[11] <- "Avg_Chla_ug.L" # use this column bc it's mean of all reps
+names(SDWS_chla)[11] <- "Avg_Chla_ug.L" 
 names(SDWS_chla)[12] <- "Error"
 names(SDWS_chla)[14] <- "Comments"
 
 # fix pond names
 SDWS_chla$Pond <- gsub("\\.0$","",SDWS_chla$Pond)
 SDWS_chla$Pond <- gsub("\\?$","",SDWS_chla$Pond)
+SDWS_chla$Pond <- gsub("1255","125S",SDWS_chla$Pond)
+SDWS_chla$Pond[SDWS_chla$Pond == "125"] <- "125S"
+SDWS_chla$Pond[SDWS_chla$Pond == "159"] <- "15" # no such thing as pond 159 - typo
+
+# fix date errors to match with SDWS_wq file
+SDWS_chla$Date <- gsub("2022-05-18","2022-05-17", SDWS_chla$Date)
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "39" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "109" & Date == "2021-07-15" ~ "2021-07-16", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "5340" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "67" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "50" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "40" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "60" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
+SDWS_chla <- SDWS_chla %>%
+  mutate(Date = case_when(Pond == "63" & Date == "2016-07-18" ~ "2016-07-19", TRUE ~ Date))
 
 # fix date format
 SDWS_chla$Date <- as.Date(SDWS_chla$Date)
+SDWS_chla$RunDate <- as.Date(SDWS_chla$RunDate)
 
-# only keep mean chl data bc it takes into account all reps + DS doesn't like duplicates
-SDWS_chla_sum <- SDWS_chla %>% 
-  filter(!is.na(Avg_Chla_ug.L))
+# if there were multiple reps done, keep Avg_Chla_ug.L, otherwise keep Chla_ug.L
+SDWS_chla <- SDWS_chla %>% 
+  mutate(Chla_ug.L = ifelse(is.na(Avg_Chla_ug.L), Chla_ug.L, Avg_Chla_ug.L))
+
+# remove duplicate rows
+SDWS_chla <- SDWS_chla %>% 
+  filter(!Rep == 2)
 
 # only keep relevant columns to merge with other SDWS df
-SDWS_chla_sum <- SDWS_chla_sum %>% 
-  select(c(Pond, Date, Avg_Chla_ug.L, Error, RunDate, Comments))
+SDWS_chla <- SDWS_chla %>% 
+  select(c(Pond, Date, Chla_ug.L, Error, RunDate, Comments))
+
+# look for duplicates
+duplicated(SDWS_chla$Chla_ug.L) 
+SDWS_chla[duplicated(SDWS_chla$Chla_ug.L) | duplicated(SDWS_chla$Chla_ug.L, fromLast = TRUE), ]
+duplicated(SDWS_chla)
+
+# add column to know which df this came from
+SDWS_chla$DataFile <- "SDWS_chla"
 
 #
 
@@ -413,9 +448,25 @@ names(SDWS_iso)[5] <- "Comments"
 
 # fix pond names
 SDWS_iso$Pond <- gsub("SDNWA ","",SDWS_iso$Pond)
+SDWS_iso$Pond <- gsub("a","A",SDWS_iso$Pond)
+SDWS_iso$Pond <- gsub("\\?$","",SDWS_iso$Pond)
+
+# fix date errors to match with SDWS_wq
+SDWS_iso <- SDWS_iso %>%
+  mutate(Date = case_when(Pond == "10" & Date == "2014-08-21" ~ "2014-08-25", TRUE ~ Date))
+
 
 # fix date format
 SDWS_iso$Date <- as.Date(SDWS_iso$Date)
+
+# look for duplicates
+duplicated(SDWS_iso) # all good
+
+# add column to know which df this came from
+SDWS_iso$DataFile <- "SDWS_iso"
+
+# matched up with SDWS_wq dataset, they are the same except for 12 rows with
+# weird pond IDs that don't match the SDWS map  
 
 #
 
@@ -451,6 +502,9 @@ names(SDWS_wq)[21] <- "Comments"
 # fix date format
 SDWS_wq$Date <- as.Date(SDWS_wq$Date)
 
+# add column to know which df this came from
+SDWS_wq$DataFile <- "SDWS_wq"
+
 
 #
 
@@ -461,8 +515,29 @@ SDWS_wq$Date <- as.Date(SDWS_wq$Date)
 #-------------------------------------------------------------------------------
 
 # merge
-SDWS_merged <- full_join(SDWS_chla_sum, SDWS_iso)
-SDWS_merged <- full_join(SDWS_merged, SDWS_wq)
+SDWS_merged <- full_join(SDWS_wq, SDWS_chla)
+
+# deal with duplicates
+SDWS_merged <- SDWS_merged %>%
+  group_by(Pond, Date) %>%
+  summarize(
+    across(
+      .cols = everything(),
+      .fns = ~ ifelse(all(is.na(.)), NA, 
+                      ifelse(is.numeric(.), mean(., na.rm = TRUE), 
+                             paste(na.omit(unique(.)), collapse = "; "))),
+      .names = "{.col}"
+    ),
+    .groups = "drop"
+  )
+
+# look for any more duplicates 
+duplicated(SDWS_merged)
+dups <- SDWS_merged[duplicated(SDWS_merged$Chla_ug.L) | duplicated(SDWS_merged$Chla_ug.L, fromLast = TRUE), ]
+
+# remove rows with no date
+SDWS_merged <- SDWS_merged %>% 
+  filter(!is.na(Date))
 
 # write as new csv
 write.csv(SDWS_merged,"02_tidydata/SDWS_merged_2014-2022.csv")
@@ -512,10 +587,185 @@ Baulch$Pond <- gsub("\\.0$","",Baulch$Pond)
 Baulch$Date <- as.numeric(Baulch$Date)
 Baulch$Date <- as.Date(Baulch$Date, format = "%Y-%m-%d", origin = "1899-12-30")
 
+# fix date errors to match with SDWS_merged
+Baulch$Date <- as.character(Baulch$Date)
+Baulch$Date <- gsub("2016-07-18","2016-07-19", Baulch$Date)
+Baulch <- Baulch %>%
+  mutate(Date = case_when(Pond == "1" & Date == "2020-09-11" ~ "2020-09-09", TRUE ~ Date))
+Baulch <- Baulch %>%
+  mutate(Date = case_when(Pond == "60" & Date == "2022-05-17" ~ "2022-05-11", TRUE ~ Date))
+Baulch$Date <- as.Date(Baulch$Date)
+
+# remove rows with no date
+Baulch <- Baulch %>% 
+  filter(!is.na(Date))
+
 # fix time format
 Baulch$Time <- as.numeric(Baulch$Time)
 Baulch$Time <- as_hms(Baulch$Time * 86400) # 86400 is the number of seconds in a day
 Baulch$Time <- as.character(Baulch$Time) # for merging
+
+# look for duplicates
+duplicated(Baulch)
+
+# add column to know which df this came from
+Baulch$DataFile <- "Baulch"
+
+# write as new csv
+write.csv(Baulch,"02_tidydata/Baulch_2015-2022.csv")
+
+
+#
+
+#-------------------------------------------------------------------------------
+
+### Merge Baulch with SDWS_merged
+
+#-------------------------------------------------------------------------------
+
+# convert all variables to chr for merging 
+SDWS_merged$Temp_degC <- as.character(SDWS_merged$Temp_degC)
+SDWS_merged$pH <- as.character(SDWS_merged$pH)
+SDWS_merged$SPC_uS.cm <- as.character(SDWS_merged$SPC_uS.cm)
+SDWS_merged$DO_mg.L <- as.character(SDWS_merged$DO_mg.L)
+SDWS_merged$SRP_mg.L <- as.character(SDWS_merged$SRP_mg.L)
+SDWS_merged$TDP_mg.L <- as.character(SDWS_merged$TDP_mg.L)
+SDWS_merged$TP_mg.L <- as.character(SDWS_merged$TP_mg.L)
+SDWS_merged$NH3_mg.L <- as.character(SDWS_merged$NH3_mg.L)
+SDWS_merged$Urea_mg.L <- as.character(SDWS_merged$Urea_mg.L)
+SDWS_merged$NO3_mg.L <- as.character(SDWS_merged$NO3_mg.L)
+SDWS_merged$TDN_mg.L <- as.character(SDWS_merged$TDN_mg.L)
+SDWS_merged$TN_mg.L <- as.character(SDWS_merged$TN_mg.L)
+SDWS_merged$SO4_mg.L <- as.character(SDWS_merged$SO4_mg.L)
+SDWS_merged$Chla_ug.L <- as.character(SDWS_merged$Chla_ug.L)
+SDWS_merged$Alk_mg.L <- as.character(SDWS_merged$Alk_mg.L)
+
+# merge 
+SDWS_Baulch_merged <- full_join(SDWS_merged, Baulch)
+
+# move DO comment from DO column to Comments column
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>% 
+  mutate(Comments = ifelse(!is.na(as.numeric(DO_mg.L)), Comments, 
+                           ifelse(is.na(Comments), DO_mg.L, paste(Comments, DO_mg.L, sep = "; "))))
+
+# convert columns to numeric
+SDWS_Baulch_merged$Temp_degC <- as.numeric(SDWS_Baulch_merged$Temp_degC)
+SDWS_Baulch_merged$pH <- as.numeric(SDWS_Baulch_merged$pH)
+SDWS_Baulch_merged$Cond_uS.cm <- as.numeric(SDWS_Baulch_merged$Cond_uS.cm)
+SDWS_Baulch_merged$DO_mg.L <- as.numeric(SDWS_Baulch_merged$DO_mg.L)
+SDWS_Baulch_merged$SRP_mg.L <- as.numeric(SDWS_Baulch_merged$SRP_mg.L)
+SDWS_Baulch_merged$TDP_mg.L <- as.numeric(SDWS_Baulch_merged$TDP_mg.L)
+SDWS_Baulch_merged$TP_mg.L <- as.numeric(SDWS_Baulch_merged$TP_mg.L)
+SDWS_Baulch_merged$NH3_mg.L <- as.numeric(SDWS_Baulch_merged$NH3_mg.L)
+SDWS_Baulch_merged$Urea_mg.L <- as.numeric(SDWS_Baulch_merged$Urea_mg.L)
+SDWS_Baulch_merged$NO3_mg.L <- as.numeric(SDWS_Baulch_merged$NO3_mg.L)
+SDWS_Baulch_merged$TDN_mg.L <- as.numeric(SDWS_Baulch_merged$TDN_mg.L)
+SDWS_Baulch_merged$TN_mg.L <- as.numeric(SDWS_Baulch_merged$TN_mg.L)
+SDWS_Baulch_merged$SO4_mg.L <- as.numeric(SDWS_Baulch_merged$SO4_mg.L)
+SDWS_Baulch_merged$Chla_ug.L <- as.numeric(SDWS_Baulch_merged$Chla_ug.L)
+SDWS_Baulch_merged$Alk_mg.L <- as.numeric(SDWS_Baulch_merged$Alk_mg.L)
+SDWS_Baulch_merged$TRP_mg.L <- as.numeric(SDWS_Baulch_merged$TRP_mg.L)
+
+# standardize numeric precision (e.g., 3 decimal places)
+numeric_columns <- SDWS_Baulch_merged %>%
+  select(where(is.numeric)) %>%
+  colnames()
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>%
+  mutate(across(all_of(numeric_columns), ~ round(.x, 3)))
+
+# deal with duplicates
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>%
+  group_by(Pond, Date) %>%
+  summarize(
+    across(
+      .cols = everything(),
+      .fns = ~ ifelse(all(is.na(.)), NA, 
+                      ifelse(is.numeric(.), mean(., na.rm = TRUE), 
+                             paste(na.omit(unique(.)), collapse = "; "))),
+      .names = "{.col}"
+    ),
+    .groups = "drop"
+  )
+
+# still duplicates - dates are off by one day
+# match rows with DataFile containing "SDWS_wq"
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>%
+  arrange(Pond, Date) %>% 
+  # Create a helper column to group dates within 1 day
+  group_by(Pond) %>%
+  mutate(Date_group = cumsum(c(0, diff(as.Date(Date)) > 1))) %>%
+  ungroup() %>%
+  # Summarize by Pond and Date_group
+  group_by(Pond, Date_group) %>%
+  summarize(
+    # Match Date with rows where DataFile contains "SDWS_wq"
+    Date = ifelse(
+      any(grepl("SDWS_wq", DataFile, ignore.case = TRUE)),
+      # Select the Date corresponding to the first match
+      Date[grep("SDWS_wq", DataFile, ignore.case = TRUE)[1]],
+      min(Date) # If no match, use the earliest date
+    ),
+    across(
+      .cols = setdiff(names(SDWS_Baulch_merged), c("Pond", "Date_group", "Date", "DataFile")),
+      .fns = ~ ifelse(all(is.na(.)), NA, 
+                      ifelse(is.numeric(.), mean(., na.rm = TRUE), 
+                             paste(na.omit(unique(.)), collapse = "; "))),
+      .names = "{.col}"
+    ),
+    DataFile = paste(unique(DataFile), collapse = "; "),
+    .groups = "drop"
+  ) %>%
+  select(-Date_group) # Remove helper column
+
+# fix date column
+SDWS_Baulch_merged$Date <- as.Date(SDWS_Baulch_merged$Date, origin = "1970-01-01") # For Unix Epoch
+SDWS_Baulch_merged$RunDate <- as.Date(SDWS_Baulch_merged$RunDate)
+
+# check for duplicates
+duplicated(SDWS_Baulch_merged)
+
+# fix SPC column
+SDWS_Baulch_merged$SPC_uS.cm <- gsub("1.42; 1.501","1.46",SDWS_Baulch_merged$SPC_uS.cm) # average it
+SDWS_Baulch_merged$SPC_uS.cm <- as.numeric(SDWS_Baulch_merged$SPC_uS.cm)
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>% 
+  mutate(SPC_uS.cm = ifelse(SPC_uS.cm < 90, SPC_uS.cm*1000, SPC_uS.cm)) # convert to proper units
+
+# SPC and Cond column have identical values - combine them
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>% 
+  mutate(Cond_uS.cm = coalesce(SPC_uS.cm, Cond_uS.cm)) %>% 
+  relocate(Cond_uS.cm, .after = pH)
+SDWS_Baulch_merged <- SDWS_Baulch_merged %>% 
+  select(!SPC_uS.cm)
+
+# write as new csv
+write.csv(SDWS_Baulch_merged,"02_tidydata/SDWS_Baulch_merged_2014-2022.csv")
+
+
+#
+
+#-------------------------------------------------------------------------------
+
+### Convert SDWS_Baulch_merged to long format for DataStream template
+
+#-------------------------------------------------------------------------------
+
+# convert to long format - leave out temp, DO + pH bc already on DataStream?
+SDWS_Baulch_merged_long <- pivot_longer(SDWS_Baulch_merged, 
+                                 cols = c("Delta2H", "Delta18O", "Temp_degC", 
+                                          "pH", "Cond_uS.cm", "DO_mg.L", "SRP_mg.L", 
+                                          "TDP_mg.L", "TP_mg.L", "NH3_mg.L", 
+                                          "Urea_mg.L", "NO3_mg.L", "TDN_mg.L",
+                                          "TN_mg.L", "SO4_mg.L", "Chla_ug.L",
+                                          "Alk_mg.L", "TRP_mg.L"),
+                                 names_to = "CharacteristicID", 
+                                 values_to = "ResultValue")
+
+# export file to be copied to Data Stream
+write.csv(SDWS_Baulch_merged_long,"05_DataStream/SDWS_Baulch_merged_long_2014-2022.csv")
+
+
+#
+
 
 
 #-------------------------------------------------------------------------------
@@ -546,6 +796,13 @@ THG_data$Analyzing_date <- as.Date(THG_data$Analyzing_date)
 # fix pond ID
 THG_data$Pond <- as.character(THG_data$Pond)
 THG_data$Pond[THG_data$Pond == "97"] <- "97/98"
+
+# write as new csv
+write.csv(THG_data,"02_tidydata/THG_data_2021.csv")
+
+# export file to be copied to Data Stream
+write.csv(THG_data,"05_DataStream/THG_data_long_2021.csv")
+
 
 
 #-------------------------------------------------------------------------------
@@ -639,6 +896,41 @@ Robbins <- Robbins %>%
 # remove "cm" from values in depth column
 Robbins$Depth_cm <- gsub("cm","",Robbins$Depth_cm)
 
+
+# write as new csv
+write.csv(Robbins,"02_tidydata/Robbins_2023.csv")
+
+
+#
+
+#-------------------------------------------------------------------------------
+
+### Convert Robbins to long format for DataStream template
+
+#-------------------------------------------------------------------------------
+
+
+# convert to long format
+Robbins_long <- pivot_longer(Robbins,
+                             cols = c("Be_ppm", "B_ppm", "Al_ppm", "Li_ppm", 
+                                          "Ga_ppm", "Na_ppm", "Mg_ppm", "K_ppm", 
+                                          "Ti_ppm", "Si_ppm", "Ca_ppm", 
+                                          "Fe_ppm", "V_ppm", "Cr_ppm",
+                                          "Mn_ppm", "Co_ppm", "Ni_ppm", 
+                                          "Cu_ppm", "Zn_ppm", "Rb_ppm",
+                                          "Sr_ppm", "P_ppm", "S_ppm", 
+                                          "As_ppm", "Se_ppm", "Mo_ppm",
+                                          "Cd_ppm", "Cs_ppm", "Ba_ppm",
+                                          "Ce_ppm", "Pb_ppm", "Th_ppm", "U_ppm"),
+                             names_to = "CharacteristicID", 
+                             values_to = "ResultValue")
+
+# export file to be copied to Data Stream
+write.csv(Robbins_long,"05_DataStream/Robbins_long_2023.csv")
+
+
+#
+
 #-------------------------------------------------------------------------------
 
 ### MeHg 2021 df (MeHg2021)
@@ -665,53 +957,8 @@ MeHg2021$Date <- as.Date(MeHg2021$Date)
 MeHg2021$Pond <- as.character(MeHg2021$Pond)
 MeHg2021$Pond[MeHg2021$Pond == "97"] <- "97/98"
 
-#-------------------------------------------------------------------------------
+# after looking more closely at the data, MeHg is included in PPR_merged 
 
-### SO4 df (SO4_CHmod and SO4)
-
-#-------------------------------------------------------------------------------
-
-# are these df the same? need to find what's different about them
-
-# Compare dimensions
-dim(SO4_CHmod) == dim(SO4) # same
-
-# Compare column names
-all(names(SO4_CHmod) == names(SO4)) # same
-
-# Rows in SO4_CHmod not in SO4
-setdiff(SO4_CHmod, SO4) 
-
-# Rows in SO4 not in SO4_CHmod
-setdiff(SO4, SO4_CHmod)
-
-# 5 rows are different - every value is the same but SO4_CHmod says 2021-06-09
-# and SO4 says 2022-06-09 ... the correct date is 2022-06-09
-
-# we can just use SO4 df and ignore SO4_CHmod
-rm(SO4_CHmod)
-
-# rename columns
-names(SO4)[1] <- "Pond"
-names(SO4)[2] <- "Region"
-names(SO4)[3] <- "Date"
-names(SO4)[4] <- "Temp_degC"
-names(SO4)[5] <- "Cond_uS.cm" # column says mS/cm but values are in uS/cm
-names(SO4)[6] <- "DO_perc"
-names(SO4)[7] <- "DO_mg.L"
-names(SO4)[8] <- "Secchi_cm"
-names(SO4)[9] <- "Depth_m"
-names(SO4)[10] <- "Secchi_on.ground"
-names(SO4)[11] <- "ORP"
-names(SO4)[12] <- "Airtemp_C"
-names(SO4)[13] <- "Cloud"
-names(SO4)[15] <- "Comments"
-
-# fix pond IDs
-SO4$Pond <- as.character(SO4$Pond)
-SO4$Pond[SO4$Pond == "97"] <- "97/98"
-
-# after looking more closely at the data, SO4 is included in PPR_merged 
 
 #-------------------------------------------------------------------------------
 
@@ -767,24 +1014,80 @@ TICTOC <- TICTOC %>%
 # fix date format
 TICTOC$Date <- lubridate::dmy(TICTOC$Date)
 
+# write as new csv
+write.csv(TICTOC,"02_tidydata/TICTOC_2021-2023.csv")
+
+#
+
 #-------------------------------------------------------------------------------
 
-### Try merging df together
+### Convert TICTOC to long format for DataStream template
+
+#-------------------------------------------------------------------------------
+
+# convert to long format
+TICTOC_long <- pivot_longer(TICTOC,
+                             cols = c("TIC_ppm", "TOC_ppm"),
+                             names_to = "CharacteristicID", 
+                             values_to = "ResultValue")
+
+# export file to be copied to Data Stream
+write.csv(TICTOC_long,"05_DataStream/TICTOC_long_2021-2023.csv")
 
 
+#
 
 
+#-------------------------------------------------------------------------------
 
+### SO4 df (SO4_CHmod and SO4)
 
+#-------------------------------------------------------------------------------
 
+# are these df the same? need to find what's different about them
+SO4_CHmod <- read_excel("00_rawdata/UofR data/SO4_2021_2022 CH mod.xlsx")
+SO4 <- read_excel("00_rawdata/UofR data/SO4_2021_2022.xlsx")
 
+# Compare dimensions
+dim(SO4_CHmod) == dim(SO4) # same
 
+# Compare column names
+all(names(SO4_CHmod) == names(SO4)) # same
 
+# Rows in SO4_CHmod not in SO4
+setdiff(SO4_CHmod, SO4) 
 
+# Rows in SO4 not in SO4_CHmod
+setdiff(SO4, SO4_CHmod)
 
+# 5 rows are different - every value is the same but SO4_CHmod says 2021-06-09
+# and SO4 says 2022-06-09 ... the correct date is 2022-06-09
 
+# we can just use SO4 df and ignore SO4_CHmod
+rm(SO4_CHmod)
 
+# rename columns
+names(SO4)[1] <- "Pond"
+names(SO4)[2] <- "Region"
+names(SO4)[3] <- "Date"
+names(SO4)[4] <- "Temp_degC"
+names(SO4)[5] <- "Cond_uS.cm" # column says mS/cm but values are in uS/cm
+names(SO4)[6] <- "DO_perc"
+names(SO4)[7] <- "DO_mg.L"
+names(SO4)[8] <- "Secchi_cm"
+names(SO4)[9] <- "Depth_m"
+names(SO4)[10] <- "Secchi_on.ground"
+names(SO4)[11] <- "ORP"
+names(SO4)[12] <- "Airtemp_C"
+names(SO4)[13] <- "Cloud"
+names(SO4)[15] <- "Comments"
 
+# fix pond IDs
+SO4$Pond <- as.character(SO4$Pond)
+SO4$Pond[SO4$Pond == "97"] <- "97/98"
 
+# after looking more closely at the data, SO4 is included in PPR_merged 
+
+#
 
 #-------------------------------------------------------------------------------
