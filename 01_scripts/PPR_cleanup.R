@@ -1,8 +1,9 @@
 ################################################################################
 #
 # Script: PPR data cleaning and merging
-# Author: Jess Lerminiaux (adapted from Erika)
+# Author: Jess Lerminiaux
 # Purpose: To clean up the PPR water quality data to be published on DataStream
+# Date: Fall 2024
 #
 ################################################################################
 
