@@ -1130,7 +1130,6 @@ write.csv(ECCC_waterlevel,"02_tidydata/ECCC_waterlevel_clean.csv")
 
 #
 
-
 # convert to long format for DataStream template
 ECCC_waterlevel_long <- pivot_longer(ECCC_waterlevel, cols = Water_level_m, 
                                      names_to = "CharacteristicID", 
@@ -1138,11 +1137,6 @@ ECCC_waterlevel_long <- pivot_longer(ECCC_waterlevel, cols = Water_level_m,
 
 # export as csv
 write.csv(ECCC_waterlevel_long,"05_DataStream/ECCC_waterlevel_long_1993-1996.csv")
-
-
-
-
-
 
 
 

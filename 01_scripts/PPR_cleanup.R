@@ -14,7 +14,241 @@ library(sp) #for lat/long conversions
 library(sf)
 library(readxl) #excel
 library(tidyverse)
+library(hms)
 
+
+#-------------------------------------------------------------------------------
+#
+# SDWS_wq data cleanup
+#
+#-------------------------------------------------------------------------------
+
+#load data
+SDWS_2014 <- read_excel("00_rawdata/UofR data/SDWS - 2014 - Long Term Monitoring - All Data.xlsx")
+SDWS_2015 <- read_excel("00_rawdata/UofR data/SDWS - 2015 - Long Term Monitoring - All Data.xlsx")
+SDWS_2016 <- read_excel("00_rawdata/UofR data/SDWS - 2016 - Long Term Monitoring - All Data.xlsx")
+SDWS_2017 <- read_excel("00_rawdata/UofR data/SDWS - 2017 - Long Term Monitoring - All Data.xlsx")
+SDWS_2019 <- read_excel("00_rawdata/UofR data/SDWS - 2019 - Long Term Monitoring - All Data.xlsx")
+SDWS_2020 <- read_excel("00_rawdata/UofR data/SDWS - 2020 - Long Term Monitoring - All Data.xlsx")
+SDWS_2021 <- read_excel("00_rawdata/UofR data/SDWS - 2021 - Long Term Monitoring - All Data.xlsx")
+SDWS_2022 <- read_excel("00_rawdata/UofR data/SDWS - 2022 - Long Term Monitoring - All Data.xlsx")
+
+# fix 2016 date
+SDWS_2016$Date <- as.Date(SDWS_2016$Date)
+SDWS_2016$Date <- format(SDWS_2016$Date, "%Y-%m-%d")
+
+# fix 2016 + 2020 time (add leading zeros to hour if necessary)
+SDWS_2016$Time <- ifelse(nchar(SDWS_2016$Time) == 3, paste0("0", SDWS_2016$Time), SDWS_2016$Time)
+
+# extract hour and minute parts and format as "HH:MM"
+SDWS_2016$Time <- paste(substr(SDWS_2016$Time, 1, 2), ":", substr(SDWS_2016$Time, 3, 4), sep = "")
+SDWS_2016$Time[SDWS_2016$Time == "NA:NA"] <- NA
+
+# convert datetime column to POSIXct object
+SDWS_2020$Time <- as.POSIXct(SDWS_2020$Time)
+SDWS_2020$Time <- format(SDWS_2020$Time, "%H:%M") # extract only the time part
+
+# full join on all variables
+merged_SDWS <- merge(SDWS_2014, SDWS_2015, by = intersect(names(SDWS_2014), names(SDWS_2015)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2016, by = intersect(names(merged_SDWS), names(SDWS_2016)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2017, by = intersect(names(merged_SDWS), names(SDWS_2017)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2019, by = intersect(names(merged_SDWS), names(SDWS_2019)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2020, by = intersect(names(merged_SDWS), names(SDWS_2020)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2021, by = intersect(names(merged_SDWS), names(SDWS_2021)), all = TRUE)
+merged_SDWS <- merge(merged_SDWS, SDWS_2022, by = intersect(names(merged_SDWS), names(SDWS_2022)), all = TRUE)
+
+# clean up pond names and dates, remove time aspect from Date again
+merged_SDWS$Date <- as.Date(merged_SDWS$Date)
+merged_SDWS$Date <- format(merged_SDWS$Date, "%Y-%m-%d")
+
+# remove spaces and decimals from pond names 
+merged_SDWS$Pond <- gsub(" ", "", merged_SDWS$Pond)
+merged_SDWS$Pond <- sub("\\.0$", "", merged_SDWS$Pond)
+
+
+# write as tidy csv
+write.csv(merged_SDWS, "02_tidydata/merged_SDWS_clean.csv", row.names = FALSE)
+
+# 
+
+
+#-------------------------------------------------------------------------------
+#
+# SDWS_iso data cleanup
+#
+#-------------------------------------------------------------------------------
+
+#load data
+Iso_2014 <- read_excel("00_rawdata/UofR data/SDWS - 2014 - Long Term Monitoring - All Data.xlsx", sheet = "Isotopes")
+Iso_2015 <- read_excel("00_rawdata/UofR data/SDWS - 2015 - Long Term Monitoring - All Data.xlsx", sheet = "Isotopes")
+Iso_2016 <- read_excel("00_rawdata/UofR data/SDWS - 2016 - Long Term Monitoring - All Data.xlsx", sheet = "Isotopes")
+Iso_2017 <- read_excel("00_rawdata/UofR data/SDWS - 2017 - Long Term Monitoring - All Data.xlsx", sheet = "Isotpes")
+
+# fix column names in 2017 df
+names(Iso_2017)[2] <- "Sample_ID"
+
+# remove extra (all-NA) column in 2017 df
+Iso_2017 <- Iso_2017[, -7]
+
+# remove the space between number and letter in each column
+Iso_2014$Sample_ID <- sub("SDWS ", "", Iso_2014$Sample_ID)
+Iso_2014$Sample_ID[] <- lapply(Iso_2014$Sample_ID, function(x) gsub(" ", "", x))
+Iso_2014$Sample_ID <- as.character(Iso_2014$Sample_ID)
+
+Iso_2015$Sample_ID <- sub("SDWS ", "", Iso_2015$Sample_ID)
+Iso_2015$Sample_ID[] <- lapply(Iso_2015$Sample_ID, function(x) gsub(" ", "", x))
+Iso_2015$Sample_ID <- as.character(Iso_2015$Sample_ID)
+
+Iso_2016$Sample_ID <- sub("SDWS P", "", Iso_2016$Sample_ID)
+Iso_2016$Sample_ID <- sub("SDNWA", "", Iso_2016$Sample_ID)
+Iso_2016$Sample_ID[] <- lapply(Iso_2016$Sample_ID, function(x) gsub(" ", "", x))
+Iso_2016$Sample_ID <- as.character(Iso_2016$Sample_ID)
+Iso_2016$Sample_ID <- toupper(Iso_2016$Sample_ID)
+
+# make sure dates are consistent
+Iso_2014$`Collection Date` <- as.Date(Iso_2014$`Collection Date` , format = "%Y-%m-%d")
+Iso_2015$`Collection Date` <- as.Date(Iso_2015$`Collection Date` , format = "%Y-%m-%d")
+Iso_2016$`Collection Date` <- as.Date(Iso_2016$`Collection Date` , format = "%Y-%m-%d")
+Iso_2017$`Collection Date` <- as.Date(Iso_2017$`Collection Date` , format = "%Y-%m-%d")
+
+# merge data
+merged_Iso <- merge(Iso_2014, Iso_2015, by = intersect(names(Iso_2014), names(Iso_2015)), all = TRUE)
+merged_Iso <- merge(merged_Iso, Iso_2016, by = intersect(names(merged_Iso), names(Iso_2016)), all = TRUE)
+merged_Iso <- merge(merged_Iso, Iso_2017, by = intersect(names(merged_Iso), names(Iso_2017)), all = TRUE)
+
+
+# write as tidy csv
+write.csv(merged_Iso, "02_tidydata/merged_Isotopes_clean.csv", row.names = FALSE)
+
+
+#
+
+#-------------------------------------------------------------------------------
+#
+# SDWS_chl data cleanup
+#
+#-------------------------------------------------------------------------------
+
+#load data
+ChlA_2014 <- read_excel("00_rawdata/UofR data/SDWS - 2014 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2015 <- read_excel("00_rawdata/UofR data/SDWS - 2015 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2016 <- read_excel("00_rawdata/UofR data/SDWS - 2016 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2017 <- read_excel("00_rawdata/UofR data/SDWS - 2017 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2019 <- read_excel("00_rawdata/UofR data/SDWS - 2019 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2020 <- read_excel("00_rawdata/UofR data/SDWS - 2020 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2021 <- read_excel("00_rawdata/UofR data/SDWS - 2021 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+ChlA_2022 <- read_excel("00_rawdata/UofR data/SDWS - 2022 - Long Term Monitoring - All Data.xlsx", sheet = "ChlA")
+
+# change column names so they all match
+names(ChlA_2014)[14] <- "RunDate"
+names(ChlA_2015)[14] <- "RunDate"
+
+# fix pond names
+ChlA_2014$Location <- sub("SDWS ", "", ChlA_2014$Location)
+ChlA_2014$Location[] <- lapply(ChlA_2014$Location, function(x) gsub(" ", "", x))
+ChlA_2014$Location <- as.character(ChlA_2014$Location)
+
+ChlA_2015$Location <- sub("SDWS ", "", ChlA_2015$Location)
+ChlA_2015$Location <- sub("P", "", ChlA_2015$Location)
+
+ChlA_2016$Location <- sub("SDWS P", "", ChlA_2016$Location)
+ChlA_2016$Location <- sub("SDWS ", "", ChlA_2016$Location)
+
+ChlA_2017$Location <- sub("SD", "", ChlA_2017$Location)
+
+ChlA_2019$Location[] <- lapply(ChlA_2019$Location, function(x) gsub(" ", "", x))
+ChlA_2019$Location <- sub("\\.0$", "", ChlA_2019$Location)
+
+ChlA_2020$Location <- sub("\\.0$", "", ChlA_2020$Location)
+
+ChlA_2021$Location[] <- lapply(ChlA_2021$Location, function(x) gsub(" ", "", x))
+ChlA_2021$Location <- sub("\\.0$", "", ChlA_2021$Location)
+
+# 2022 includes replicate in location/ID, but also have replicate column, so unnecessary
+ChlA_2022$Location <- gsub(".*P([0-9]+).*", "\\1", ChlA_2022$Location )
+ChlA_2022$Location[ChlA_2022$Location == "SDWS P 1 - R1"] <- "1"
+ChlA_2022$Location[ChlA_2022$Location == "01"] <- "1"
+
+# date formats to change: 2014, 2015 
+ChlA_2014$RunDate <- as.Date(ChlA_2014$RunDate, format = "%Y%m%d")
+
+ChlA_2015$Date <- as.Date(ChlA_2015$Date, format = "%B %d %Y")
+ChlA_2015$Date <- as.Date(ChlA_2015$Date, format = "%Y-%m-%d")
+ChlA_2015$RunDate <- as.Date(ChlA_2015$RunDate, format = "%Y%m%d")
+
+# convert Rep # to numeric
+ChlA_2014$`Rep #` <- as.numeric(ChlA_2014$`Rep #`) 
+
+# convert Abs columns to numeric
+ChlA_2016$`Abs @ 750` <- as.numeric(ChlA_2016$`Abs @ 750`) 
+ChlA_2016$`Abs @ 665` <- as.numeric(ChlA_2016$`Abs @ 665`) 
+ChlA_2016$`Abs @ 649` <- as.numeric(ChlA_2016$`Abs @ 649`) 
+
+# convert Chl A column to numeric
+ChlA_2016$`Chl  A (µg/L)` <- as.numeric(ChlA_2016$`Chl  A (µg/L)`) 
+
+# convert Average to numeric
+ChlA_2014$`Average` <- as.numeric(ChlA_2014$`Average`) 
+ChlA_2019$`Average` <- as.numeric(ChlA_2019$`Average`) 
+ChlA_2020$`Average` <- as.numeric(ChlA_2020$`Average`) 
+ChlA_2021$`Average` <- as.numeric(ChlA_2021$`Average`) 
+
+# convert %Error to numeric for merging
+ChlA_2014$`%Error` <- as.numeric(ChlA_2014$`%Error`) 
+ChlA_2016$`%Error` <- as.numeric(ChlA_2016$`%Error`) 
+ChlA_2019$`%Error` <- as.numeric(ChlA_2019$`%Error`) 
+ChlA_2020$`%Error` <- as.numeric(ChlA_2020$`%Error`) 
+ChlA_2021$`%Error` <- as.numeric(ChlA_2021$`%Error`) 
+
+# convert Notes to characters
+ChlA_2017$Notes <- as.character(ChlA_2017$Notes)
+ChlA_2019$Notes <- as.character(ChlA_2019$Notes)
+ChlA_2020$Notes <- as.character(ChlA_2020$Notes)
+ChlA_2021$Notes <- as.character(ChlA_2021$Notes)
+
+# make sure all dates are formatted as such
+ChlA_2014$Date <- as.Date(ChlA_2014$Date, format = "%Y-%m-%d")
+ChlA_2016$Date <- as.Date(ChlA_2016$Date, format = "%Y-%m-%d")
+ChlA_2017$Date <- as.Date(ChlA_2017$Date, format = "%Y-%m-%d")
+ChlA_2019$Date <- as.Date(ChlA_2019$Date, format = "%Y-%m-%d")
+ChlA_2020$Date <- as.Date(ChlA_2020$Date, format = "%Y-%m-%d")
+ChlA_2021$Date <- as.Date(ChlA_2021$Date, format = "%Y-%m-%d")
+ChlA_2022$Date <- as.Date(ChlA_2022$Date, format = "%Y-%m-%d")
+
+ChlA_2016$RunDate <- as.Date(ChlA_2016$RunDate, format = "%Y-%m-%d")
+ChlA_2017$RunDate <- as.Date(ChlA_2017$RunDate, format = "%Y-%m-%d")
+ChlA_2019$RunDate <- as.Date(ChlA_2019$RunDate, format = "%Y-%m-%d")
+ChlA_2020$RunDate <- as.Date(ChlA_2020$RunDate, format = "%Y-%m-%d")
+ChlA_2021$RunDate <- as.Date(ChlA_2021$RunDate, format = "%Y-%m-%d")
+ChlA_2022$RunDate <- as.Date(ChlA_2022$RunDate, format = "%Y-%m-%d")
+
+# merge data together
+merged_ChlA <- merge(ChlA_2014, ChlA_2015, by = intersect(names(ChlA_2014), names(ChlA_2015)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2016, by = intersect(names(merged_ChlA), names(ChlA_2016)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2017, by = intersect(names(merged_ChlA), names(ChlA_2017)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2019, by = intersect(names(merged_ChlA), names(ChlA_2019)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2020, by = intersect(names(merged_ChlA), names(ChlA_2020)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2021, by = intersect(names(merged_ChlA), names(ChlA_2021)), all = TRUE)
+merged_ChlA <- merge(merged_ChlA, ChlA_2022, by = intersect(names(merged_ChlA), names(ChlA_2022)), all = TRUE)
+
+# make sure all depth are spelled same/upper lower case same
+merged_ChlA$`Depth (m)`[merged_ChlA$`Depth (m)` == "surface"] <- "Surface"
+merged_ChlA$`Depth (m)`[merged_ChlA$`Depth (m)` == "wetland"] <- "Wetland"
+merged_ChlA$`Depth (m)`[merged_ChlA$`Depth (m)` == "NA"] <- NA
+
+
+# write as tidy csv
+write.csv(merged_ChlA, "02_tidydata/merged_ChlA_clean.csv", row.names = FALSE)
+
+#
+
+
+
+
+#-------------------------------------------------------------------------------
+#
+# Read in all other data
+#
 #-------------------------------------------------------------------------------
 
 # read in updated raw PPR data from Britt
@@ -81,6 +315,10 @@ Abs_PPR_2024$Date <- as.Date(Abs_PPR_2024$Date, format = "%Y-%m-%d", origin = "1
 Abs_PPR_2024$Analyzing_date <- as.numeric(Abs_PPR_2024$Analyzing_date)
 Abs_PPR_2024$Analyzing_date <- as.Date(Abs_PPR_2024$Analyzing_date, format = "%Y-%m-%d", origin = "1899-12-30")
 
+# only keep 1.2 um filter results (will get duplicates on DS otherwise)
+Abs_PPR_2024 <- Abs_PPR_2024 %>% 
+  filter(!Filter == 0.45)
+
 #-------------------------------------------------------------------------------
 
 ### PPR Data df (Data_PPR_2024)
@@ -126,6 +364,25 @@ Data_PPR_2024$Pond[Data_PPR_2024$Pond == "97"] <- "97/98"
 
 # make new column to put "Dry" or "NO YSI" conditions for pH
 Data_PPR_2024$Comments <- ifelse(grepl("^[0-9.]+$", Data_PPR_2024$pH), NA, Data_PPR_2024$pH)
+
+# remove columns that are duplicated from Abs_PPR_2024 df
+Data_PPR_2024 <- Data_PPR_2024 %>% 
+  select(-c("Abs254nm_1.2", "Abs254nm_0.45"))
+
+# merge DOC and DIC columns with different filter size
+Data_PPR_2024 <- Data_PPR_2024 %>%
+  mutate(DOC_mg.L = ifelse(!is.na(DOC_mg.L) & !is.na(DOC_mg.L_0.45),
+      (DOC_mg.L + DOC_mg.L_0.45) / 2, # calculate mean if both columns have values
+      coalesce(DOC_mg.L, DOC_mg.L_0.45))) # select non-NA value from the two columns
+Data_PPR_2024 <- Data_PPR_2024 %>%
+  mutate(DIC_mg.L = ifelse(!is.na(DIC_mg.L) & !is.na(DIC_mg.L_0.45),
+      (DIC_mg.L + DIC_mg.L_0.45) / 2, # calculate mean if both columns have values
+      coalesce(DIC_mg.L, DIC_mg.L_0.45))) # select non-NA value from the two columns
+
+# remove unwanted columns
+Data_PPR_2024 <- Data_PPR_2024 %>% 
+  select(-c("DOC_mg.L_0.45", "DIC_mg.L_0.45"))
+
 
 #-------------------------------------------------------------------------------
 
@@ -175,7 +432,18 @@ Field_PPR_2024 <- Field_PPR_2024 %>%
 Field_PPR_2024$Cloud[Field_PPR_2024$Cloud == "?"] <- NA
 Field_PPR_2024$Cloud <- as.numeric(Field_PPR_2024$Cloud)
 
-#
+# put Secchi_on.ground column into Comments column if not NA
+Field_PPR_2024 <- Field_PPR_2024 %>%
+  mutate(Comments = ifelse(!is.na(Secchi_on.ground),
+      ifelse(is.na(Comments), 
+        paste("Secchi on ground? ", Secchi_on.ground), 
+        paste(Comments, paste("Secchi on ground?", Secchi_on.ground), sep = "; ")),
+      Comments))
+
+# remove Secchi_on.ground column
+Field_PPR_2024 <- Field_PPR_2024 %>% 
+  select(!Secchi_on.ground)
+
 
 #-------------------------------------------------------------------------------
 
@@ -185,6 +453,7 @@ Field_PPR_2024$Cloud <- as.numeric(Field_PPR_2024$Cloud)
 
 PPR_merged <- full_join(Abs_PPR_2024, Data_PPR_2024)
 PPR_merged <- full_join(PPR_merged, Field_PPR_2024)
+
 
 #-------------------------------------------------------------------------------
 
@@ -207,7 +476,7 @@ Data_2006 <- Data_2006 %>%
 
 # I also removed ABS columns for now because I have no idea what it is or its units
 Data_2006 <- Data_2006 %>% 
-  select(-c('ABS', 'ABS /m')) # ask Britt?
+  select(-c('ABS', 'ABS /m')) # asked Britt - she hasn't replied
 
 # select St. Denis region
 Data_2006 <- Data_2006 %>% 
@@ -268,28 +537,44 @@ Data_2006$DO_mg.L <- as.character(Data_2006$DO_mg.L)
 # merge
 PPR_merged <- full_join(PPR_merged, Data_2006)
 
-# make sure no columns were accidentally deleted during merging 
-all_columns <- unique(c(
-  colnames(Abs_PPR_2024),
-  colnames(Data_PPR_2024),
-  colnames(Field_PPR_2024),
-  colnames(Data_2006))) # combine column names from all datasets
+# move comments from CO2, CH4, and YSI variable columns into Comments column
+PPR_merged$Comments <- ifelse(grepl("^[0-9.]+$", PPR_merged$CO2_umol.L), NA, PPR_merged$CO2_umol.L)
+PPR_merged$Comments <- ifelse(grepl("^[0-9.]+$", PPR_merged$Temp_degC), NA, PPR_merged$Temp_degC)
 
-# Compare with the merged dataset
-missing_columns <- setdiff(all_columns, colnames(PPR_merged))
-extra_columns <- setdiff(colnames(PPR_merged), all_columns)
+# make columns numeric
+PPR_merged$pH <- as.numeric(PPR_merged$pH)
+PPR_merged$SO4_mg.L <- as.numeric(PPR_merged$SO4_mg.L)
+PPR_merged$CO2_umol.L <- as.numeric(PPR_merged$CO2_umol.L)
+PPR_merged$CH4_umol.L <- as.numeric(PPR_merged$CH4_umol.L)
+PPR_merged$Temp_degC <- as.numeric(PPR_merged$Temp_degC)
+PPR_merged$Cond_uS.cm <- as.numeric(PPR_merged$Cond_uS.cm)
+PPR_merged$DO_perc <- as.numeric(PPR_merged$DO_perc)
+PPR_merged$DO_mg.L <- as.numeric(PPR_merged$DO_mg.L)
+PPR_merged$Secchi_cm <- as.numeric(PPR_merged$Secchi_cm)
+PPR_merged$ORP <- as.numeric(PPR_merged$ORP)
+PPR_merged$Airtemp_C <- as.numeric(PPR_merged$Airtemp_C)
 
-if (length(missing_columns) > 0) {
-  warning(paste("Missing columns:", paste(missing_columns, collapse = ", ")))
-} else if (length(extra_columns) > 0) {
-  warning(paste("Extra columns detected:", paste(extra_columns, collapse = ", ")))
-} else {
-  print("All expected columns are present.")
-}
+# deal with duplicates
+PPR_merged <- PPR_merged %>%
+  group_by(Pond, Date) %>%
+  summarize(
+    across(
+      .cols = everything(),
+      .fns = ~ ifelse(all(is.na(.)), NA, 
+                      ifelse(is.numeric(.), mean(., na.rm = TRUE), 
+                             paste(na.omit(unique(.)), collapse = "; "))),
+      .names = "{.col}"
+    ),
+    .groups = "drop"
+  )
 
-# remove duplicate
+# fix pond IDs
+PPR_merged$Pond[PPR_merged$Pond == "125 N"] <- "125N"
+PPR_merged$Pond[PPR_merged$Pond == "125 S"] <- "125S"
+
+# remove sample with no date
 PPR_merged <- PPR_merged %>% 
-  filter(!(Pond == "118" & DOC_mg.L_0.45 == 24.59))
+  filter(!is.na(Date))
 
 # write as new csv
 write.csv(PPR_merged,"02_tidydata/PPR_merged_2006-2024.csv")
@@ -310,31 +595,37 @@ PPR_merged$"350_nm" <- as.character(PPR_merged$"350_nm")
 PPR_merged$"365_nm" <- as.character(PPR_merged$"365_nm")
 PPR_merged$"370_nm" <- as.character(PPR_merged$"370_nm")
 PPR_merged$DOC_mg.L <- as.character(PPR_merged$DOC_mg.L)
-PPR_merged$DOC_mg.L_0.45 <- as.character(PPR_merged$DOC_mg.L_0.45)
-PPR_merged$Abs254nm_1.2 <- as.character(PPR_merged$Abs254nm_1.2)
-PPR_merged$Abs254nm_0.45 <- as.character(PPR_merged$Abs254nm_0.45)
 PPR_merged$SUVA <- as.character(PPR_merged$SUVA)
 PPR_merged$Wholewater_THg_ng.L <- as.character(PPR_merged$Wholewater_THg_ng.L)
 PPR_merged$Wholewater_MeHg_ng.L <- as.character(PPR_merged$Wholewater_MeHg_ng.L)
 PPR_merged$MeHg_perc <- as.character(PPR_merged$MeHg_perc)
 PPR_merged$DIC_mg.L <- as.character(PPR_merged$DIC_mg.L)
-PPR_merged$DIC_mg.L_0.45 <- as.character(PPR_merged$DIC_mg.L_0.45)
 PPR_merged$TDC_mg.L <- as.character(PPR_merged$TDC_mg.L)
 PPR_merged$Chla <- as.character(PPR_merged$Chla)
 PPR_merged$Depth_m <- as.character(PPR_merged$Depth_m)
 PPR_merged$Cloud <- as.character(PPR_merged$Cloud)
+PPR_merged$pH <- as.character(PPR_merged$pH)
+PPR_merged$SO4_mg.L <- as.character(PPR_merged$SO4_mg.L)
+PPR_merged$CO2_umol.L <- as.character(PPR_merged$CO2_umol.L)
+PPR_merged$CH4_umol.L <- as.character(PPR_merged$CH4_umol.L)
+PPR_merged$Temp_degC <- as.character(PPR_merged$Temp_degC)
+PPR_merged$Cond_uS.cm <- as.character(PPR_merged$Cond_uS.cm)
+PPR_merged$DO_perc <- as.character(PPR_merged$DO_perc)
+PPR_merged$DO_mg.L <- as.character(PPR_merged$DO_mg.L)
+PPR_merged$Secchi_cm <- as.character(PPR_merged$Secchi_cm)
+PPR_merged$ORP <- as.character(PPR_merged$ORP)
+PPR_merged$Airtemp_C <- as.character(PPR_merged$Airtemp_C)
 
 # convert to long format - leave in all variables already on DataStream
 # will update as new file so will overwrite what's already published
 PPR_merged_long <- pivot_longer(PPR_merged, 
                                        cols = c("250_nm", "254_nm", "280_nm", "350_nm", 
                                                 "365_nm", "370_nm", "pH", "Fe_mg.L", 
-                                                "SO4_mg.L", "DOC_mg.L", "DOC_mg.L_0.45", 
-                                                "Abs254nm_1.2", "Abs254nm_0.45", "SUVA",
+                                                "SO4_mg.L", "DOC_mg.L", "SUVA",
                                                 "Wholewater_THg_ng.L", 
                                                 "Wholewater_MeHg_ng.L", "MeHg_perc", 
                                                 "CO2_umol.L", "CH4_umol.L", "DIC_mg.L", 
-                                                "DIC_mg.L_0.45", "TDC_mg.L", "Chla", "Temp_degC",
+                                                "TDC_mg.L", "Chla", "Temp_degC",
                                                 "Cond_uS.cm", "DO_perc", "DO_mg.L", "Secchi_cm", 
                                                 "ORP", "Airtemp_C", "Cloud"),
                                        names_to = "CharacteristicID", 
@@ -515,7 +806,7 @@ SDWS_wq$DataFile <- "SDWS_wq"
 #-------------------------------------------------------------------------------
 
 # merge
-SDWS_merged <- full_join(SDWS_wq, SDWS_chla)
+SDWS_merged <- full_join(SDWS_wq, SDWS_chla) # isotope data already in wq df
 
 # deal with duplicates
 SDWS_merged <- SDWS_merged %>%
@@ -604,9 +895,6 @@ Baulch <- Baulch %>%
 Baulch$Time <- as.numeric(Baulch$Time)
 Baulch$Time <- as_hms(Baulch$Time * 86400) # 86400 is the number of seconds in a day
 Baulch$Time <- as.character(Baulch$Time) # for merging
-
-# look for duplicates
-duplicated(Baulch)
 
 # add column to know which df this came from
 Baulch$DataFile <- "Baulch"
@@ -721,9 +1009,6 @@ SDWS_Baulch_merged <- SDWS_Baulch_merged %>%
 SDWS_Baulch_merged$Date <- as.Date(SDWS_Baulch_merged$Date, origin = "1970-01-01") # For Unix Epoch
 SDWS_Baulch_merged$RunDate <- as.Date(SDWS_Baulch_merged$RunDate)
 
-# check for duplicates
-duplicated(SDWS_Baulch_merged)
-
 # fix SPC column
 SDWS_Baulch_merged$SPC_uS.cm <- gsub("1.42; 1.501","1.46",SDWS_Baulch_merged$SPC_uS.cm) # average it
 SDWS_Baulch_merged$SPC_uS.cm <- as.numeric(SDWS_Baulch_merged$SPC_uS.cm)
@@ -736,6 +1021,9 @@ SDWS_Baulch_merged <- SDWS_Baulch_merged %>%
   relocate(Cond_uS.cm, .after = pH)
 SDWS_Baulch_merged <- SDWS_Baulch_merged %>% 
   select(!SPC_uS.cm)
+
+# fix pond ID
+SDWS_Baulch_merged$Pond[SDWS_Baulch_merged$Pond == "97"] <- "97/98"
 
 # write as new csv
 write.csv(SDWS_Baulch_merged,"02_tidydata/SDWS_Baulch_merged_2014-2022.csv")
@@ -785,16 +1073,62 @@ names(THG_data)[5] <- "Date"
 names(THG_data)[9] <- "THg_ug.kg"
 # will use method names and other details in raw file for DataStream template
 
-# select columns we will need/be using
-THG_data <- THG_data %>% 
-  select(c(Pond, Analyzing_date, Date, THg_ug.kg))
-
 # fix date formats
 THG_data$Date <- as.Date(THG_data$Date)
 THG_data$Analyzing_date <- as.Date(THG_data$Analyzing_date)
 
+# fix pond ID
+THG_data$Pond[THG_data$Pond == "97"] <- "97/98"
+
+# remove m from site column
+THG_data$Site <- gsub("m","",THG_data$Site)
+# not sure what "Off" means.. Off shore? I asked Britt but she hasn't replied 
+
+# change sites to negative for DS template
+THG_data <- THG_data %>%
+  mutate(Site = ifelse(Site != "Off", -as.numeric(Site), Site))
+
+# combine replicates into one mean THg value
+THG_data <- THG_data %>%
+  group_by(Pond, Site, Date) %>%
+  mutate(mean_THg_ug.kg = ifelse(!is.na(Replicate), mean(THg_ug.kg, na.rm = TRUE), 
+      THg_ug.kg)) %>%
+  ungroup()
+
+# remove duplicate rows
+THG_data <- THG_data %>%
+  filter(!(Replicate %in% c(2, 3)))
+
+# remove unwanted columns
+THG_data <- THG_data %>%
+  select(c(Pond, Site, Analyzing_date, Date, mean_THg_ug.kg))
+
+# rename THg column
+names(THG_data)[5] <- "THg_ug.kg"
+
 # write as new csv
 write.csv(THG_data,"02_tidydata/THG_data_2021.csv")
+
+
+#-------------------------------------------------------------------------------
+
+### Convert THG_data to long format for DataStream template
+
+#-------------------------------------------------------------------------------
+
+# convert to long format - leave out temp, DO + pH bc already on DataStream?
+THG_data_long <- pivot_longer(THG_data, cols = c("THg_ug.kg"),
+                                        names_to = "CharacteristicID", 
+                                        values_to = "ResultValue")
+
+# export file to be copied to Data Stream
+write.csv(THG_data_long,"05_DataStream/THG_data_long_2021.csv")
+
+
+#
+
+
+
 
 # export file to be copied to Data Stream
 write.csv(THG_data,"05_DataStream/THG_data_long_2021.csv")
@@ -835,6 +1169,8 @@ Sed_moisture$Depth_m <- gsub("M","",Sed_moisture$Depth_m)
 ### Leslie Robbins Lab df (Robbins)
 
 #-------------------------------------------------------------------------------
+
+## manually got rid of dupicates in excel because it wasn't working in R
 
 # remove any columns with all-NAs
 Robbins <- Robbins %>% 
@@ -877,17 +1213,13 @@ names(Robbins)[33] <- "Pb_ppm"
 names(Robbins)[34] <- "Th_ppm"
 names(Robbins)[35] <- "U_ppm"
 
-# make Date column (all samples were collected on Jul 28, 2023)
+# make Date column (file said all samples were collected on Jul 28, 2023)
 Robbins$Date <- "2023-07-28" 
 Robbins <- Robbins %>% 
   relocate(Date, .after = Pond)
 
 # fix date format
 Robbins$Date <- as.Date(Robbins$Date)
-
-# remove samples that were below detection for all elements (8 of them)
-Robbins <- Robbins %>% 
-  filter(!Si_ppm == "BDL")
 
 # remove "cm" from values in depth column
 Robbins$Depth_cm <- gsub("cm","",Robbins$Depth_cm)
@@ -929,7 +1261,7 @@ Robbins_long <- pivot_longer(Robbins,
 write.csv(Robbins_long,"05_DataStream/Robbins_long_2023.csv")
 
 
-#
+ #
 
 #-------------------------------------------------------------------------------
 
